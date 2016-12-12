@@ -2,6 +2,9 @@
   "name": "unopinionated-angular-toolbox",
   "version": "0.0.2",
   "license": "MIT",
+  "main": "./lib/index.js",
+  "module": "./lib/index.js",
+  "typings": "./lib/index.d.ts",
   "angular-cli": {},
   "scripts": {
     "start": "ng serve",
