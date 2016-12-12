@@ -1,0 +1,13 @@
+﻿<li class="item"
+    [ngClass]="dynamicComponentClasses"
+    *ngFor="let componentData of dynamicComponentsData; let i = index;"
+    (click)="onContainerClick($event, componentData, i)"
+    (mouseover)="onContainerMouseOver($event, componentData, i)">
+    <uat-dynamic-component-container 
+        #dynamicComponent 
+        [index]="i"
+        [componentData]="componentData">
+    </uat-dynamic-component-container>
+</li>
+
+

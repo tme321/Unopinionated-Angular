@@ -1,0 +1,11 @@
+﻿<li *ngFor="let compData of dynamicComponentsData; let i = index;"
+    #listItem
+    class="item"
+    [class.auto-selected]="itemAutoSelected[i]"
+    [class.selected]="itemSelected[i]"
+    (click)="onListItemClick($event, i)"
+    (mouseover)="onListItemMouseOver($event, i)">
+    <template #container="dynamicComp" [uat-dynamic-component] = "compData"></template>
+</li>
+
+

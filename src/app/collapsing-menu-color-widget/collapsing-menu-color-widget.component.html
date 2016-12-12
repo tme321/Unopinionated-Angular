@@ -1,0 +1,25 @@
+<div class="color-picker">
+  <div uat-collapsing-menu
+       #menu="uatCollapsingMenu"
+       [showOnHover]="true">
+    <div uat-menu-toggle>
+      
+      <span *ngIf="!menu.isOpen" style="padding:15px">More...</span>
+      <span *ngIf="menu.isOpen" style="padding:15px">Less...</span>
+    </div>
+    <a uat-menu-item class="nav-link" (click)="setColor('white')">White</a>
+    <a uat-menu-item class="nav-link" (click)="setColor('black')">Black</a>
+    <a uat-menu-item class="nav-link" (click)="setColor('red')">Red</a>
+    <a uat-menu-item class="nav-link" (click)="setColor('green')">Green</a>
+    <a uat-menu-item class="nav-link" (click)="setColor('blue')">Blue</a>
+    <a uat-menu-item class="nav-link" (click)="setColor('yellow')">Yellow</a>
+    <a uat-menu-item class="nav-link" (click)="setColor('orange')">Orange</a>
+    <a uat-menu-item class="nav-link" (click)="setColor('purple')">Purple</a>
+    <a uat-menu-item class="nav-link" (click)="setColor('pink')">Pink</a>
+    <a uat-menu-item class="nav-link" (click)="setColor('cyan')">Cyan</a>
+    <a uat-menu-item class="nav-link" (click)="setColor('magenta')">Magenta</a>
+  </div>
+  <app-color-viewer
+    [viewedColor]="myColor">
+  </app-color-viewer>
+</div>

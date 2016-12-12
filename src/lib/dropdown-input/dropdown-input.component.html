@@ -1,0 +1,35 @@
+<style>
+	div.dropdown-anchor {
+		position:relative;
+	}
+
+	.dropdown-anchor > div.uat-sliding-panel {
+		position: absolute;
+	}
+
+	.dropdown-anchor > .uat-sliding-panel ul.uat-dropdown-input-items-list{
+		display:flex;
+		flex:1;
+		flex-direction:column;
+		padding-left:0;
+		list-style:none;
+	}
+</style>
+
+<div class="dropdown-anchor">
+  <input #dropdownInput
+		 (keydown)="onKeyDown($event)"
+		 [attr.placeholder]="placeholderText"/>
+  	<div uat-sliding-panel
+	     class="results" 
+		 slideDirection="vertical"
+		 #panel="uatSlidingPanel">
+		 <ul uat-dropdown-input-items-list
+		 	#dropdownList
+		    [dynamicComponentsData]="diServ.items$ | async"
+			(listItemMouseOver)="onListItemMouseOver($event)"
+			(listItemClick)="onListItemClicked($event)"
+			(newContainers)="onNewItemContainers($event)">
+		 </ul>
+  	</div>	
+</div>

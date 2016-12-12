@@ -1,0 +1,6 @@
+<div *ngIf="!state">
+  <ng-content select="[uat-open]"></ng-content>
+</div>
+<div *ngIf="state">
+  <ng-content select="[uat-close]"></ng-content>
+</div>

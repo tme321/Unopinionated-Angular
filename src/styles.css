@@ -1,0 +1,201 @@
+@import url('menu.css');
+
+/* Material Icons */
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* Material Icons */
+
+/* small normalization */
+
+ul{
+	margin:0;
+}
+
+div.main-content {
+	margin:5em;
+}
+
+/* /normalization */
+
+/* Sliding Panel styles */
+
+.uat-sliding-panel-toggle {
+	max-width: 250px;
+	background-color:#222;
+	color:#9d9d9d;
+}
+
+.uat-sliding-panel-toggle.open {
+	color: #ddd;
+}
+
+.uat-sliding-panel-toggle.open.pinned {
+	color: #fff;
+}
+
+div.uat-sliding-panel {
+	border:1px black solid;
+}
+
+div.uat-sliding-panel.closed {
+	opacity: 0;
+}
+
+div.uat-sliding-panel.open {
+	background-color: #444;
+	color:#9d9d9d;
+}
+
+.uat-sliding-panel.open a:hover { 
+	color:#fff;
+}
+
+div.uat-sliding-panel.open.pinned {
+	background-color: #222;
+}
+
+/* /Sliding Panel styles */
+
+/* Nav Link styles */
+
+a.nav-link {
+    padding: 15px;
+    text-decoration: none;
+    cursor: pointer;
+	display:block;
+}
+
+a.nav-link:hover {
+	
+}
+
+/* /Nav Link styles */
+
+/* Hamburger Menu styles */
+
+div.uat-hamburger-menu {
+	background-color: #222;
+	border:1px solid black;
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	min-height: 50px;
+	z-index: 1000;
+}
+
+.uat-hamburger-menu div.uat-sliding-panel {
+	border: none;
+}
+
+.uat-hamburger-menu div.uat-sliding-panel {
+	background-color: #222;
+}
+
+.uat-hamburger-menu.collapsed div.uat-sliding-panel.open {
+	border:1px solid black;
+}
+
+.uat-hamburger-menu a {
+	color:#9d9d9d;
+}
+
+div.inner-menu {
+	padding:15px;
+	text-align: center;
+	width:75px;
+}
+
+.collapsed div.inner-menu {
+	text-align: start;
+}
+
+a.my-brand {
+	font-size:18px;
+	color:#fff;
+	padding:15px;
+	text-decoration: none;
+}
+
+div.uat-slideout-menu {
+	width:100px;
+}
+
+/* /Hamburger */
+
+/* dropdown input */
+
+.uat-dropdown-input input {
+	width:150px;
+}
+
+li.item {
+	color: #000;
+}
+
+li.item.selected {
+	background-color: #222;
+	color: #fff;
+}
+
+li.item.soft-selected {
+	background-color: #444;
+	color: #fff;
+}
+
+.uat-dropdown-input div.results {
+	max-height: 250px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background-color:#222;
+	border: 2px black solid;
+	width:150px;
+	border-style: inset;
+}
+
+.uat-dropdown-input li {
+	border-top: 1px solid #444;
+	border-bottom: 1px solid #444;
+}
+
+.uat-dropdown-input li.auto-selected {
+	background-color: #555;
+}
+
+.uat-dropdown-input li.selected {
+ 	background-color:#444;
+}
+
+div.uat-dropdown-input {
+    display:inline-block;
+}
+
+.results a {
+    color: #9d9d9d;
+}
+
+/* /dropdown input */

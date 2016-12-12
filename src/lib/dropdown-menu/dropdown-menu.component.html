@@ -1,0 +1,31 @@
+<style>
+  div.dropdown-container {
+    position: relative;
+  }
+
+  /deep/ .dropdown-container > div.uat-sliding-panel {
+    position: absolute;
+    top: 0;
+  }
+
+  .dropdown-container div.uat-sliding-panel{
+    display: flex;
+    flex:1;
+    flex-direction:column;
+  }
+
+</style>
+<div [uat-sliding-panel-toggle]="panel" 
+     [toggleOnClick]="toggleOnClick"
+     [showOnHover]="showOnHover"
+     [closeOnClickOutside]="closeOnClickOutside">
+    <ng-content select="[uat-menu-toggle]"></ng-content>
+</div>
+<div class="dropdown-container">
+  <div uat-sliding-panel 
+    #panel="uatSlidingPanel"
+    [showOnInit]="showOnInit"
+    slideDirection="vertical">
+    <ng-content select="[uat-menu-item]"></ng-content>
+  </div>
+</div>

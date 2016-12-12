@@ -1,0 +1,34 @@
+<div class="color-picker">
+  <div class="quick-menu">
+    <div uat-dropdown-menu
+      #ddmenu1="uatDropdownMenu"
+      [showOnHover]="true">
+      <a uat-menu-toggle class="nav-link">Primary</a>
+      <a uat-menu-item class="nav-link" (click)="setColor('red')">Red</a>
+      <a uat-menu-item class="nav-link" (click)="setColor('green')">Green</a>
+      <a uat-menu-item class="nav-link" (click)="setColor('blue')">Blue</a>
+    </div>
+    <div uat-dropdown-menu
+      #ddmenu2="uatDropdownMenu"
+      [showOnHover]="true">
+      <a uat-menu-toggle class="nav-link">CMYK</a>
+      <a uat-menu-item class="nav-link" (click)="setColor('cyan')">Cyan</a>
+      <a uat-menu-item class="nav-link" (click)="setColor('magenta')">Magenta</a>
+      <a uat-menu-item class="nav-link" (click)="setColor('yellow')">Yellow</a>
+      <a uat-menu-item class="nav-link" (click)="setColor('black')">Black</a>
+    </div>
+    <div uat-dropdown-menu
+      #ddmenu3="uatDropdownMenu"
+      [showOnHover]="true">
+      <a uat-menu-toggle class="nav-link">Other</a>
+      <a uat-menu-item class="nav-link" (click)="setColor('white')">White</a>
+      <a uat-menu-item class="nav-link" (click)="setColor('orange')">Orange</a>
+      <a uat-menu-item class="nav-link" (click)="setColor('purple')">Purple</a>
+      <a uat-menu-item class="nav-link" (click)="setColor('pink')">Pink</a>
+    </div>
+
+  </div>
+  <app-color-viewer
+    [viewedColor]="myColor">
+  </app-color-viewer>
+</div>

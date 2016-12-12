@@ -1,0 +1,14 @@
+div.uat-collapsing-menu {
+	background-color: #222;
+}
+
+div.color-picker {
+	border-radius: 4px;
+	border: 1px solid #222;
+	margin-top:50px;
+	margin-bottom: 50px;
+}
+
+.uat-collapsing-menu a {
+	color:#9d9d9d;
+}
