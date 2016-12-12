@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UATDynamicComponentContainer } from './dynamic-component-container.component';
 import { UATContentContainer } from './content-container.component';
@@ -21,4 +21,11 @@ import { UATDynamicComponentList } from './dynamic-component-list.component';
     UATDynamicComponentList,
   ]
 })
-export class UATContainersModule { }
+export class UATContainersModule {
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: UATContainersModule,
+      providers: []
+    };
+  }
+ }

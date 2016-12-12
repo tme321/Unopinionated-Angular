@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { UATSlidingPanel } from './sliding-panel.component';
@@ -19,4 +19,11 @@ import { UATSlidingPanelToggle } from './sliding-panel-toggle.directive';
     UATSlidingPanelToggle
   ]
 })
-export class UATSlidingPanelModule { }
+export class UATSlidingPanelModule { 
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: UATSlidingPanelModule,
+      providers: []
+    };
+  }  
+}

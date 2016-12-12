@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UATCommonModule } from '../common/common.module';
 import { UATCollapsingMenu } from './collapsing-menu.component';
@@ -13,4 +13,11 @@ import { UATSlidingPanelModule } from '../sliding-panel/sliding-panel.module';
   declarations: [UATCollapsingMenu],
   exports: [UATCollapsingMenu]
 })
-export class UATCollapsingMenuModule { }
+export class UATCollapsingMenuModule {
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: UATCollapsingMenuModule,
+      providers: []
+    };
+  }
+ }

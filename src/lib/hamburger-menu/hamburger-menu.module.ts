@@ -1,4 +1,4 @@
-import { NgModule, OpaqueToken } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UATSlidingPanelModule } from '../sliding-panel/sliding-panel.module';
 import { UATHamburgerMenu } from './hamburger-menu.component';
@@ -22,4 +22,11 @@ import {UATCommonModule} from '../common/common.module';
     UATMenuItemRight,
   ]
 })
-export class UATHamburgerMenuModule { }
+export class UATHamburgerMenuModule {
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: UATHamburgerMenuModule,
+      providers: []
+    };
+  }
+}

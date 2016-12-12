@@ -1,9 +1,6 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UATMenuItem } from './menu-item.directive';
-
-//import { UATTest } from './test.directive';
-
 
 @NgModule({
   imports: [
@@ -11,11 +8,16 @@ import { UATMenuItem } from './menu-item.directive';
   ],
   declarations: [
     UATMenuItem,
-    //UATTest
   ],
   exports: [
     UATMenuItem,
-    //UATTest
   ]
 })
-export class UATCommonModule { }
+export class UATCommonModule {
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: UATCommonModule,
+      providers: []
+    };
+  }
+ }

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UATDropdownMenu } from './dropdown-menu.component';
 import { UATSlidingPanelModule } from '../sliding-panel/sliding-panel.module';
@@ -17,4 +17,11 @@ import { UATSlidingPanelModule } from '../sliding-panel/sliding-panel.module';
 	UATDropdownMenu
   ]
 })
-export class UATDropdownMenuModule { }
+export class UATDropdownMenuModule {
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: UATDropdownMenuModule,
+      providers: []
+    };
+  }
+ }

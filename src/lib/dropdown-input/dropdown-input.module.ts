@@ -1,4 +1,4 @@
-import { NgModule, OpaqueToken } from '@angular/core';
+import { NgModule, ModuleWithProviders, OpaqueToken } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UATDropdownInput } from './dropdown-input.component';
 import { UATSlidingPanelModule } from '../sliding-panel/sliding-panel.module';
@@ -14,15 +14,11 @@ import { UATDynamicComponentDirective } from './dynamic-component.directive';
   imports: [
     CommonModule,
     UATSlidingPanelModule,
-    //UATContainersModule,
-
   ],
   
   declarations: [
     UATDropdownInput,
-    UATDropdownInputDirective,
-
-    // temp 
+    UATDropdownInputDirective, 
     UATDropdownInputItemsList,
     UATDynamicComponentDirective
   ],
@@ -31,4 +27,11 @@ import { UATDynamicComponentDirective } from './dynamic-component.directive';
 	  UATDropdownInput,
   ]
 })
-export class UATDropdownInputModule { }
+export class UATDropdownInputModule {
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: UATDropdownInputModule,
+      providers: []
+    };
+  }
+}
