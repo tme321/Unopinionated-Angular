@@ -6,8 +6,8 @@ import { DebugElement } from '@angular/core';
 import { UATDynamicComponentList } from './dynamic-component-list.component';
 
 describe('UATDynamicComponentList', () => {
-  let component: UATDynamicComponentList;
-  let fixture: ComponentFixture<UATDynamicComponentList>;
+  let component: UATDynamicComponentList<any>;
+  let fixture: ComponentFixture<UATDynamicComponentList<any>>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({

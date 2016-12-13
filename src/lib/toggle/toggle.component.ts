@@ -1,9 +1,10 @@
 import { Component, Input, Output, EventEmitter, HostBinding } from '@angular/core';
 
 @Component({
+  moduleId: module.id,
   selector: '[uat-toggle]',
-  templateUrl: './toggle.component.html',
-  styleUrls: ['./toggle.component.css'],
+  templateUrl: 'toggle.component.html',
+  styleUrls: ['toggle.component.css'],
   host: {
     '(click)':"onClick($event)",
     '(mouseenter)': "onMouseEnter($event)"

@@ -20,12 +20,13 @@ import { UATDropdownInputItemsList } from './dropdown-input-item-list.component'
 import { UATDynamicComponentDirective } from './dynamic-component.directive';
 import { DropdownInputItemsMouseEvent, DropdownInputItemChosenEvent } from './dropdown-input-item-events.interface';
 
-export const DropdownInputServiceToken: OpaqueToken = new OpaqueToken('DdIService');
+export const UATDropdownInputServiceToken: OpaqueToken = new OpaqueToken('DdIService');
 
 @Component({
+  moduleId: module.id,
   selector: 'div[uat-dropdown-input]',
-  templateUrl: './dropdown-input.component.html',
-  styleUrls: ['./dropdown-input.component.css'],
+  templateUrl: 'dropdown-input.component.html',
+  styleUrls: ['dropdown-input.component.css'],
   host: {
     '(focusout)':"onHostFocusOut($event)",
     '(focusin)':"onHostFocusIn($event)",
@@ -141,7 +142,7 @@ export class UATDropdownInput {
   private dynamicContainers: UATDynamicComponentDirective[];
 
   constructor(
-    @Inject(DropdownInputServiceToken) private diServ: DropdownInputService,
+    @Inject(UATDropdownInputServiceToken) private diServ: DropdownInputService,
     private ele: ElementRef,
     private chDetRef: ChangeDetectorRef) { }
 

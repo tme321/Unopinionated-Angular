@@ -30,28 +30,6 @@ export class NavigationLink {
 }
 
 @Component({
-    template: `<label class="menu-label">{{MenuLabelModel.text}}</label>`,
-    changeDetection: ChangeDetectionStrategy.OnPush
-})
-export class MenuLabel {
-    @Input() model: MenuLabelModel;
-
-    constructor() {
-    }
-}
-
-@Component({
-    template: `<a class="button" (click)="model.onClick($event)">{{model.text}}</a>`,
-    changeDetection: ChangeDetectionStrategy.OnPush
-})
-export class MenuButton {
-    @Input() model: MenuButtonModel;
-
-    constructor() {
-    }
-}
-
-@Component({
     template: `<input class="menu-input"
 				[(ngModel)]="input"
 				(ngModelChange)="inputChanged($event)"				

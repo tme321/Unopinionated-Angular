@@ -14,9 +14,10 @@ import {UATMenuItem} from '../common/menu-item.directive';
 import {UATMenuItemRight} from './menu-item-right.directive';
 
 @Component({
+  moduleId: module.id,
   selector: 'div[uat-hamburger-menu]',
-  templateUrl: './hamburger-menu.component.html',
-  styleUrls: ['./hamburger-menu.component.css'],
+  templateUrl: 'hamburger-menu.component.html',
+  styleUrls: ['hamburger-menu.component.css'],
   host: {
     '[class.expanded]': "expanded",
     '[class.collapsed]': "!expanded",

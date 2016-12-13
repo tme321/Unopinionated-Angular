@@ -1,7 +1,7 @@
 import { Component, ContentChildren, QueryList, ChangeDetectorRef } from '@angular/core';
-import { DynamicComponentData } from '../lib/common/dynamic-component-data.interface';
+import { DynamicComponentData } from '../lib';
 import { NavigationLink, MenuInput } from './menu-items.components';
-import { DropdownInputItemChosenEvent } from '../lib/dropdown-input/dropdown-input-item-events.interface';
+import { DropdownInputItemChosenEvent } from '../lib';
 
 @Component({
   selector: 'app-root',

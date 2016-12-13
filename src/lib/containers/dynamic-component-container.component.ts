@@ -10,6 +10,7 @@ import {
 import { DynamicComponentData } from '../common/dynamic-component-data.interface';
 
 @Component({
+    moduleId: module.id,
     selector: 'uat-dynamic-component-container',
     templateUrl: 'dynamic-component-container.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush

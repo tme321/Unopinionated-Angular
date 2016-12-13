@@ -17,6 +17,7 @@ import { UATDynamicComponentContainer } from './dynamic-component-container.comp
 import { DynamicContainerMouseEvent } from '../common/dynamic-component-events.interface';
 
 @Component({
+    moduleId: module.id,
     selector:'ul[uat-dynamic-component-list]',
     templateUrl: 'dynamic-component-list.component.html',
 })

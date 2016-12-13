@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { SlidingPanelComponent } from './sliding-panel.component';
+import { UATSlidingPanel } from './sliding-panel.component';
 
 describe('SlidingPanelComponent', () => {
-  let component: SlidingPanelComponent;
-  let fixture: ComponentFixture<SlidingPanelComponent>;
+  let component: UATSlidingPanel;
+  let fixture: ComponentFixture<UATSlidingPanel>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SlidingPanelComponent ]
+      declarations: [ UATSlidingPanel ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SlidingPanelComponent);
+    fixture = TestBed.createComponent(UATSlidingPanel);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

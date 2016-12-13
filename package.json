@@ -1,17 +1,19 @@
 {
   "name": "unopinionated-angular-toolbox",
-  "version": "0.0.2",
+  "version": "0.0.7",
   "license": "MIT",
-  "main": "./lib/index.js",
-  "module": "./lib/index.js",
-  "typings": "./lib/index.d.ts",
+  "description": "Unopinionated Angular Toolbox",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
   "angular-cli": {},
   "scripts": {
     "start": "ng serve",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "nps" : "rm -rf dist && cd src/lib && tsc & cd .. & cd .."
   },
   "private": false,
   "dependencies": {
