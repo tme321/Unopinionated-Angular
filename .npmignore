@@ -1,5 +1,6 @@
-.vscode
-e2e
-node_modules
-src
-gulp
+/.vscode
+/e2e
+/node_modules
+/src
+/gulp
+/lib

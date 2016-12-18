@@ -1,0 +1,41 @@
+<div class="main-content">
+	<h1>
+	{{title}}
+	</h1>
+
+	<div uat-hamburger-menu
+		#hmmenu="uatHamburgerMenu"
+		expandOnQuery="(min-width : 844px)">
+		<div uat-fixed-content>
+			<a class="my-brand" [routerLink]="['/']">Home</a>
+		</div>
+		<a uat-menu-item class="nav-link" [routerLink]="['/collapsing']">Collapsing Menu</a>
+		<a uat-menu-item class="nav-link" [routerLink]="['/dropdown']">Dropdown Menu</a>
+
+		<div uat-menu-item class="inner-menu">
+			<div uat-dropdown-menu 
+				 *ngIf="hmmenu.expanded">
+				<a uat-menu-toggle>Menu</a>
+				<a uat-menu-item class="nav-link">Item A</a>
+				<a uat-menu-item class="nav-link">Item B</a>
+				<a uat-menu-item class="nav-link">Item C</a>
+			</div>
+			<div uat-slideout-menu 
+				 *ngIf="!hmmenu.expanded">
+				<a uat-menu-toggle>Menu</a>
+				<a uat-menu-item class="nav-link">Item A</a>
+				<a uat-menu-item class="nav-link">Item B</a>
+				<a uat-menu-item class="nav-link">Item C</a>
+			</div>
+		</div>
+
+		<a uat-menu-item-right class="nav-link">Item D</a>
+		<a uat-menu-item-right class="nav-link">Item E</a>
+		<div uat-menu-toggle>
+			<span *ngIf="!hmmenu.isOpen" class="material-icons">expand_more</span>
+			<span *ngIf="hmmenu.isOpen" class="material-icons">expand_less</span>
+		</div>
+	</div>
+
+	<router-outlet></router-outlet>
+</div>

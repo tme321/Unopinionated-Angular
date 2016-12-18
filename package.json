@@ -13,7 +13,8 @@
     "test": "ng test",
     "pree2e": "webdriver-manager update",
     "e2e": "protractor",
-    "nps" : "rm -rf dist && cd src/lib && tsc & cd .. & cd .."
+    "compileDemo":"cd src/demo && tsc && cd .. && cd ..",
+    "runDemo":"cd src/demo && tsc && cd .. && cd .. && gulp mv:demotemplates && gulp mvDemoLibs && gulp webserver"
   },
   "private": false,
   "dependencies": {
@@ -28,7 +29,8 @@
     "core-js": "^2.4.1",
     "rxjs": "5.0.0-beta.12",
     "ts-helpers": "^1.1.1",
-    "zone.js": "^0.6.23"
+    "zone.js": "^0.6.23",
+    "systemjs": "latest"
   },
   "devDependencies": {
     "@types/jasmine": "^2.2.30",
@@ -46,6 +48,17 @@
     "ts-node": "1.2.1",
     "tslint": "3.13.0",
     "typescript": "~2.0.3",
-    "webdriver-manager": "10.2.5"
+    "webdriver-manager": "10.2.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-cli": "^1.2.2",
+    "gulp-markdown": "^1.2.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-server-livereload": "^1.8.2",
+    "gulp-shell": "^0.5.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-transform": "^1.1.0",
+    "gulp-typescript": "^2.13.6"
   }
 }
