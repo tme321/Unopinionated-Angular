@@ -16,16 +16,19 @@ System.config({
     '@angular/router': 'vendor/@angular/router/bundles/router.umd.js',
     '@angular/platform-browser': 'vendor/@angular/platform-browser/bundles/platform-browser.umd.js',
     '@angular/platform-browser-dynamic': 'vendor/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
-    //'core-js': 'vendor/core-js',
-    //'zone.js': 'vendor/zone.js',
+
+    // traceur for es2015 modules
+    'traceur':'vendor/traceur/bin',
 
     // UAT
     'unopinionated-angular-toolbox': 'vendor/unopinionated-angular-toolbox',
   },
   packages: {
-    // Thirdparty barrels.
     'rxjs': { main: 'Rx' },
     'unopinionated-angular-toolbox': { main: 'index' },
+    'traceur':{
+        main: 'traceur'
+    },
     // Set the default extension for the root package, because otherwise the demo-app can't
     // be built within the production mode. Due to missing file extensions.
     '.': {

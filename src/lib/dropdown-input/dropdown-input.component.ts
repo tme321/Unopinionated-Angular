@@ -3,6 +3,7 @@ import {
   Input,
   Output,
   Inject,
+  forwardRef,
   EventEmitter,
   ElementRef,
   ChangeDetectionStrategy,
@@ -35,7 +36,7 @@ export const UATDropdownInputServiceToken: OpaqueToken = new OpaqueToken('DdISer
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UATDropdownInput {
-  @HostBinding('class.uat-dropdown-input') private applyHostClass = true;
+  @HostBinding('class.uat-dropdown-input') applyHostClass = true;
 
   /**
    * Set maximum number of items for the service.
@@ -108,11 +109,11 @@ export class UATDropdownInput {
     return this.panel.isShowing;
   }
 
-  @ViewChild('dropdownInput', {read: ElementRef}) private inputElementRef: ElementRef;
-  @ViewChild('panel', {read: ElementRef}) private panelElementRef: ElementRef;
+  @ViewChild('dropdownInput', {read: ElementRef}) inputElementRef: ElementRef;
+  @ViewChild('panel', {read: ElementRef}) panelElementRef: ElementRef;
 
-  @ViewChild('panel') private panel: UATSlidingPanel;
-  @ViewChild('dropdownList') private list: UATDropdownInputItemsList;
+  @ViewChild('panel') panel: UATSlidingPanel;
+  @ViewChild('dropdownList') list: UATDropdownInputItemsList;
 
   public get inputElement() {
     return (this.inputElementRef.nativeElement as HTMLInputElement);
@@ -141,12 +142,16 @@ export class UATDropdownInput {
    */
   private dynamicContainers: UATDynamicComponentDirective[];
 
-  constructor(
-    @Inject(UATDropdownInputServiceToken) private diServ: DropdownInputService,
-    private ele: ElementRef,
-    private chDetRef: ChangeDetectorRef) { }
+  public diServ: DropdownInputService;
 
-  private ngOnInit() {
+  constructor(
+    @Inject(forwardRef(()=>UATDropdownInputServiceToken)) private _diServ: DropdownInputService,
+    private ele: ElementRef,
+    private chDetRef: ChangeDetectorRef) {
+      this.diServ = _diServ;
+  }
+
+  ngOnInit() {
 
     if(this.maxItems) {
       this.diServ.setMaxItems(this.maxItems);
@@ -188,7 +193,7 @@ export class UATDropdownInput {
         ()=>{/*done*/});
   }
 
-  private ngOnDestroy(){
+  ngOnDestroy(){
     this.inputSub.unsubscribe();
     this.itemsSub.unsubscribe();
     this.diServ.clearItems();
@@ -198,7 +203,7 @@ export class UATDropdownInput {
    * Clear any previous selection criteria and
    * perform a new auto selection.
    */
-  private onNewItemContainers(
+   onNewItemContainers(
     containers: UATDynamicComponentDirective[]) {
       this.clearAutoSelection();
       this.clearSelection();
@@ -423,7 +428,7 @@ export class UATDropdownInput {
    * Enter - 'choose' the currently selected item
    * @param e
    */
-  private onKeyDown(e: KeyboardEvent) {
+   onKeyDown(e: KeyboardEvent) {
       switch (e.keyCode) {
           case EventKeys.UPARROW:
               this.clearAutoSelection();
@@ -447,7 +452,7 @@ export class UATDropdownInput {
 
 
   @HostListener('document:click',['$event']) 
-  private onOutsideClick(e: MouseEvent) {
+  onOutsideClick(e: MouseEvent) {
     if(!this.wasInsideClicked) {
       this.wasFocused = false;
       setTimeout(_=>{
@@ -461,12 +466,12 @@ export class UATDropdownInput {
   }
 
   @HostListener('click',['$event']) 
-  private onInsideClick(e: MouseEvent) {
+  onInsideClick(e: MouseEvent) {
     this.wasInsideClicked = true;
     this.wasFocused = true;
   }
 
-  private onHostFocusIn(e: FocusEvent) {
+  onHostFocusIn(e: FocusEvent) {
     if(this.hasItems){
       this.panel.show();
       this.chDetRef.markForCheck();
@@ -475,7 +480,7 @@ export class UATDropdownInput {
     this.wasFocused = true;
   }
 
-  private onHostFocusOut(e: FocusEvent){
+  onHostFocusOut(e: FocusEvent){
     this.wasFocused = false;
     setTimeout(_=>{
       if(!this.wasFocused){
@@ -484,14 +489,14 @@ export class UATDropdownInput {
       }},150);
   }
 
-  private onListItemMouseOver(e: DropdownInputItemsMouseEvent) {
+  onListItemMouseOver(e: DropdownInputItemsMouseEvent) {
     this.clearAutoSelection();
     this.clearSelection();
     this.selectedIndex = e.index;
     this.list.changeSelection(this.selectedIndex,true);
   }
 
-  private onListItemClicked(e: DropdownInputItemsMouseEvent) {
+  onListItemClicked(e: DropdownInputItemsMouseEvent) {
     this.selectedIndex = e.index;
     this.list.changeSelection(this.selectedIndex,true);
     this.chooseCurrentItem();

@@ -1,0 +1,42 @@
+div.slide-container {
+    position: relative;
+}
+
+.slide-container > div.slide-position {
+    position:absolute;
+    top:0;
+}
+
+/deep/ .slide-left > div.slide-container {
+    background-color: red;
+}
+
+/deep/ .slide-left div.slide-position {
+    left:0;
+}
+
+/deep/ .slide-right div.slide-position {
+    right:0;
+}
+
+.slide-container >> div.slide-anchor {
+    position: relative;
+}
+
+/deep/ .slide-anchor > div.uat-sliding-panel {
+    position: absolute;
+}
+
+/deep/ .slide-left div.uat-sliding-panel{
+    right:0;
+}
+
+/deep/ .slide-right div.uat-sliding-panel{
+    left:0;
+}
+
+/deep/ .slide-anchor > div.uat-sliding-panel{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}

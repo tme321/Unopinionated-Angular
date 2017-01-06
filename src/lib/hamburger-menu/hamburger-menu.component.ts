@@ -26,12 +26,12 @@ import {UATMenuItemRight} from './menu-item-right.directive';
   exportAs:'uatHamburgerMenu'
 })
 export class UATHamburgerMenu {
-  @HostBinding('class.uat-hamburger-menu') private applyHostClass = true;
+  @HostBinding('class.uat-hamburger-menu') applyHostClass = true;
 
   @ViewChild('panel') panel: UATSlidingPanel;
 
-  @ContentChildren(UATMenuItem, { read:ElementRef }) private items: QueryList<ElementRef>;
-  @ContentChildren(UATMenuItemRight, {read:ElementRef}) private rightItems: QueryList<ElementRef>;
+  @ContentChildren(UATMenuItem, { read:ElementRef }) items: QueryList<ElementRef>;
+  @ContentChildren(UATMenuItemRight, {read:ElementRef}) rightItems: QueryList<ElementRef>;
 
   public get itemElementRefs(): ElementRef[] {
     return this.items.toArray().concat(this.rightItems.toArray());
@@ -47,7 +47,7 @@ export class UATHamburgerMenu {
 
   @Input() closeOnClickOutside = true;
 
-  private toggleOnClick = true;
+  toggleOnClick = true;
 
   private _cocoInit = false;
 

@@ -1,37 +1,5 @@
-<style>
-  div.displayed {
-    flex-grow: 1;
-    flex-direction:row;
-    flex-shrink: 0;
-    display: flex;
-  }
-
-  div.menu-container {
-    position: relative;
-    height:inherit;
-    flex-direction:row;
-    display:flex;
-    align-items: center;
-    flex-shrink: 0;
-    flex-grow: 1;
-  }
-
-  div.uat-sliding-panel {
-    display:flex;
-    flex-direction:column;
-    flex-grow: 1;
-    position: absolute;
-    right:0;
-    top:100%;
-  }
-
-  div.hidden {
-    visibility: hidden;
-  }
-
-</style>
-  <div class="menu-container">
-    <div #displayedItems class="displayed">
+<div class="menu-container">
+  <div #displayedItems class="displayed">
   </div>
 
   <div  #toggle

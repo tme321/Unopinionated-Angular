@@ -12,7 +12,7 @@ import { UATSlidingPanel } from '../sliding-panel/sliding-panel.component';
   }
 })
 export class UATSlideoutMenu {
-  @HostBinding('class.uat-slideout-menu') private applyHostClass = true;
+  @HostBinding('class.uat-slideout-menu') applyHostClass = true;
 
   @Input() public showOnMouseOver = true;
   @Input() public pinOnClick = true;
@@ -25,13 +25,11 @@ export class UATSlideoutMenu {
     return this.panel.isShowing;
   }
 
-  private applyMenuClass = true;
-
-  private get slideLeft() {
+  get slideLeft() {
     return this.slideDirection === "left";
   }
 
-  private showOnInit = false;
+  showOnInit = false;
 
   constructor() { }
 }

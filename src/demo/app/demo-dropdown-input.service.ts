@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject } from 'rxjs/Rx';
-import { DropdownInputService, DropdownItemComponentData } from 'unopinionated-angular-toolbox';
+import { DropdownInputService} from 'unopinionated-angular-toolbox';
+import { DropdownItemComponentData } from 'unopinionated-angular-toolbox';
 import { NavigationLink } from './menu-items.components';
 
 /**

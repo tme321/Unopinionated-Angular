@@ -42,7 +42,7 @@ export class UATDynamicComponentDirective {
 
       if (compData.providers) {
         inputProviders = Object.keys(compData.providers).map(
-          (provName) => {
+          (provName: any) => {
             return { provide: provName, useValue: compData.providers[provName] };
           });
       }

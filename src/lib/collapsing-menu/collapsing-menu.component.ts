@@ -26,7 +26,7 @@ import { UATSlidingPanel } from '../sliding-panel/sliding-panel.component';
   exportAs: "uatCollapsingMenu"
 })
 export class UATCollapsingMenu {
-  @HostBinding('class.uat-collapsing-menu') private applyHostClass = true;
+  @HostBinding('class.uat-collapsing-menu') applyHostClass = true;
 
   /**
    * Controls whether the collapsed items should  
@@ -47,13 +47,13 @@ export class UATCollapsingMenu {
   @Input() closeOnClickOutside = true;
 
   @ContentChildren(UATMenuItem, {read:ElementRef, descendants: false}) 
-    private items: QueryList<ElementRef>;
+    items: QueryList<ElementRef>;
   @ViewChild('displayedItems', {read:ElementRef}) 
-    private displayedItems: ElementRef;
+    displayedItems: ElementRef;
   @ViewChild('collapsedItems', {read:ElementRef}) 
-    private collapsedItems: ElementRef;
+    collapsedItems: ElementRef;
   @ViewChild('toggle', {read:ElementRef}) 
-    private toggle: ElementRef;
+    toggle: ElementRef;
 
   @ViewChild('panel') panel: UATSlidingPanel;
 
@@ -90,14 +90,14 @@ export class UATCollapsingMenu {
     return this.toggle.nativeElement as HTMLDivElement;
   }
 
-  private hasOverflow = false;
+  hasOverflow = false;
 
   constructor(
     private renderer: Renderer, 
     private hostElementRef: ElementRef,
     private zone: NgZone) { }
 
-  private ngAfterViewInit() {
+  ngAfterViewInit() {
     this.calculateOverflow();
   }
 
@@ -178,7 +178,7 @@ export class UATCollapsingMenu {
    * Event handlers
    */
 
-  private  onWindowResize() {
+  onWindowResize() {
     this.calculateOverflow();
   }
 

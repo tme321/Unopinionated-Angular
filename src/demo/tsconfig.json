@@ -13,7 +13,7 @@
     "sourceMap": true,
     "target": "es5",
     "outDir": "./dist",
-    "inlineSources": true,
+    "inlineSources": false,
     "stripInternal": false,
     "removeComments": true,
     "baseUrl": "",
@@ -28,5 +28,11 @@
     "types": [
       "jasmine"
     ]
-  }
+  },
+  "compileOnSave": true,
+  "exclude": [
+    "../../node_modules/*",
+    "node_modules/*",
+    "main.aot.ts"
+  ]
 }

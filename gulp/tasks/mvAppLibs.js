@@ -37,7 +37,7 @@ gulp.task('mv:@angular', ()=>{
 });
 
 gulp.task('mv:uat', ()=>{
-    return gulp.src(['./dist/**/*.*'])
+    return gulp.src(['./dist/**/*.*','!./dist/**/*.ngfactory.ts'])
         .pipe(gulp.dest('./src/demo/dist/vendor/unopinionated-angular-toolbox'));    
 });
 
@@ -46,13 +46,20 @@ gulp.task('mv:rxjs', ()=>{
         .pipe(gulp.dest('./src/demo/dist/vendor/rxjs'));    
 });
 
+gulp.task('mv:traceur', ()=>{
+    return gulp.src(['./node_modules/traceur/**/*.*'])
+        .pipe(gulp.dest('./src/demo/dist/vendor/traceur'));    
+});
+
+
 gulp.task('mvDemoLibs', [
     'mv:core-js',
     'mv:systemjs',
     'mv:zonejs',
     'mv:@angular',
     'mv:uat',
-    'mv:rxjs'
+    'mv:rxjs',
+    'mv:traceur'
 ]);
 
 //systemjs/dist/system.src.js

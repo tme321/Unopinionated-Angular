@@ -1,0 +1,75 @@
+div.uat-hamburger-menu:host {
+}
+
+div.menu-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    min-height: inherit;
+    max-height: inherit;
+    height: inherit;
+}
+
+:host.uat-hamburger-menu .fixed-content {}
+
+:host.uat-hamburger-menu.expanded div.menu-items-container {
+    display:flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-between;
+}
+
+:host.uat-hamburger-menu.expanded .menu-items-container div.menu-items {
+    display:flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+:host.uat-hamburger-menu.expanded .menu-items-container div.menu-items-right {
+    display:flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+:host.uat-hamburger-menu.collapsed div.menu-items-container {
+    display:flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+:host.uat-hamburger-menu.collapsed .menu-items-container div.menu-items {
+    display:flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+:host.uat-hamburger-menu.collapsed .menu-items-container div.menu-items-right {
+    display:flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+
+:host.uat-hamburger-menu.expanded div.uat-sliding-panel-toggle {
+    visibility: hidden;
+    width:0;
+}
+
+
+:host.uat-hamburger-menu div.uat-sliding-panel-toggle {
+    display: inline-block;
+}
+
+:host.collapsed div.menu-items-container {
+    position: absolute;
+    top:100%;
+    left:0;
+    right:0;
+}
+
+:host.collapsed div.menu-container {
+    justify-content: space-between;
+}

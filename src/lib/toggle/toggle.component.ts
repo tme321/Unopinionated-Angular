@@ -12,7 +12,7 @@ import { Component, Input, Output, EventEmitter, HostBinding } from '@angular/co
   exportAs: 'uatToggle'
 })
 export class UATToggle {
-  @HostBinding('class.uat-toggle') private applyHostClass = true;
+  @HostBinding('class.uat-toggle') applyHostClass = true;
 
   @Input() set state(s:boolean) { 
     this._state = s;

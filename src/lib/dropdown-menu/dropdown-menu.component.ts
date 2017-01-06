@@ -18,7 +18,7 @@ import { UATSlidingPanel } from '../sliding-panel/sliding-panel.component';
   exportAs:'uatDropdownMenu'
 })
 export class UATDropdownMenu {
-  @HostBinding('class.uat-dropdown-menu') private applyHostClass = true;
+  @HostBinding('class.uat-dropdown-menu') applyHostClass = true;
 
   @Input() public showOnHover = false;
   @Input() public toggleOnClick = true;
@@ -30,13 +30,7 @@ export class UATDropdownMenu {
     return this.panel.isShowing;
   }
 
-  private showOnInit = false;
+  showOnInit = false;
 
   constructor() { }
-
-  ngOnInit() {
-  }
-
-  private ngAfterViewInit() {
-  }
 }

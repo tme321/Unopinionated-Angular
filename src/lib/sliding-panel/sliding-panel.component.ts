@@ -133,7 +133,7 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UATSlidingPanel {
-  @HostBinding('class.uat-sliding-panel') private applyHostClass = true;
+  @HostBinding('class.uat-sliding-panel') applyHostClass = true;
 
   /**
    * Specify the direction of the panels sliding animation.
@@ -182,8 +182,8 @@ export class UATSlidingPanel {
     return this.slideDirection === 'horizontal';
   }
 
-  private horizontalState: 'init' | 'show' | 'hide' = 'init';
-  private verticalState: 'init' | 'show' | 'hide' = 'init';
+  horizontalState: 'init' | 'show' | 'hide' = 'init';
+  verticalState: 'init' | 'show' | 'hide' = 'init';
 
   private overflowStyle = 'hidden';
 
@@ -192,20 +192,20 @@ export class UATSlidingPanel {
   ngOnInit() {
     if(!this.showOnInit) {
         if(this.isHorizontal) {
-          this.zone.run(()=> setTimeout(_=>{
+          this.zone.run(()=> setTimeout((_:any)=>{
             this.verticalState = 'show';
             this.horizontalState = 'hide';
           }));
         }
         else {
-          this.zone.run(()=> setTimeout(_=>{
+          this.zone.run(()=> setTimeout((_:any)=>{
             this.horizontalState = 'show';
             this.verticalState = 'hide';
           }));
         }
     }
     else {
-      this.zone.run(()=> setTimeout(_=>{
+      this.zone.run(()=> setTimeout((_:any)=>{
         this.verticalState = 'show';
         this.horizontalState = 'show';
       }));

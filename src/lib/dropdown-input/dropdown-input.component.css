@@ -1,0 +1,15 @@
+div.dropdown-anchor {
+    position:relative;
+}
+
+.dropdown-anchor > div.uat-sliding-panel {
+    position: absolute;
+}
+
+.dropdown-anchor > .uat-sliding-panel ul.uat-dropdown-input-items-list{
+    display:flex;
+    flex:1;
+    flex-direction:column;
+    padding-left:0;
+    list-style:none;
+}

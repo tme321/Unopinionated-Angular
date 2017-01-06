@@ -21,7 +21,7 @@ import { UATSlidingPanel } from './sliding-panel.component';
   exportAs:'uatSlidingPanelToggle'
 })
 export class UATSlidingPanelToggle {
-  @HostBinding('class.uat-sliding-panel-toggle') private applyHostClass = true;
+  @HostBinding('class.uat-sliding-panel-toggle') applyHostClass = true;
 
   /**
    * The panel that the toggle is attached to.
@@ -79,7 +79,7 @@ export class UATSlidingPanelToggle {
   constructor(private zone: NgZone) {
   }
 
-  private ngOnInit() {
+  ngOnInit() {
     if(!this.panel){
       throw new ReferenceError('No UATSlidingPanel component supplied to ' + 
                                'the uat-sliding-panel-toggle directive ' + 
@@ -116,7 +116,7 @@ export class UATSlidingPanelToggle {
       })
   }
 
-  private ngOnDestroy() {
+  ngOnDestroy() {
     /*
      * Clean up panel event syncing.
      */
@@ -126,7 +126,7 @@ export class UATSlidingPanelToggle {
   }
 
 
-  private onClick(e:MouseEvent){
+  onClick(e:MouseEvent){
     this.toggleWasClicked = true;
     this.clickedNotEntered = true;
 
@@ -170,7 +170,7 @@ export class UATSlidingPanelToggle {
     }
   }
 
-  private onOutsideClick(e: MouseEvent) {
+  onOutsideClick(e: MouseEvent) {
     if(this.closeOnClickOutside && 
        !this.panelWasClicked &&
        !this.toggleWasClicked) {
@@ -185,7 +185,7 @@ export class UATSlidingPanelToggle {
     this.panelWasClicked = false;
   }
 
-  private onMouseEnter(e: MouseEvent) {
+  onMouseEnter(e: MouseEvent) {
     this.isHovering = true;
 
     if(this.showOnHover && !this.clickedNotEntered) {
@@ -193,7 +193,7 @@ export class UATSlidingPanelToggle {
     }
   }
 
-  private onMouseLeave(e: MouseEvent) {
+  onMouseLeave(e: MouseEvent) {
     this.isHovering = false;
 
     if(this.showOnHover) {

@@ -36,11 +36,11 @@ const UAT_MODULES = [
 export class UATRootModule { }
 
 @NgModule({
-  imports:    UAT_MODULES,
-  exports:    UAT_MODULES,
+  imports: UAT_MODULES,
+  exports: UAT_MODULES,
 })
 export class UATModule {
   static forRoot(): ModuleWithProviders {
-    return {ngModule: UATRootModule};
+    return {ngModule: UATRootModule, providers: []};
   }
 }

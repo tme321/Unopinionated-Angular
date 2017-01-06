@@ -22,10 +22,11 @@ import { DropdownItemComponentData } from './dropdown-input-service.interface';
     moduleId: module.id,
     selector:'ul[uat-dropdown-input-items-list]',
     templateUrl: 'dropdown-input-item-list.component.html',
+    styleUrls: ['dropdown-input-item-list.component.css'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UATDropdownInputItemsList {
-    @HostBinding('class.uat-dropdown-input-items-list') private applyHostClass = true;
+    @HostBinding('class.uat-dropdown-input-items-list') applyHostClass = true;
 
     @Input() public dynamicComponentsData: DropdownItemComponentData[] = [];
 
@@ -69,7 +70,7 @@ export class UATDropdownInputItemsList {
         this.chDetRef.detectChanges();
     }
 
-    private ngAfterViewInit() {
+    ngAfterViewInit() {
         // emit the original list
         this.newContainers.emit(this.dynamicComponentContainers.toArray());
         
@@ -92,13 +93,13 @@ export class UATDropdownInputItemsList {
                     });
     }
 
-    private ngOnDestroy() {
+    ngOnDestroy() {
         if (this.newContainersSub) {
             this.newContainersSub.unsubscribe();
         }
     }
 
-    private onListItemClick(
+    onListItemClick(
         e: MouseEvent, 
         index: number){
         this.listItemClick.emit({
@@ -107,7 +108,7 @@ export class UATDropdownInputItemsList {
         });
     }
 
-    private onListItemMouseOver(
+    onListItemMouseOver(
         e: MouseEvent, 
         index: number) {
         this.listItemMouseOver.emit({

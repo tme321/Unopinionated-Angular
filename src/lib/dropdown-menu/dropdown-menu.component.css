@@ -1,0 +1,14 @@
+div.dropdown-container {
+    position: relative;
+}
+
+/deep/ .dropdown-container > div.uat-sliding-panel {
+    position: absolute;
+    top: 0;
+}
+
+.dropdown-container div.uat-sliding-panel{
+    display: flex;
+    flex:1;
+    flex-direction:column;
+}

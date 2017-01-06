@@ -40,7 +40,7 @@ export class NavigationLink {
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MenuInput {
-    private input: string;
+    input: string;
 	
     constructor() {
     }

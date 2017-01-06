@@ -3,6 +3,8 @@
 # compiled output
 /dist
 /src/demo/dist
+/src/demo/aot
+/src/lib/aot
 /tmp
 
 # dependencies
