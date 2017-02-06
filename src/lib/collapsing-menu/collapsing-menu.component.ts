@@ -18,8 +18,8 @@ import { UATSlidingPanel } from '../sliding-panel/sliding-panel.component';
 @Component({
   moduleId: module.id,
   selector: 'div[uat-collapsing-menu]',
-  templateUrl: 'collapsing-menu.component.html',
-  styleUrls: ['collapsing-menu.component.css'],
+  templateUrl: './collapsing-menu.component.html',
+  styleUrls: ['./collapsing-menu.component.css'],
   host:{
     '(window:resize)': "onWindowResize()",
   },

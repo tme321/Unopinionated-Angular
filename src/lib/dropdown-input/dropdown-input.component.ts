@@ -26,8 +26,8 @@ export const UATDropdownInputServiceToken: OpaqueToken = new OpaqueToken('DdISer
 @Component({
   moduleId: module.id,
   selector: 'div[uat-dropdown-input]',
-  templateUrl: 'dropdown-input.component.html',
-  styleUrls: ['dropdown-input.component.css'],
+  templateUrl: './dropdown-input.component.html',
+  styleUrls: ['./dropdown-input.component.css'],
   host: {
     '(focusout)':"onHostFocusOut($event)",
     '(focusin)':"onHostFocusIn($event)",

@@ -3,11 +3,6 @@
     "declaration": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "lib": [
-      "es6", 
-      "es2015",
-      "dom"
-    ],
     "noImplicitAny": false,
     "target": "es5",
     "module": "es2015",

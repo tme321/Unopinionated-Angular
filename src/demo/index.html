@@ -12,24 +12,9 @@
 </head>
 <body>
   <app-root>Loading...</app-root>
-
-  <script src="/vendor/core-js/client/core.js"></script>
-  <script src="/vendor/systemjs/dist/system.src.js"></script>
-  <script src="/vendor/zone.js/dist/zone.js"></script>
-
-  <script src="/system.config.js"></script>
-
-  <script>
-    System.import('main').then(null, console.error.bind(console));
-  </script>
-
-
-<!--
-  <script>
-    System.import('/system.config.js').then(function () {
-      System.import('main');
-    }).catch(console.error.bind(console));
-  </script>
-  -->
+  <footer>
+    <script src="/bundles/polyfills.bundle.js"></script>
+    <script src="/bundles/app.bundle.js"></script>
+  </footer>
 </body>
 </html>

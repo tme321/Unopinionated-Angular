@@ -13,8 +13,8 @@ import { UATSlidingPanel } from '../sliding-panel/sliding-panel.component';
 @Component({
   moduleId: module.id,
   selector: 'div[uat-dropdown-menu]',
-  templateUrl: 'dropdown-menu.component.html',
-  styleUrls: ['dropdown-menu.component.css'],
+  templateUrl: './dropdown-menu.component.html',
+  styleUrls: ['./dropdown-menu.component.css'],
   exportAs:'uatDropdownMenu'
 })
 export class UATDropdownMenu {

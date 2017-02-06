@@ -1,3 +1,4 @@
+/*
 import { browser, element, by } from 'protractor';
 
 export class UnopinionatedAngularToolboxPage {
@@ -9,3 +10,4 @@ export class UnopinionatedAngularToolboxPage {
     return element(by.css('app-root h1')).getText();
   }
 }
+*/

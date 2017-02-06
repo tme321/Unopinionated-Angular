@@ -15,7 +15,7 @@ import { ColorButtonComponent } from '../color-button/color-button.component';
 import { CollapsingMenuColorWidgetComponent } from '../collapsing-menu-color-widget/collapsing-menu-color-widget.component';
 import { DropdownMenuColorWidgetComponent } from '../dropdown-menu-color-widget/dropdown-menu-color-widget.component';
 
-import {UATModule} from 'unopinionated-angular-toolbox';
+import { UATModule } from 'unopinionated-angular-toolbox';
 import { UATDropdownInputServiceToken } from 'unopinionated-angular-toolbox';
 
 @NgModule({

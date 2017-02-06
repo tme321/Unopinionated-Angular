@@ -1,3 +1,4 @@
+/*
 import { UnopinionatedAngularToolboxPage } from './app.po';
 
 describe('unopinionated-angular-toolbox App', function() {
@@ -12,3 +13,4 @@ describe('unopinionated-angular-toolbox App', function() {
     expect(page.getParagraphText()).toEqual('app works!');
   });
 });
+*/

@@ -6,6 +6,7 @@ import { UATSlideoutMenuModule } from './slideout-menu/index';
 import { UATDropdownInputModule } from './dropdown-input/index';
 import { UATHamburgerMenuModule } from './hamburger-menu/index';
 import { UATCollapsingMenuModule } from './collapsing-menu/index';
+import { UATMultiSelectModule } from './multi-select/index';
 import { UATCommonModule } from './common/index';
 
 const UAT_MODULES = [    
@@ -15,6 +16,7 @@ const UAT_MODULES = [
     UATDropdownInputModule,
     UATHamburgerMenuModule,
     UATCollapsingMenuModule,
+    UATMultiSelectModule,
     UATCommonModule,
 ];
 
@@ -27,6 +29,7 @@ const UAT_MODULES = [
     UATHamburgerMenuModule.forRoot(),
     UATCollapsingMenuModule.forRoot(),
     UATCommonModule.forRoot(),
+    UATMultiSelectModule.forRoot(),
   ],
 
   exports:[

@@ -3,8 +3,8 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   moduleId: module.id,
   selector: 'app-collapsing-menu-color-widget',
-  templateUrl: 'collapsing-menu-color-widget.component.html',
-  styleUrls: ['collapsing-menu-color-widget.component.css']
+  templateUrl: './collapsing-menu-color-widget.component.html',
+  styleUrls: ['./collapsing-menu-color-widget.component.css']
 })
 export class CollapsingMenuColorWidgetComponent implements OnInit {
   @Input() myColor = 'white';

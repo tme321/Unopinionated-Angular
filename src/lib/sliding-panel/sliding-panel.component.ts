@@ -29,8 +29,8 @@ import {
 @Component({
   moduleId: module.id,
   selector: 'div[uat-sliding-panel]',
-  templateUrl: 'sliding-panel.component.html',
-  styleUrls: ['sliding-panel.component.css'],
+  templateUrl: './sliding-panel.component.html',
+  styleUrls: ['./sliding-panel.component.css'],
   host: {
     '[@horizontalTrigger]':'horizontalState',
     '[@verticalTrigger]':'verticalState',

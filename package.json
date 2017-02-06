@@ -1,6 +1,6 @@
 {
   "name": "unopinionated-angular-toolbox",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "author": "Thomas Elliott",
   "license": "MIT",
   "description": "Unopinionated Angular Toolbox",
@@ -19,7 +19,10 @@
     "demo": "cd src/demo && tsc && cd .. && cd .. && gulp mv:demotemplates && gulp mvDemoLibs && gulp webserver",
     "demoAot": "cd src/demo && ngc -p tsconfig-aot.json && cd .. && cd .. && gulp mv:demotemplates && gulp inline-demo-resources && gulp mvDemoLibs && gulp webserver",
     "bundling": "cd dist && rollup -c",
-    "demoWebpack": "cd src/demo && webpack --config webpack.config.js"
+    "demoWebpack": "cd src/demo && webpack --config webpack.config.js",
+    "buildw": "webpack --progress --watch",
+    "ws": "gulp webserver",
+    "wbds": "webpack-dev-server --open --hot"
   },
   "private": false,
   "dependencies": {
@@ -37,10 +40,20 @@
     "rxjs": "^5.0.1",
     "systemjs": "latest",
     "ts-helpers": "^1.1.1",
-    "zone.js": "^0.7.2",
-    "unopinionated-angular-toolbox": "latest"
+    "zone.js": "^0.7.2" 
   },
   "devDependencies": {
+    "@angularclass/hmr-loader": "~3.0.2",
+    "@angularclass/hmr": "~1.2.0",
+    "awesome-typescript-loader": "~3.0.0-beta.18",
+    "ng-router-loader": "^2.1.0",
+    "angular2-template-loader": "^0.6.0",
+    "to-string-loader": "^1.1.4",
+    "css-loader": "^0.26.0",
+    "raw-loader": "0.5.1",
+    "string-replace-loader": "1.0.5",
+    "webpack-dev-server": "2.2.0",
+
     "@types/jasmine": "^2.2.30",
     "@types/node": "^6.0.42",
     "angular-cli": "1.0.0-beta.19-3",
@@ -55,7 +68,7 @@
     "protractor": "4.0.9",
     "ts-node": "1.2.1",
     "tslint": "3.13.0",
-    "typescript": "~2.0.3",
+    "typescript": "~2.0.10",
     "webdriver-manager": "10.2.5",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
@@ -75,10 +88,10 @@
     "rollup": "^0.37.0",
     "traceur": "latest",
 
-    "@ngtools/webpack": "latest",
+    "@ngtools/webpack": "^1.2",
     "live-server": "^1.1.0",
     "performance-now": "^0.2.0",
-    "raw-loader": "^0.5.1",
-    "webpack": "2.1.0-beta.22"
+    
+    "webpack": "^2.2.0"
   }
 }
