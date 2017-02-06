@@ -8,4 +8,7 @@ function main() {
         .catch((err: any) => console.error(err));
 }
 
+// This function is used in conjunction with the 
+// @angularclass/hmr-loader webpack plugin to 
+// support hot module reloading
 bootloader(main);

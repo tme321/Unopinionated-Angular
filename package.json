@@ -1,28 +1,23 @@
 {
   "name": "unopinionated-angular-toolbox",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "author": "Thomas Elliott",
   "license": "MIT",
   "description": "Unopinionated Angular Toolbox",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "typings": "./dist/index.d.ts",
+  "main": "./dist/lib/index.js",
+  "module": "./dist/lib/index.js",
+  "typings": "./dist/lib/index.d.ts",
   "angular-cli": {},
   "scripts": {
-    "start": "ng serve",
+    "start": "webpack-dev-server --open --hot", 
     "lint": "tslint \"src/**/*.ts\"",
-    "test": "ng test",
     "pree2e": "webdriver-manager update",
     "e2e": "protractor",
-    "build": "cd src/lib && tsc && cd .. && cd .. && gulp mv:templates",
-    "buildAot": "cd src/lib && ngc -p tsconfig-aot.json && cd .. && cd .. && gulp mv:templates && gulp inline-resources",
-    "demo": "cd src/demo && tsc && cd .. && cd .. && gulp mv:demotemplates && gulp mvDemoLibs && gulp webserver",
-    "demoAot": "cd src/demo && ngc -p tsconfig-aot.json && cd .. && cd .. && gulp mv:demotemplates && gulp inline-demo-resources && gulp mvDemoLibs && gulp webserver",
-    "bundling": "cd dist && rollup -c",
-    "demoWebpack": "cd src/demo && webpack --config webpack.config.js",
-    "buildw": "webpack --progress --watch",
-    "ws": "gulp webserver",
-    "wbds": "webpack-dev-server --open --hot"
+    "build": "cd src/lib && ngc -p tsconfig-aot.json && cd .. && cd .. && gulp mv:templates && gulp inline-resources",
+    "bundle": "cd dist/lib && rollup -c",
+    "publish": "npm run build && npm run bundle",
+    "buildwp": "webpack --progress",
+    "demo": "webpack-dev-server --open --hot"
   },
   "private": false,
   "dependencies": {
@@ -38,7 +33,6 @@
     "@angular/router": "~3.4.1",
     "core-js": "^2.4.1",
     "rxjs": "^5.0.1",
-    "systemjs": "latest",
     "ts-helpers": "^1.1.1",
     "zone.js": "^0.7.2" 
   },
@@ -53,10 +47,11 @@
     "raw-loader": "0.5.1",
     "string-replace-loader": "1.0.5",
     "webpack-dev-server": "2.2.0",
+    "@ngtools/webpack": "^1.2",    
+    "webpack": "^2.2.0",
 
     "@types/jasmine": "^2.2.30",
     "@types/node": "^6.0.42",
-    "angular-cli": "1.0.0-beta.19-3",
     "codelyzer": "1.0.0-beta.1",
     "jasmine-core": "2.4.1",
     "jasmine-spec-reporter": "2.5.0",
@@ -70,13 +65,13 @@
     "tslint": "3.13.0",
     "typescript": "~2.0.10",
     "webdriver-manager": "10.2.5",
+
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-clean": "^0.3.2",
     "gulp-cli": "^1.2.2",
     "gulp-markdown": "^1.2.0",
     "gulp-sass": "^2.3.2",
-    "gulp-server-livereload": "^1.8.2",
     "gulp-shell": "^0.5.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-transform": "^1.1.0",
@@ -85,13 +80,6 @@
     "gulp-htmlmin": "^3.0.0",
     "gulp-if": "^2.0.2",
     "rimraf": "^2.5.4",
-    "rollup": "^0.37.0",
-    "traceur": "latest",
-
-    "@ngtools/webpack": "^1.2",
-    "live-server": "^1.1.0",
-    "performance-now": "^0.2.0",
-    
-    "webpack": "^2.2.0"
+    "rollup": "^0.37.0"
   }
 }

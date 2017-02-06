@@ -14,7 +14,7 @@
     "moduleResolution": "node",
     "sourceMap": true,
     "mapRoot": "",
-    "outDir": "../../dist",
+    "outDir": "../../dist/lib",
     "skipLibCheck": true,
     "baseUrl": ""
   },
@@ -24,7 +24,7 @@
     "./polyfills.ts"
   ],
   "angularCompilerOptions": {
-    "genDir": "../../dist",
+    "genDir": "../../dist/lib",
     "skipTemplateCodegen": true,
     "debug": true
   }

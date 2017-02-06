@@ -120,7 +120,7 @@ module.exports = {
      * serve the demo with hot reloading.
      */
     devServer: {
-        contentBase: path.join(__dirname, "dist/demo"),
+        contentBase: path.join(__dirname, "src/demo"),
         compress: true,
         port: 4200,
         historyApiFallback: true,

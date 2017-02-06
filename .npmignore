@@ -3,6 +3,15 @@
 /node_modules
 /src
 /gulp
-/lib
 /tmp
 /node
+/dist/demo
+.editorconfig
+.gitignore
+angular-cli.json
+gulpfile.js
+karama.confg.js
+protractor.conf.js
+tsconfig.webpack.json
+tsling.json
+webpack.config.js
