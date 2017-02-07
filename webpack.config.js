@@ -2,6 +2,8 @@ var path = require('path');
 var webpack = require('webpack');
 var CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
 var ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var AOT = false;
 var isProd = false;
@@ -12,6 +14,7 @@ module.exports = {
     entry: { 
         polyfills: './src/demo/polyfills.ts',
         vendor: './src/demo/vendor.ts',
+        styles: './src/demo/styles.ts',
         uat: './src/lib/index.ts',
         app:'./src/demo/main.ts'
     },
@@ -80,13 +83,41 @@ module.exports = {
                     /\.(spec|e2e|d)\.ts$/
                     ]
             },
+            // this should load the site css
+
+            /*
+            * css loader support for *.css files (styles directory only)
+            * Loads external css styles into the DOM, supports HMR
+            *
+            */
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
+                include: [path.resolve(__dirname,'src', 'demo', 'css')]
+            },
+            /*
+            {
+                test: /\.css$/,
+                include: 
+                    path.resolve(__dirname, 'src', 'demo', 'css'),
+                
+                loader: ExtractTextPlugin.extract({ 
+                    fallbackLoader: 'style-loader', 
+                    loader: 'css-loader?sourceMap' 
+                })
+            },
+            */
+            // this should allow angular 2 components to load their specific css
             {
                 test: /\.css$/,
                 use: ['to-string-loader', 'css-loader'],
                 exclude: [
-                    path.resolve(__dirname, 'src/demo/styles.css'),
-                    path.resolve(__dirname, 'src/demo/menu.css')
+                    path.resolve(__dirname, 'src/demo/css')
                 ]
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
+                loader: 'file-loader?name=assets/[name].[hash].[ext]'
             },
             {
                 test: /\.html$/,
@@ -111,8 +142,16 @@ module.exports = {
         // this plugin properly separates the bundles into chunks
         // otherwise the entire bundle is contained in app.bundle.js
         new CommonsChunkPlugin({
-            name: ['app', 'uat', 'vendor', 'polyfills']
+            name: ['app', 'uat', 'vendor', 'polyfills', 'styles']
         }),
+
+        new ExtractTextPlugin('[name].css'),
+
+        new HtmlWebpackPlugin({
+            template: 'src/demo/index.html'
+        }),
+
+        
     ],
 
     /*

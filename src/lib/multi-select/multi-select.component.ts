@@ -10,6 +10,5 @@ export class UATMultiSelectComponent implements OnInit {
     constructor() { }
 
     ngOnInit() { 
-        
     }
 }
