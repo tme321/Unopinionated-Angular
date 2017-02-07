@@ -1,6 +1,15 @@
-﻿import { Component, Input, ChangeDetectionStrategy, ViewChild, EventEmitter, Output } from '@angular/core';
+﻿import { 
+    Component, 
+    Input, 
+    ChangeDetectionStrategy, 
+    ViewChild, 
+    EventEmitter, 
+    Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { NavigationLinkModel, MenuLabelModel, MenuButtonModel } from './menu-items.interfaces';
+import { 
+    NavigationLinkModel, 
+    MenuLabelModel, 
+    MenuButtonModel } from './menu-items.interfaces';
 
 @Component({
     moduleId: module.id,

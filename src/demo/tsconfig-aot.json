@@ -9,19 +9,28 @@
     "sourceMap": true,
     "rootDir": ".",
     "mapRoot": "",
-    "outDir": "./dist",
+    "outDir": "../../dist/demo",
     "skipLibCheck": true,
     "lib": ["es6", "es2015", "dom"],
-    "noImplicitAny": true,
-    "baseUrl": ""
+    "noImplicitAny": false,
+    "baseUrl": "",
+    "paths": {
+      "unopinionated-angular-toolbox": [
+        "../../dist/lib"
+      ]
+    }
   },
-
+  
   "typeRoots": [
       "../../node_modules/@types"
   ],
 
+  "exclude": [
+    "**/*.spec.ts"
+  ],
+
   "angularCompilerOptions": {
-    "genDir": "./app/ngfactory",
+    "genDir": "../../dist/demo",
     "entryModule": "app/app.module#AppModule",
     "debug": true
   }

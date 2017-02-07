@@ -17,7 +17,8 @@
     "bundle": "cd dist/lib && rollup -c",
     "publish": "npm run build && npm run bundle",
     "buildwp": "webpack --progress",
-    "demo": "webpack-dev-server --open --hot"
+    "demo": "webpack-dev-server --open --hot",
+    "buildDemoAot": "cd src/demo && ngc -p tsconfig-aot.json && cd .. && cd .."
   },
   "private": false,
   "dependencies": {
