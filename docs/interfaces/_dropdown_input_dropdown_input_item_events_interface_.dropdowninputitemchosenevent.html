@@ -1,0 +1,6 @@
+# Interface DropdownInputItemChosenEvent
+## Index### Properties* [component](_dropdown_input_dropdown_input_item_events_interface_.dropdowninputitemchosenevent.html#component)* [index](_dropdown_input_dropdown_input_item_events_interface_.dropdowninputitemchosenevent.html#index)* [matchText](_dropdown_input_dropdown_input_item_events_interface_.dropdowninputitemchosenevent.html#matchtext)## Properties### component: any
+* Defined in [dropdown-input/dropdown-input-item-events.interface.ts:13](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/dropdown-input/dropdown-input-item-events.interface.ts#L13)### index: number
+* Defined in [dropdown-input/dropdown-input-item-events.interface.ts:14](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/dropdown-input/dropdown-input-item-events.interface.ts#L14)### matchText: string
+* Defined in [dropdown-input/dropdown-input-item-events.interface.ts:15](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/dropdown-input/dropdown-input-item-events.interface.ts#L15)
+Generated using [TypeDoc](http://typedoc.io)

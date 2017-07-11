@@ -1,0 +1,3 @@
+# Class UATSlideoutMenuModule
+## Index### Methods* [forRoot](_slideout_menu_slideout_menu_module_.uatslideoutmenumodule.html#forroot)## Methods### Static forRoot(): ModuleWithProviders  * Defined in [slideout-menu/slideout-menu.module.ts:21](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/slideout-menu/slideout-menu.module.ts#L21)#### Returns: ModuleWithProviders
+Generated using [TypeDoc](http://typedoc.io)

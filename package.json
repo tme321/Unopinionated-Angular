@@ -19,9 +19,10 @@
     "publish": "npm run build && npm run bundle",
     "buildwp": "webpack --progress",
     "demo": "webpack-dev-server --open --hot",
-    "clean": "rm -r ./dist && rm -r ./doc",
+    "clean": "rm -r ./dist && rm -r ./docs",
     "buildDemoAot": "cd src/demo && ngc -p tsconfig-aot.json && cd .. && cd ..",
-    "genDoc": "cd src/lib && typedoc --out ../../doc --exclude \"**/+(*.spec.ts|*.css|*.*css|*.html|*.config.ts)\" --excludeExternals --theme \"../../node_modules/typedoc-md-theme/bin\""
+    "genDoc": "cd src/lib && typedoc --out ../../docs --exclude \"**/+(*.spec.ts|*.css|*.*css|*.html|*.config.ts)\" --excludeExternals --theme \"../../node_modules/typedoc-md-theme/bin\" && npm run fixDoc",
+    "fixDoc": "gulp rename:md"
   },
   "dependencies": {
     "@angular/animations": "^4.0.0",
@@ -62,6 +63,7 @@
     "gulp-htmlmin": "^3.0.0",
     "gulp-if": "^2.0.2",
     "gulp-markdown": "^1.2.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "gulp-shell": "^0.5.2",
     "gulp-sourcemaps": "^1.6.0",

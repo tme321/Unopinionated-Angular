@@ -17,3 +17,6 @@ generator in the future is likely.
 
 ## Deploying to Github Pages
 Run `npm run deploy` to deploy to Github Pages.
+
+## API Documentation
+[Library Documentation..](docs/index.md) 
