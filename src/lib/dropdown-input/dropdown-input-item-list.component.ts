@@ -19,7 +19,6 @@ import { UATDynamicComponentDirective } from './dynamic-component.directive';
 import { DropdownItemComponentData } from './dropdown-input-service.interface';
 
 @Component({
-    moduleId: module.id,
     selector:'ul[uat-dropdown-input-items-list]',
     templateUrl: './dropdown-input-item-list.component.html',
     styleUrls: ['./dropdown-input-item-list.component.css'],

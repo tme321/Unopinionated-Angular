@@ -14,7 +14,7 @@ import { UATSlidingPanelModule } from '../sliding-panel/sliding-panel.module';
   ],
   
   exports: [
-	UATDropdownMenu
+	  UATDropdownMenu
   ]
 })
 export class UATDropdownMenuModule {

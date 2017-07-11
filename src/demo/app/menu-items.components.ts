@@ -12,7 +12,6 @@ import {
     MenuButtonModel } from './menu-items.interfaces';
 
 @Component({
-    moduleId: module.id,
     template: `
                 <a class="nav-link"
                    [routerLink]="[model.value]"
@@ -40,7 +39,6 @@ export class NavigationLink {
 }
 
 @Component({
-    moduleId: module.id,
     template: `<input class="menu-input"
 				[(ngModel)]="input"
 				(ngModelChange)="inputChanged($event)"				

@@ -7,6 +7,7 @@ export default {
   globals: {
     '@angular/core': 'ng.core',
     '@angular/common': 'ng.common',
+    '@angular/animations': 'ng.animations',
     'rxjs/Rx': 'Rx',
   }
 }

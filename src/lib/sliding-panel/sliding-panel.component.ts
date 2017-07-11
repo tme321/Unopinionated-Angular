@@ -8,15 +8,17 @@ import {
   HostListener,
   NgZone,
   HostBinding,
+} from '@angular/core';
+
+import {
   trigger,
   state,
   style,
   transition,
   keyframes,
   animate,
-  group,
-  AnimationTransitionEvent
-} from '@angular/core';
+  group
+} from '@angular/animations';
 
 /**
  * A sliding panel is a div element that can be 
@@ -27,7 +29,6 @@ import {
  * public members. 
  */
 @Component({
-  moduleId: module.id,
   selector: 'div[uat-sliding-panel]',
   templateUrl: './sliding-panel.component.html',
   styleUrls: ['./sliding-panel.component.css'],
@@ -123,11 +124,9 @@ import {
             }))
           ])
         ]), 
-
         //transition('hide => show', animate('200ms ease-in')),
         //transition('show => hide', animate('200ms ease-out'))
     ])
-
   ],
   exportAs: 'uatSlidingPanel',
   changeDetection: ChangeDetectionStrategy.OnPush,

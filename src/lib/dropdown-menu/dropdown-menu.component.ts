@@ -11,7 +11,6 @@ import {UATMenuItem} from '../common/menu-item.directive';
 import { UATSlidingPanel } from '../sliding-panel/sliding-panel.component';
 
 @Component({
-  moduleId: module.id,
   selector: 'div[uat-dropdown-menu]',
   templateUrl: './dropdown-menu.component.html',
   styleUrls: ['./dropdown-menu.component.css'],

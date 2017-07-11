@@ -6,7 +6,7 @@ import { UATSlidingPanelToggle } from './sliding-panel-toggle.directive';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
   ],
   
   declarations: [

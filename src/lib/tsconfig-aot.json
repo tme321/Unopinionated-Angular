@@ -13,7 +13,6 @@
     "module": "es2015",
     "moduleResolution": "node",
     "sourceMap": true,
-    "mapRoot": "",
     "outDir": "../../dist/lib",
     "skipLibCheck": true,
     "baseUrl": ""

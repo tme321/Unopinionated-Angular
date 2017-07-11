@@ -2,7 +2,6 @@ import { Component, ContentChildren, QueryList, ChangeDetectorRef, ViewContainer
 import { NavigationLink, MenuInput } from './menu-items.components';
 
 @Component({
-  moduleId: module.id,
   selector: 'app-root',
    templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
