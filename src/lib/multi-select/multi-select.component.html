@@ -1,1 +1,20 @@
-<div>Multi Select</div>
+<input class="selections-filter" #filter [attr.placeholder]="placeholderText"/>
+<div class="container-labels">
+    <span>Items</span><span>Selected</span>
+</div>
+<div class="selections-container">
+    <div class="choices">
+        <ul>
+            <li *ngFor="let choice of choices">
+                <a (click)="onChoiceClicked(choice)">{{choice.text}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="selections">
+        <ul>
+            <li *ngFor="let selection of selections">
+                <a (click)="onSelectionClicked(selection)">{{selection.text}}</a>
+            </li>
+        </ul>
+    </div>
+</div>

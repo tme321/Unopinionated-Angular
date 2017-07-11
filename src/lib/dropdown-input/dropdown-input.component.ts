@@ -24,7 +24,6 @@ import { DropdownInputItemsMouseEvent, DropdownInputItemChosenEvent } from './dr
 export const UATDropdownInputServiceToken: OpaqueToken = new OpaqueToken('DdIService');
 
 @Component({
-  moduleId: module.id,
   selector: 'div[uat-dropdown-input]',
   templateUrl: './dropdown-input.component.html',
   styleUrls: ['./dropdown-input.component.css'],

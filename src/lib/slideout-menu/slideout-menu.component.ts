@@ -2,7 +2,6 @@ import { Component, Input, HostBinding, ViewChild } from '@angular/core';
 import { UATSlidingPanel } from '../sliding-panel/sliding-panel.component';
 
 @Component({
-  moduleId: module.id,
   selector: 'div[uat-slideout-menu]',
   templateUrl: './slideout-menu.component.html',
   styleUrls: ['./slideout-menu.component.css'],

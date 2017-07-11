@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app.routes';
@@ -35,6 +36,7 @@ import { UATDropdownInputServiceToken } from 'unopinionated-angular-toolbox';
     FormsModule,
 	  ReactiveFormsModule,
     HttpModule,
+    BrowserAnimationsModule,
 	  RouterModule,
 	  AppRoutingModule,
     UATModule.forRoot(),

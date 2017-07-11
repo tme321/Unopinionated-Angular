@@ -1,0 +1,33 @@
+:host div {
+    display: flex;
+    flex-direction: column;
+}
+
+input.selections-filter {
+    justify-content: center;
+}
+
+div.container-labels,
+div.selections-container {
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.selections-container ul {
+    padding-left: 0;
+}
+
+.choices ul {
+    list-style: none;
+}
+
+.selections ul {
+    list-style: none;
+}
+
+/* temp */
+div.container-labels {
+    border-bottom: 1px black solid;
+}
