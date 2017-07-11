@@ -6,3 +6,4 @@ var inline = require('./tasks/inline');
 var inlineDemo = require('./tasks/inlineDemo');
 var minify = require('./tasks/minify');
 var genDoc = require('./tasks/generateDocumentation');
+var fixDoc = require('./tasks/renameMarkdown');
