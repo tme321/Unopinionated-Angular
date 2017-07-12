@@ -1,17 +1,607 @@
-# Class UATSlidingPanel
-A sliding panel is a div element that can beset to slide horizontally or vertically.It can be tied to a slidiing panel toggleor can be shown or hidden by calling thepublic members.
-## Index### Constructors* [constructor](_sliding_panel_sliding_panel_component_.uatslidingpanel.html#constructor)### Properties* [applyHostClass](_sliding_panel_sliding_panel_component_.uatslidingpanel.html#applyhostclass)* [chRef](_sliding_panel_sliding_panel_component_.uatslidingpanel.html#chref)* [clickPanel](_sliding_panel_sliding_panel_component_.uatslidingpanel.html#clickpanel)* [horizontalState](_sliding_panel_sliding_panel_component_.uatslidingpanel.html#horizontalstate)* [mouseEnterPanel](_sliding_panel_sliding_panel_component_.uatslidingpanel.html#mouseenterpanel)* [mouseLeavePanel](_sliding_panel_sliding_panel_component_.uatslidingpanel.html#mouseleavepanel)* [mouseOverPanel](_sliding_panel_sliding_panel_component_.uatslidingpanel.html#mouseoverpanel)* [overflowStyle](_sliding_panel_sliding_panel_component_.uatslidingpanel.html#overflowstyle)* [pinned](_sliding_panel_sliding_panel_component_.uatslidingpanel.html#pinned)* [showOnInit](_sliding_panel_sliding_panel_component_.uatslidingpanel.html#showoninit)* [slideDirection](_sliding_panel_sliding_panel_component_.uatslidingpanel.html#slidedirection)* [verticalState](_sliding_panel_sliding_panel_component_.uatslidingpanel.html#verticalstate)* [zone](_sliding_panel_sliding_panel_component_.uatslidingpanel.html#zone)### Accessors* [isHorizontal](_sliding_panel_sliding_panel_component_.uatslidingpanel.html#ishorizontal)* [isShowing](_sliding_panel_sliding_panel_component_.uatslidingpanel.html#isshowing)### Methods* [hide](_sliding_panel_sliding_panel_component_.uatslidingpanel.html#hide)* [ngOnInit](_sliding_panel_sliding_panel_component_.uatslidingpanel.html#ngoninit)* [show](_sliding_panel_sliding_panel_component_.uatslidingpanel.html#show)* [toggle](_sliding_panel_sliding_panel_component_.uatslidingpanel.html#toggle)## Constructors### new UATSlidingPanel(chRef: ChangeDetectorRef, zone: NgZone): [UATSlidingPanel](_sliding_panel_sliding_panel_component_.uatslidingpanel.html)  * Defined in [sliding-panel/sliding-panel.component.ts:187](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/sliding-panel/sliding-panel.component.ts#L187)#### Parameters| Name | Type | Description || ---- | ---- | ---- || chRef | ChangeDetectorRef|  || zone | NgZone|  |#### Returns: [UATSlidingPanel](_sliding_panel_sliding_panel_component_.uatslidingpanel.html)## Properties### applyHostClass: boolean
-* Defined in [sliding-panel/sliding-panel.component.ts:135](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/sliding-panel/sliding-panel.component.ts#L135)### Private chRef: ChangeDetectorRef
-* Defined in [sliding-panel/sliding-panel.component.ts:189](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/sliding-panel/sliding-panel.component.ts#L189)### clickPanel: EventEmitter<MouseEvent>
-Event for when the panel is clicked.* Defined in [sliding-panel/sliding-panel.component.ts:167](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/sliding-panel/sliding-panel.component.ts#L167)### horizontalState: "init" | "show" | "hide"
-* Defined in [sliding-panel/sliding-panel.component.ts:184](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/sliding-panel/sliding-panel.component.ts#L184)### mouseEnterPanel: EventEmitter<MouseEvent>
-	Event for when the mouse enters the panel.* Defined in [sliding-panel/sliding-panel.component.ts:152](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/sliding-panel/sliding-panel.component.ts#L152)### mouseLeavePanel: EventEmitter<MouseEvent>
-		Event for when the mouse leaves the panel.* Defined in [sliding-panel/sliding-panel.component.ts:157](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/sliding-panel/sliding-panel.component.ts#L157)### mouseOverPanel: EventEmitter<MouseEvent>
-			Event for when the mouse is over the panel.* Defined in [sliding-panel/sliding-panel.component.ts:162](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/sliding-panel/sliding-panel.component.ts#L162)### Private overflowStyle: string
-			* Defined in [sliding-panel/sliding-panel.component.ts:187](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/sliding-panel/sliding-panel.component.ts#L187)### pinned: boolean
-			* Defined in [sliding-panel/sliding-panel.component.ts:169](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/sliding-panel/sliding-panel.component.ts#L169)### showOnInit: boolean
-			Specify whether the menu should initialize in the showingor hidden state.  Defaults to false.* Defined in [sliding-panel/sliding-panel.component.ts:147](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/sliding-panel/sliding-panel.component.ts#L147)### slideDirection: "horizontal" | "vertical"
-			Specify the direction of the panels sliding animation.'horizontal' or 'veritcal'* Defined in [sliding-panel/sliding-panel.component.ts:141](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/sliding-panel/sliding-panel.component.ts#L141)### verticalState: "init" | "show" | "hide"
-			* Defined in [sliding-panel/sliding-panel.component.ts:185](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/sliding-panel/sliding-panel.component.ts#L185)### Private zone: NgZone
-			* Defined in [sliding-panel/sliding-panel.component.ts:189](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/sliding-panel/sliding-panel.component.ts#L189)## Accessors### isHorizontal* get (): boolean  * Defined in [sliding-panel/sliding-panel.component.ts:180](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/sliding-panel/sliding-panel.component.ts#L180)#### Returns: boolean### isShowing* get (): boolean  * Defined in [sliding-panel/sliding-panel.component.ts:171](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/sliding-panel/sliding-panel.component.ts#L171)#### Returns: boolean## Methods### hide(): voidHide the panel with a sliding animation.  * Defined in [sliding-panel/sliding-panel.component.ts:229](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/sliding-panel/sliding-panel.component.ts#L229)#### Returns: void### ngOnInit(): void  * Defined in [sliding-panel/sliding-panel.component.ts:191](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/sliding-panel/sliding-panel.component.ts#L191)#### Returns: void### show(): voidShow the panel with a sliding animation.  * Defined in [sliding-panel/sliding-panel.component.ts:217](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/sliding-panel/sliding-panel.component.ts#L217)#### Returns: void### toggle(): voidToggle the panel state with a sliding animation.  * Defined in [sliding-panel/sliding-panel.component.ts:241](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/sliding-panel/sliding-panel.component.ts#L241)#### Returns: void
-			Generated using [TypeDoc](http://typedoc.io)
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>UATSlidingPanel | unopinionated-angular-toolbox</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">unopinionated-angular-toolbox</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/_sliding_panel_sliding_panel_component_.html">&quot;sliding-panel/sliding-panel.component&quot;</a>
+				</li>
+				<li>
+					<a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html">UATSlidingPanel</a>
+				</li>
+			</ul>
+			<h1>Class UATSlidingPanel</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A sliding panel is a div element that can be
+						set to slide horizontally or vertically.</p>
+					</div>
+					<p>It can be tied to a slidiing panel toggle
+						or can be shown or hidden by calling the
+					public members.</p>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">UATSlidingPanel</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#applyhostclass" class="tsd-kind-icon">apply<wbr>Host<wbr>Class</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#chref" class="tsd-kind-icon">ch<wbr>Ref</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#clickpanel" class="tsd-kind-icon">click<wbr>Panel</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#horizontalstate" class="tsd-kind-icon">horizontal<wbr>State</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#mouseenterpanel" class="tsd-kind-icon">mouse<wbr>Enter<wbr>Panel</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#mouseleavepanel" class="tsd-kind-icon">mouse<wbr>Leave<wbr>Panel</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#mouseoverpanel" class="tsd-kind-icon">mouse<wbr>Over<wbr>Panel</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#overflowstyle" class="tsd-kind-icon">overflow<wbr>Style</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#pinned" class="tsd-kind-icon">pinned</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#showoninit" class="tsd-kind-icon">show<wbr>OnInit</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#slidedirection" class="tsd-kind-icon">slide<wbr>Direction</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#verticalstate" class="tsd-kind-icon">vertical<wbr>State</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#zone" class="tsd-kind-icon">zone</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Accessors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#ishorizontal" class="tsd-kind-icon">is<wbr>Horizontal</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#isshowing" class="tsd-kind-icon">is<wbr>Showing</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#hide" class="tsd-kind-icon">hide</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#ngoninit" class="tsd-kind-icon">ng<wbr>OnInit</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#show" class="tsd-kind-icon">show</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#toggle" class="tsd-kind-icon">toggle</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new UATSliding<wbr>Panel<span class="tsd-signature-symbol">(</span>chRef<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ChangeDetectorRef</span>, zone<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">NgZone</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html" class="tsd-signature-type">UATSlidingPanel</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tme321/Unopinionated-Angular/blob/68c275f/src/lib/sliding-panel/sliding-panel.component.ts#L187">sliding-panel/sliding-panel.component.ts:187</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>chRef: <span class="tsd-signature-type">ChangeDetectorRef</span></h5>
+								</li>
+								<li>
+									<h5>zone: <span class="tsd-signature-type">NgZone</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html" class="tsd-signature-type">UATSlidingPanel</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="applyhostclass" class="tsd-anchor"></a>
+					<h3>apply<wbr>Host<wbr>Class</h3>
+					<div class="tsd-signature tsd-kind-icon">apply<wbr>Host<wbr>Class<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;true</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tme321/Unopinionated-Angular/blob/68c275f/src/lib/sliding-panel/sliding-panel.component.ts#L135">sliding-panel/sliding-panel.component.ts:135</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="chref" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> ch<wbr>Ref</h3>
+					<div class="tsd-signature tsd-kind-icon">ch<wbr>Ref<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ChangeDetectorRef</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tme321/Unopinionated-Angular/blob/68c275f/src/lib/sliding-panel/sliding-panel.component.ts#L189">sliding-panel/sliding-panel.component.ts:189</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="clickpanel" class="tsd-anchor"></a>
+					<h3>click<wbr>Panel</h3>
+					<div class="tsd-signature tsd-kind-icon">click<wbr>Panel<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">MouseEvent</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new EventEmitter&lt;MouseEvent&gt;()</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tme321/Unopinionated-Angular/blob/68c275f/src/lib/sliding-panel/sliding-panel.component.ts#L167">sliding-panel/sliding-panel.component.ts:167</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Event for when the panel is clicked.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="horizontalstate" class="tsd-anchor"></a>
+					<h3>horizontal<wbr>State</h3>
+					<div class="tsd-signature tsd-kind-icon">horizontal<wbr>State<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"init"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"show"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"hide"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;init&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tme321/Unopinionated-Angular/blob/68c275f/src/lib/sliding-panel/sliding-panel.component.ts#L184">sliding-panel/sliding-panel.component.ts:184</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="mouseenterpanel" class="tsd-anchor"></a>
+					<h3>mouse<wbr>Enter<wbr>Panel</h3>
+					<div class="tsd-signature tsd-kind-icon">mouse<wbr>Enter<wbr>Panel<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">MouseEvent</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new EventEmitter&lt;MouseEvent&gt;()</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tme321/Unopinionated-Angular/blob/68c275f/src/lib/sliding-panel/sliding-panel.component.ts#L152">sliding-panel/sliding-panel.component.ts:152</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Event for when the mouse enters the panel.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="mouseleavepanel" class="tsd-anchor"></a>
+					<h3>mouse<wbr>Leave<wbr>Panel</h3>
+					<div class="tsd-signature tsd-kind-icon">mouse<wbr>Leave<wbr>Panel<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">MouseEvent</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new EventEmitter&lt;MouseEvent&gt;()</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tme321/Unopinionated-Angular/blob/68c275f/src/lib/sliding-panel/sliding-panel.component.ts#L157">sliding-panel/sliding-panel.component.ts:157</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Event for when the mouse leaves the panel.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="mouseoverpanel" class="tsd-anchor"></a>
+					<h3>mouse<wbr>Over<wbr>Panel</h3>
+					<div class="tsd-signature tsd-kind-icon">mouse<wbr>Over<wbr>Panel<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">EventEmitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">MouseEvent</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new EventEmitter&lt;MouseEvent&gt;()</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tme321/Unopinionated-Angular/blob/68c275f/src/lib/sliding-panel/sliding-panel.component.ts#L162">sliding-panel/sliding-panel.component.ts:162</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Event for when the mouse is over the panel.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="overflowstyle" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> overflow<wbr>Style</h3>
+					<div class="tsd-signature tsd-kind-icon">overflow<wbr>Style<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;hidden&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tme321/Unopinionated-Angular/blob/68c275f/src/lib/sliding-panel/sliding-panel.component.ts#L187">sliding-panel/sliding-panel.component.ts:187</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="pinned" class="tsd-anchor"></a>
+					<h3>pinned</h3>
+					<div class="tsd-signature tsd-kind-icon">pinned<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tme321/Unopinionated-Angular/blob/68c275f/src/lib/sliding-panel/sliding-panel.component.ts#L169">sliding-panel/sliding-panel.component.ts:169</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="showoninit" class="tsd-anchor"></a>
+					<h3>show<wbr>OnInit</h3>
+					<div class="tsd-signature tsd-kind-icon">show<wbr>OnInit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tme321/Unopinionated-Angular/blob/68c275f/src/lib/sliding-panel/sliding-panel.component.ts#L147">sliding-panel/sliding-panel.component.ts:147</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Specify whether the menu should initialize in the showing
+							or hidden state.  Defaults to false.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="slidedirection" class="tsd-anchor"></a>
+					<h3>slide<wbr>Direction</h3>
+					<div class="tsd-signature tsd-kind-icon">slide<wbr>Direction<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"horizontal"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"vertical"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;horizontal&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tme321/Unopinionated-Angular/blob/68c275f/src/lib/sliding-panel/sliding-panel.component.ts#L141">sliding-panel/sliding-panel.component.ts:141</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Specify the direction of the panels sliding animation.
+							&#39;horizontal&#39; or &#39;veritcal&#39;</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="verticalstate" class="tsd-anchor"></a>
+					<h3>vertical<wbr>State</h3>
+					<div class="tsd-signature tsd-kind-icon">vertical<wbr>State<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"init"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"show"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"hide"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;init&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tme321/Unopinionated-Angular/blob/68c275f/src/lib/sliding-panel/sliding-panel.component.ts#L185">sliding-panel/sliding-panel.component.ts:185</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="zone" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> zone</h3>
+					<div class="tsd-signature tsd-kind-icon">zone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">NgZone</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tme321/Unopinionated-Angular/blob/68c275f/src/lib/sliding-panel/sliding-panel.component.ts#L189">sliding-panel/sliding-panel.component.ts:189</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="ishorizontal" class="tsd-anchor"></a>
+					<h3>is<wbr>Horizontal</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> isHorizontal<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tme321/Unopinionated-Angular/blob/68c275f/src/lib/sliding-panel/sliding-panel.component.ts#L180">sliding-panel/sliding-panel.component.ts:180</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="isshowing" class="tsd-anchor"></a>
+					<h3>is<wbr>Showing</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> isShowing<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tme321/Unopinionated-Angular/blob/68c275f/src/lib/sliding-panel/sliding-panel.component.ts#L171">sliding-panel/sliding-panel.component.ts:171</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="hide" class="tsd-anchor"></a>
+					<h3>hide</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">hide<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tme321/Unopinionated-Angular/blob/68c275f/src/lib/sliding-panel/sliding-panel.component.ts#L229">sliding-panel/sliding-panel.component.ts:229</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Hide the panel with a sliding animation.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="ngoninit" class="tsd-anchor"></a>
+					<h3>ng<wbr>OnInit</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">ng<wbr>OnInit<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tme321/Unopinionated-Angular/blob/68c275f/src/lib/sliding-panel/sliding-panel.component.ts#L191">sliding-panel/sliding-panel.component.ts:191</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="show" class="tsd-anchor"></a>
+					<h3>show</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">show<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tme321/Unopinionated-Angular/blob/68c275f/src/lib/sliding-panel/sliding-panel.component.ts#L217">sliding-panel/sliding-panel.component.ts:217</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Show the panel with a sliding animation.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="toggle" class="tsd-anchor"></a>
+					<h3>toggle</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">toggle<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tme321/Unopinionated-Angular/blob/68c275f/src/lib/sliding-panel/sliding-panel.component.ts#L241">sliding-panel/sliding-panel.component.ts:241</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Toggle the panel state with a sliding animation.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-external-module">
+						<a href="../modules/_sliding_panel_sliding_panel_component_.html">"sliding-<wbr>panel/sliding-<wbr>panel.component"</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-external-module">
+						<a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html" class="tsd-kind-icon">UATSliding<wbr>Panel</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#applyhostclass" class="tsd-kind-icon">apply<wbr>Host<wbr>Class</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#chref" class="tsd-kind-icon">ch<wbr>Ref</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#clickpanel" class="tsd-kind-icon">click<wbr>Panel</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#horizontalstate" class="tsd-kind-icon">horizontal<wbr>State</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#mouseenterpanel" class="tsd-kind-icon">mouse<wbr>Enter<wbr>Panel</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#mouseleavepanel" class="tsd-kind-icon">mouse<wbr>Leave<wbr>Panel</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#mouseoverpanel" class="tsd-kind-icon">mouse<wbr>Over<wbr>Panel</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#overflowstyle" class="tsd-kind-icon">overflow<wbr>Style</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#pinned" class="tsd-kind-icon">pinned</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#showoninit" class="tsd-kind-icon">show<wbr>OnInit</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#slidedirection" class="tsd-kind-icon">slide<wbr>Direction</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#verticalstate" class="tsd-kind-icon">vertical<wbr>State</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#zone" class="tsd-kind-icon">zone</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+								<a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#ishorizontal" class="tsd-kind-icon">is<wbr>Horizontal</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+								<a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#isshowing" class="tsd-kind-icon">is<wbr>Showing</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#hide" class="tsd-kind-icon">hide</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#ngoninit" class="tsd-kind-icon">ng<wbr>OnInit</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#show" class="tsd-kind-icon">show</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_sliding_panel_sliding_panel_component_.uatslidingpanel.html#toggle" class="tsd-kind-icon">toggle</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>
