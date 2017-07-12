@@ -1,3 +1,0 @@
-# Class UATSlidingPanelModule
-## Index### Methods* [forRoot](_sliding_panel_sliding_panel_module_.uatslidingpanelmodule.html#forroot)## Methods### Static forRoot(): ModuleWithProviders  * Defined in [sliding-panel/sliding-panel.module.ts:23](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/sliding-panel/sliding-panel.module.ts#L23)#### Returns: ModuleWithProviders
-Generated using [TypeDoc](http://typedoc.io)

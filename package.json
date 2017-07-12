@@ -21,7 +21,7 @@
     "demo": "webpack-dev-server --open --hot",
     "clean": "rm -r ./dist && rm -r ./docs",
     "buildDemoAot": "cd src/demo && ngc -p tsconfig-aot.json && cd .. && cd ..",
-    "genDoc": "cd src/lib && typedoc --out ../../docs --exclude \"**/+(*.spec.ts|*.css|*.*css|*.html|*.config.ts)\" --excludeExternals --theme \"../../node_modules/typedoc-md-theme/bin\" && npm run fixDoc",
+    "genDoc": "cd src/lib && typedoc --out ../../docs --exclude \"**/+(*.spec.ts|*.css|*.*css|*.html|*.config.ts)\" --excludeExternals",
     "fixDoc": "gulp rename:md"
   },
   "dependencies": {

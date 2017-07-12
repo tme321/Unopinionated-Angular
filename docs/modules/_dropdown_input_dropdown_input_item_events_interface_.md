@@ -1,3 +1,0 @@
-# External module "dropdown-input/dropdown-input-item-events.interface"
-## Index### Interfaces* [DropdownInputItemChosenEvent](../interfaces/_dropdown_input_dropdown_input_item_events_interface_.dropdowninputitemchosenevent.html)* [DropdownInputItemsEvent](../interfaces/_dropdown_input_dropdown_input_item_events_interface_.dropdowninputitemsevent.html)* [DropdownInputItemsMouseEvent](../interfaces/_dropdown_input_dropdown_input_item_events_interface_.dropdowninputitemsmouseevent.html)
-Generated using [TypeDoc](http://typedoc.io)

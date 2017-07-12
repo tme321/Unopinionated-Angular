@@ -1,3 +1,0 @@
-# Class UATMenuItemRight
-## Index### Constructors* [constructor](_hamburger_menu_menu_item_right_directive_.uatmenuitemright.html#constructor)## Constructors### new UATMenuItemRight(): [UATMenuItemRight](_hamburger_menu_menu_item_right_directive_.uatmenuitemright.html)  * Defined in [hamburger-menu/menu-item-right.directive.ts:6](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/hamburger-menu/menu-item-right.directive.ts#L6)#### Returns: [UATMenuItemRight](_hamburger_menu_menu_item_right_directive_.uatmenuitemright.html)
-Generated using [TypeDoc](http://typedoc.io)

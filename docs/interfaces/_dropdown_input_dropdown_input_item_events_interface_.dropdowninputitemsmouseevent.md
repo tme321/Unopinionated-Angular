@@ -1,6 +1,0 @@
-# Interface DropdownInputItemsMouseEvent
-### Extends* [DropdownInputItemsEvent](_dropdown_input_dropdown_input_item_events_interface_.dropdowninputitemsevent.html)
-## Index### Properties* [event](_dropdown_input_dropdown_input_item_events_interface_.dropdowninputitemsmouseevent.html#event)* [index](_dropdown_input_dropdown_input_item_events_interface_.dropdowninputitemsmouseevent.html#index)## Properties### event: MouseEvent
-* Overwrites [DropdownInputItemsEvent](_dropdown_input_dropdown_input_item_events_interface_.dropdowninputitemsevent.html).[event](_dropdown_input_dropdown_input_item_events_interface_.dropdowninputitemsevent.html#event)* Defined in [dropdown-input/dropdown-input-item-events.interface.ts:9](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/dropdown-input/dropdown-input-item-events.interface.ts#L9)### index: number
-* Inherited from [DropdownInputItemsEvent](_dropdown_input_dropdown_input_item_events_interface_.dropdowninputitemsevent.html).[index](_dropdown_input_dropdown_input_item_events_interface_.dropdowninputitemsevent.html#index)* Defined in [dropdown-input/dropdown-input-item-events.interface.ts:5](https://github.com/tme321/Unopinionated-Angular/blob/16a724b/src/lib/dropdown-input/dropdown-input-item-events.interface.ts#L5)
-Generated using [TypeDoc](http://typedoc.io)
