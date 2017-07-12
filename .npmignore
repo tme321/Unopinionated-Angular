@@ -6,6 +6,7 @@
 /tmp
 /node
 /dist/demo
+/docs
 .editorconfig
 .gitignore
 angular-cli.json
@@ -15,3 +16,6 @@ protractor.conf.js
 tsconfig.webpack.json
 tsling.json
 webpack.config.js
+npm-debug.log
+debug.log
+

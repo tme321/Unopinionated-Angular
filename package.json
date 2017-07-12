@@ -16,12 +16,14 @@
     "e2e": "protractor",
     "build": "cd src/lib && ngc -p tsconfig-aot.json && cd .. && cd .. && gulp mv:templates && gulp inline-resources",
     "bundle": "cd dist/lib && rollup -c",
-    "publish": "npm run build && npm run bundle",
+    "prepublish": "npm run build && npm run bundle",
     "buildwp": "webpack --progress",
     "demo": "webpack-dev-server --open --hot",
     "clean": "rm -r ./dist && rm -r ./docs",
     "buildDemoAot": "cd src/demo && ngc -p tsconfig-aot.json && cd .. && cd ..",
     "genDoc": "cd src/lib && typedoc --out ../../docs --exclude \"**/+(*.spec.ts|*.css|*.*css|*.html|*.config.ts)\" --excludeExternals",
+    "genDocJson": "cd src/lib && typedoc --json ../../docs/api.json --exclude \"**/+(*.spec.ts|*.css|*.*css|*.html|*.config.ts)\" --excludeExternals",
+    "compoDoc": "./node_modules/.bin/compodoc -p src/lib/tsconfig-aot.json -d \"./dist\" ",
     "fixDoc": "gulp rename:md"
   },
   "dependencies": {
@@ -44,6 +46,7 @@
     "@angular/compiler-cli": "^4.0.0",
     "@angularclass/hmr": "latest",
     "@angularclass/hmr-loader": "latest",
+    "@compodoc/compodoc": "^1.0.0-beta.12",
     "@ngtools/webpack": "latest",
     "@types/jasmine": "^2.2.30",
     "@types/node": "^6.0.42",

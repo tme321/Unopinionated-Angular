@@ -6,7 +6,7 @@ Run `npm start` for a dev server. Navigate to `http://localhost:8080/`. The demo
 ## Build
 Run `npm run build` to build the aot version of the library. 
 Run `npm run bundle` to build the entire library as a single bundle.
-Run `npm run publish` to build both the aot version and the bundle version.
+Run `npm run prepublish` to build both the aot version and the bundle version.
 The output will be in ./dist.
 
 ## Generate Documentation
@@ -19,4 +19,4 @@ generator in the future is likely.
 Run `npm run deploy` to deploy to Github Pages.
 
 ## API Documentation
-[Library Documentation..](docs/index.md) 
+[Library Documentation..](https://tme321.github.io/Unopinionated-Angular/) 
