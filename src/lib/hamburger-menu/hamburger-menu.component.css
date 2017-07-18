@@ -1,6 +1,3 @@
-div.uat-hamburger-menu:host {
-}
-
 div.menu-container {
     display: flex;
     flex: 1;
@@ -12,8 +9,6 @@ div.menu-container {
     height: inherit;
 }
 
-:host.uat-hamburger-menu .fixed-content {}
-
 :host.uat-hamburger-menu.expanded div.menu-items-container {
     display:flex;
     flex-direction: row;
@@ -21,16 +16,16 @@ div.menu-container {
     justify-content: space-between;
 }
 
-:host.uat-hamburger-menu.expanded .menu-items-container div.menu-items {
+:host.uat-hamburger-menu.expanded div.menu-items,
+:host.uat-hamburger-menu.expanded div.menu-items-right {
     display:flex;
     flex-direction: row;
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
 }
 
-:host.uat-hamburger-menu.expanded .menu-items-container div.menu-items-right {
-    display:flex;
-    flex-direction: row;
-    flex: 1;
+:host.uat-hamburger-menu.expanded div.menu-items-right {
     justify-content: flex-end;
 }
 
@@ -40,26 +35,21 @@ div.menu-container {
     flex: 1;
 }
 
-:host.uat-hamburger-menu.collapsed .menu-items-container div.menu-items {
+:host.uat-hamburger-menu.collapsed div.menu-items,
+:host.uat-hamburger-menu.collapsed div.menu-items-right {
     display:flex;
     flex-direction: column;
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
 }
-
-:host.uat-hamburger-menu.collapsed .menu-items-container div.menu-items-right {
-    display:flex;
-    flex-direction: column;
-    flex: 1;
-}
-
 
 :host.uat-hamburger-menu.expanded div.uat-sliding-panel-toggle {
     visibility: hidden;
     width:0;
 }
 
-
-:host.uat-hamburger-menu div.uat-sliding-panel-toggle {
+div.uat-sliding-panel-toggle {
     display: inline-block;
 }
 
@@ -72,4 +62,10 @@ div.menu-container {
 
 :host.collapsed div.menu-container {
     justify-content: space-between;
+}
+
+div.menu-items {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
 }
