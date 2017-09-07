@@ -46,6 +46,7 @@
     "@angular/compiler-cli": "^4.0.0",
     "@angularclass/hmr": "latest",
     "@angularclass/hmr-loader": "latest",
+    "@compodoc/compodoc": "^1.0.0-beta.15",
     "@ngtools/webpack": "latest",
     "@types/jasmine": "^2.2.30",
     "@types/node": "^6.0.42",
