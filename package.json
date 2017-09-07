@@ -23,7 +23,7 @@
     "buildDemoAot": "cd src/demo && ngc -p tsconfig-aot.json && cd .. && cd ..",
     "genDoc": "cd src/lib && typedoc --out ../../docs --exclude \"**/+(*.spec.ts|*.css|*.*css|*.html|*.config.ts)\" --excludeExternals",
     "genDocJson": "cd src/lib && typedoc --json ../../docs/api.json --exclude \"**/+(*.spec.ts|*.css|*.*css|*.html|*.config.ts)\" --excludeExternals",
-    "compoDoc": "./node_modules/.bin/compodoc -p src/lib/tsconfig-aot.json -d \"./dist\" ",
+    "compoDoc": "./node_modules/.bin/compodoc -p src/lib/tsconfig-aot.json -d \"./docs\" ",
     "fixDoc": "gulp rename:md"
   },
   "dependencies": {
