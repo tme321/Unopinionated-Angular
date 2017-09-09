@@ -6,6 +6,7 @@
 /src/demo/aot
 /src/lib/aot
 /tmp
+/temp
 
 # dependencies
 /node_modules

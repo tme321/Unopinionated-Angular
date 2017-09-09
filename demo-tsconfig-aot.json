@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,    
+    "lib": ["es6", "es2015", "dom"],
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "rootDir": "./src/demo",
+    "outDir": "./dist/demo",
+    "baseUrl": ".",
+    "paths": {
+      "unopinionated-angular-toolbox": [
+        "./dist/lib"
+      ]
+    }
+  },
+  "typeRoots": [
+    "./node_modules/@types"
+  ],
+
+  "exclude": [
+    "**/*.spec.ts",
+    "./src/demo/main.ts",
+    "./e2e/*.*",
+    "./node_modules/**/*.*",
+    "./src/environments/**/*.*",
+    "./src/lib/**/*.*",
+    "./dist/**/*.*"
+  ],
+
+  "angularCompilerOptions": {
+    "genDir": "./src/demo/aot",
+    "skipMetadataEmit" : true
+  }
+}
