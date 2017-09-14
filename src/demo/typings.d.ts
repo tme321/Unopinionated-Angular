@@ -4,4 +4,4 @@
 
 declare var System: any;
 //declare const module: {id: string};
-declare var require: any; 
+//declare var require: any; 

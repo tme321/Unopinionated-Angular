@@ -11,5 +11,4 @@ import '@angular/http';
 import '@angular/router';
 import '@angular/forms';
 import 'rxjs';
-import '@angularclass/hmr';
 

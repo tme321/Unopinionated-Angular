@@ -579,7 +579,7 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="matchText"></a>
-                                        <b>matchText</b>
+                                        <span class="name"><b>matchText</b><a href="#matchText"><span class="fa fa-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -671,7 +671,9 @@ export interface DropdownInputService {
 
     </body>
 </html>
-chText: string;
+pDownItemComponentData extends DynamicComponentData {
+    itemData: any;
+    matchText: string;
 }</code></pre>
     </div>
 </div>

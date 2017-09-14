@@ -1,0 +1,28 @@
+{
+  "extends": "../configs/ts/tsconfig.json",
+  "compilerOptions": {
+    "sourceMap": false,
+    "baseUrl": "./",
+    "outDir": "../dist",
+    "rootDir": ".",
+    "paths": {
+      "unopinionated-angular-toolbox": [
+        "./lib"
+      ]
+    }
+  },
+
+  "exclude": [
+    "./assets",
+    "**/test.ts",
+    "**/*.spec.*",
+    "../node_modules/**/*.*"
+  ],
+
+  "angularCompilerOptions": {
+    "genDir": ".",
+    "entryModule": "demo/app/app.module#AppModule",
+    "skipMetadataEmit" : true,
+    "debug": false
+  }
+}
