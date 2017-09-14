@@ -1,38 +1,13 @@
 {
+  "extends": "../../configs/ts/tsconfig.json",
   "compilerOptions": {
-    "declaration": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "lib": ["es6", "es2015", "dom"],
-    "mapRoot": "/",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "noEmitOnError": true,
-    "noImplicitAny": false,
-    "rootDir": ".",
-    "sourceMap": true,
-    "target": "es5",
-    "outDir": "./dist",
-    "inlineSources": false,
-    "stripInternal": false,
-    "removeComments": true,
-    "baseUrl": "",
+    "baseUrl": "./",
     "paths": {
       "unopinionated-angular-toolbox": [
-        "../lib"
+        "../lib/index.ts"
       ]
-    },
-    "typeRoots": [
-      "../../node_modules/@types"
-    ],
-    "types": [
-      "jasmine"
-    ]
+    }
   },
-  "compileOnSave": true,
   "exclude": [
-    "../../node_modules/*",
-    "node_modules/*",
-    "main.aot.ts"
   ]
 }

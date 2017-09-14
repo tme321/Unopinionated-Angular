@@ -1,6 +1,10 @@
-import 'core-js/es7/reflect';
+import { enableProdMode } from '@angular/core';
 import {platformBrowser} from '@angular/platform-browser';
-import {AppModuleNgFactory} from './aot/src/demo/app/app.module.ngfactory';
+import { environment } from '../environments/environment';
+import {AppModuleNgFactory} from './app/app.module.ngfactory';
 
-platformBrowser().bootstrapModuleFactory(AppModuleNgFactory)
-    .catch((err: any) => console.error(err));
+if (environment.production) {
+    enableProdMode();
+}
+
+platformBrowser().bootstrapModuleFactory(AppModuleNgFactory);

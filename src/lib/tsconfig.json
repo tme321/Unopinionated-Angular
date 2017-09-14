@@ -1,29 +1,17 @@
 {
+  "extends": "../../configs/ts/tsconfig.json",
   "compilerOptions": {
-    "declaration": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "lib": ["es6", "es2015", "dom"],
-    "mapRoot": "/vendor/unopinionated-angular-toolbox",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "noEmitOnError": true,
-    "noImplicitAny": true,
-    "outDir": "../../dist",
-    "rootDir": ".",
     "sourceMap": true,
-    "target": "es5",
-    "inlineSources": true,
-    "stripInternal": true,
-    "removeComments": true,
-    "baseUrl": "",
-    "paths": {
-    },
-    "typeRoots": [
-      "../../node_modules/@types"
-    ],
-    "types": [
-      "jasmine"
-    ]
+    "outDir": "../../dist/lib",
+    "skipLibCheck": true,
+    "baseUrl": ""
+  },
+  "exclude": [
+    "**/*.spec.ts"
+  ],
+  "angularCompilerOptions": {
+    "genDir": "../../dist/lib",
+    "skipTemplateCodegen": true,
+    "debug": true
   }
 }
