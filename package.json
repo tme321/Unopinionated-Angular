@@ -16,7 +16,7 @@
     "e2e": "protractor",
     "build": "cd src/lib && ngc -p tsconfig.json && cd .. && cd .. && gulp mv:templates && gulp inline-resources",
     "bundle": "cd dist/lib && rollup -c",
-    "prepublish": "npm run build && npm run bundle & npm run compoDoc && touch ./docs/.nojekyll ",
+    "prepublish": "npm run build && npm run bundle & npm run genDoc && touch ./docs/.nojekyll ",
     "demo": "webpack-dev-server --open --hot --config \"./configs/webpack/webpack.config.dev.js\"",
     "clean": "rm -r ./dist && rm -r ./docs",
     "bd": "npm run buildDemo",

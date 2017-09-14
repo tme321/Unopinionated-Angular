@@ -17,6 +17,7 @@
     "./assets",
     "**/*.spec.ts",
     "**/test.ts",
+    "../node_modules/**/*.*",
     "./demo/main.aot.ts"
   ],
 

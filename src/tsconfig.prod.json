@@ -15,7 +15,8 @@
   "exclude": [
     "./assets",
     "**/test.ts",
-    "**/*.spec.*"
+    "**/*.spec.*",
+    "../node_modules/**/*.*"
   ],
 
   "angularCompilerOptions": {

@@ -1,0 +1,819 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>unopinionated-angular-toolbox documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	    <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">unopinionated-angular-toolbox documentation</a>
+            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav>
+            
+                <ul class="list">
+            
+                    <li class="title">
+                        <a href="../index.html">unopinionated-angular-toolbox documentation</a>
+                    </li>
+            
+                    <li class="divider"></li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                        <ul class="links">
+                                <li class="link">
+                                    <a 
+                                        
+                                         href="../overview.html" 
+                                         href="../overview.html" 
+                                        >
+                                        <span class="fa fa-th"></span>Overview
+                                    </a>
+                                </li>
+                                <li class="link">
+                                  <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./license.html"
+                                        >
+                                        <span class="fa fa-file-text-o"></span>LICENSE
+                                    </a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../modules.html" >
+                            <div class="menu-toggler linked" data-toggle="collapse"
+                                    data-target="#xs-modules-links"
+                            >
+                                <span class="fa fa-archive"></span>
+                                <span class="link-name">Modules</span>
+                                <span class="fa fa-angle-down"></span>
+                            </div>
+                        </a>
+                        <ul class="links collapse "
+                                id="xs-modules-links"
+                            >
+                                <li class="link">
+                                    <a href="../modules/UATCollapsingMenuModule.html" >UATCollapsingMenuModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/UATCommonModule.html" >UATCommonModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/UATDropdownInputModule.html" >UATDropdownInputModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/UATDropdownMenuModule.html" >UATDropdownMenuModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/UATHamburgerMenuModule.html" >UATHamburgerMenuModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/UATModule.html" >UATModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/UATMultiSelectModule.html" >UATMultiSelectModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/UATRootModule.html"  data-type="entity-link" class="active" >UATRootModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/UATSlideoutMenuModule.html" >UATSlideoutMenuModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/UATSlidingPanelModule.html" >UATSlidingPanelModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/UATToggleModule.html" >UATToggleModule</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-components-links"
+                            >
+                            <span class="fa fa-cogs"></span>
+                            <span>Components</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-components-links"
+                            >
+                                <li class="link">
+                                    <a href="../components/UATCollapsingMenu.html" >UATCollapsingMenu</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UATDropdownInput.html" >UATDropdownInput</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UATDropdownInputItemsList.html" >UATDropdownInputItemsList</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UATDropdownMenu.html" >UATDropdownMenu</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UATHamburgerMenu.html" >UATHamburgerMenu</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UATMultiSelectComponent.html" >UATMultiSelectComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UATSlideoutMenu.html" >UATSlideoutMenu</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UATSlidingPanel.html" >UATSlidingPanel</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/UATToggle.html" >UATToggle</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-directives-links"
+                            >
+                            <span class="fa fa-code"></span>
+                            <span>Directives</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-directives-links"
+                            >
+                                <li class="link">
+                                    <a href="../directives/UATDropdownInputDirective.html" >UATDropdownInputDirective</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../directives/UATDynamicComponentDirective.html" >UATDynamicComponentDirective</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../directives/UATMenuItem.html" >UATMenuItem</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../directives/UATMenuItemRight.html" >UATMenuItemRight</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../directives/UATSlidingPanelToggle.html" >UATSlidingPanelToggle</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-interfaces-links"
+                            >
+                            <span class="fa fa-info"></span>
+                            <span>Interfaces</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-interfaces-links"
+                            >
+                                <li class="link">
+                                    <a href="../interfaces/DropDownItemComponentData.html" >DropDownItemComponentData</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/DropdownInputItemChosenEvent.html" >DropdownInputItemChosenEvent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/DropdownInputItemsEvent.html" >DropdownInputItemsEvent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/DropdownInputItemsMouseEvent.html" >DropdownInputItemsMouseEvent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/DropdownInputService.html" >DropdownInputService</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/DropdownItemComponentData.html" >DropdownItemComponentData</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/DynamicComponentData.html" >DynamicComponentData</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/DynamicContainerEvent.html" >DynamicContainerEvent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/DynamicContainerMouseEvent.html" >DynamicContainerMouseEvent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/UATMultiSelectItem.html" >UATMultiSelectItem</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-miscellaneous-links"
+                            >
+                            <span class="fa fa-cubes"></span>
+                            <span>Miscellaneous</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-miscellaneous-links"
+                            >
+                                <li class="link">
+                                  <a href="../miscellaneous/enumerations.html" data-type="entity-link" >Enums</a>
+                                </li>
+                                <li class="link">
+                                  <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                    </li>
+            
+                    <li class="divider"></li>
+                    <li class="copyright">
+                            Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
+                                        <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
+                            </a>
+                    </li>
+            
+                </ul>
+            
+            </nav>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <nav>
+                   
+                       <ul class="list">
+                   
+                           <li class="title">
+                               <a href="../index.html">unopinionated-angular-toolbox documentation</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                   
+                               <div id="book-search-input" role="search">
+                                   <input type="text" placeholder="Type to search">
+                               </div>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                               <ul class="links">
+                                       <li class="link">
+                                           <a 
+                                               
+                                                href="../overview.html" 
+                                                href="../overview.html" 
+                                               >
+                                               <span class="fa fa-th"></span>Overview
+                                           </a>
+                                       </li>
+                                       <li class="link">
+                                         <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./license.html"
+                                               >
+                                               <span class="fa fa-file-text-o"></span>LICENSE
+                                           </a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../modules.html" >
+                                   <div class="menu-toggler linked" data-toggle="collapse"
+                                           data-target="#modules-links"
+                                   >
+                                       <span class="fa fa-archive"></span>
+                                       <span class="link-name">Modules</span>
+                                       <span class="fa fa-angle-down"></span>
+                                   </div>
+                               </a>
+                               <ul class="links collapse "
+                                       id="modules-links"
+                   >
+                                       <li class="link">
+                                           <a href="../modules/UATCollapsingMenuModule.html" >UATCollapsingMenuModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/UATCommonModule.html" >UATCommonModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/UATDropdownInputModule.html" >UATDropdownInputModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/UATDropdownMenuModule.html" >UATDropdownMenuModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/UATHamburgerMenuModule.html" >UATHamburgerMenuModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/UATModule.html" >UATModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/UATMultiSelectModule.html" >UATMultiSelectModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/UATRootModule.html"  data-type="entity-link" class="active" >UATRootModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/UATSlideoutMenuModule.html" >UATSlideoutMenuModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/UATSlidingPanelModule.html" >UATSlidingPanelModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/UATToggleModule.html" >UATToggleModule</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#components-links"
+                   >
+                                   <span class="fa fa-cogs"></span>
+                                   <span>Components</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="components-links"
+                   >
+                                       <li class="link">
+                                           <a href="../components/UATCollapsingMenu.html" >UATCollapsingMenu</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UATDropdownInput.html" >UATDropdownInput</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UATDropdownInputItemsList.html" >UATDropdownInputItemsList</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UATDropdownMenu.html" >UATDropdownMenu</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UATHamburgerMenu.html" >UATHamburgerMenu</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UATMultiSelectComponent.html" >UATMultiSelectComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UATSlideoutMenu.html" >UATSlideoutMenu</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UATSlidingPanel.html" >UATSlidingPanel</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/UATToggle.html" >UATToggle</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#directives-links"
+                   >
+                                   <span class="fa fa-code"></span>
+                                   <span>Directives</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="directives-links"
+                   >
+                                       <li class="link">
+                                           <a href="../directives/UATDropdownInputDirective.html" >UATDropdownInputDirective</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../directives/UATDynamicComponentDirective.html" >UATDynamicComponentDirective</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../directives/UATMenuItem.html" >UATMenuItem</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../directives/UATMenuItemRight.html" >UATMenuItemRight</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../directives/UATSlidingPanelToggle.html" >UATSlidingPanelToggle</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#interfaces-links"
+                   >
+                                   <span class="fa fa-info"></span>
+                                   <span>Interfaces</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="interfaces-links"
+                   >
+                                       <li class="link">
+                                           <a href="../interfaces/DropDownItemComponentData.html" >DropDownItemComponentData</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/DropdownInputItemChosenEvent.html" >DropdownInputItemChosenEvent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/DropdownInputItemsEvent.html" >DropdownInputItemsEvent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/DropdownInputItemsMouseEvent.html" >DropdownInputItemsMouseEvent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/DropdownInputService.html" >DropdownInputService</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/DropdownItemComponentData.html" >DropdownItemComponentData</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/DynamicComponentData.html" >DynamicComponentData</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/DynamicContainerEvent.html" >DynamicContainerEvent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/DynamicContainerMouseEvent.html" >DynamicContainerMouseEvent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/UATMultiSelectItem.html" >UATMultiSelectItem</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#miscellaneous-links"
+                   >
+                                   <span class="fa fa-cubes"></span>
+                                   <span>Miscellaneous</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="miscellaneous-links"
+                   >
+                                       <li class="link">
+                                         <a href="../miscellaneous/enumerations.html" data-type="entity-link" >Enums</a>
+                                       </li>
+                                       <li class="link">
+                                         <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                           <li class="copyright">
+                                   Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
+                                               <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
+                                   </a>
+                           </li>
+                   
+                       </ul>
+                   
+                   </nav>
+               </div>
+               <div class="content module">
+                   <div class="content-data">
+
+
+
+<ol class="breadcrumb">
+  <li>Modules</li>
+  <li>UATRootModule</li>
+</ol>
+
+      <div class="text-center">
+          <div id="module-graph-svg">
+              <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: dependencies Pages: 1 -->
+<svg width="1558pt" height="211pt"
+ viewBox="0.00 0.00 1558.00 211.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 207)">
+<title>dependencies</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-207 1554,-207 1554,4 -4,4"/>
+<text text-anchor="start" x="754.0091" y="-42.4" font-family="sans-serif" font-weight="bold" font-size="14.00" fill="#000000">Legend</text>
+<polygon fill="#ffffb3" stroke="transparent" points="541,-10 541,-30 561,-30 561,-10 541,-10"/>
+<text text-anchor="start" x="564.629" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Declarations</text>
+<polygon fill="#8dd3c7" stroke="transparent" points="654,-10 654,-30 674,-30 674,-10 654,-10"/>
+<text text-anchor="start" x="677.7251" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Module</text>
+<polygon fill="#80b1d3" stroke="transparent" points="740,-10 740,-30 760,-30 760,-10 740,-10"/>
+<text text-anchor="start" x="763.7812" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Bootstrap</text>
+<polygon fill="#fdb462" stroke="transparent" points="837,-10 837,-30 857,-30 857,-10 837,-10"/>
+<text text-anchor="start" x="860.6732" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Providers</text>
+<polygon fill="#fb8072" stroke="transparent" points="933,-10 933,-30 953,-30 953,-10 933,-10"/>
+<text text-anchor="start" x="956.7258" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Exports</text>
+<g id="clust1" class="cluster">
+<title>cluster_UATRootModule</title>
+<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="8,-70 8,-195 1542,-195 1542,-70 8,-70"/>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_UATRootModule_exports</title>
+<polygon fill="none" stroke="#000000" points="16,-135 16,-187 1534,-187 1534,-135 16,-135"/>
+</g>
+<!-- UATSlidingPanelModule  -->
+<g id="node1" class="node">
+<title>UATSlidingPanelModule </title>
+<polygon fill="#fb8072" stroke="#000000" points="1525.8728,-179 1362.1272,-179 1362.1272,-143 1525.8728,-143 1525.8728,-179"/>
+<text text-anchor="middle" x="1444" y="-156.8" font-family="Times,serif" font-size="14.00" fill="#000000">UATSlidingPanelModule </text>
+</g>
+<!-- UATDropdownMenuModule  -->
+<g id="node2" class="node">
+<title>UATDropdownMenuModule </title>
+<polygon fill="#fb8072" stroke="#000000" points="1344.3489,-179 1159.6511,-179 1159.6511,-143 1344.3489,-143 1344.3489,-179"/>
+<text text-anchor="middle" x="1252" y="-156.8" font-family="Times,serif" font-size="14.00" fill="#000000">UATDropdownMenuModule </text>
+</g>
+<!-- UATSlideoutMenuModule  -->
+<g id="node3" class="node">
+<title>UATSlideoutMenuModule </title>
+<polygon fill="#fb8072" stroke="#000000" points="1141.6439,-179 970.3561,-179 970.3561,-143 1141.6439,-143 1141.6439,-179"/>
+<text text-anchor="middle" x="1056" y="-156.8" font-family="Times,serif" font-size="14.00" fill="#000000">UATSlideoutMenuModule </text>
+</g>
+<!-- UATDropdownInputModule  -->
+<g id="node4" class="node">
+<title>UATDropdownInputModule </title>
+<polygon fill="#fb8072" stroke="#000000" points="952.7408,-179 771.2592,-179 771.2592,-143 952.7408,-143 952.7408,-179"/>
+<text text-anchor="middle" x="862" y="-156.8" font-family="Times,serif" font-size="14.00" fill="#000000">UATDropdownInputModule </text>
+</g>
+<!-- UATHamburgerMenuModule  -->
+<g id="node5" class="node">
+<title>UATHamburgerMenuModule </title>
+<polygon fill="#fb8072" stroke="#000000" points="753.2225,-179 564.7775,-179 564.7775,-143 753.2225,-143 753.2225,-179"/>
+<text text-anchor="middle" x="659" y="-156.8" font-family="Times,serif" font-size="14.00" fill="#000000">UATHamburgerMenuModule </text>
+</g>
+<!-- UATCollapsingMenuModule  -->
+<g id="node6" class="node">
+<title>UATCollapsingMenuModule </title>
+<polygon fill="#fb8072" stroke="#000000" points="546.6425,-179 361.3575,-179 361.3575,-143 546.6425,-143 546.6425,-179"/>
+<text text-anchor="middle" x="454" y="-156.8" font-family="Times,serif" font-size="14.00" fill="#000000">UATCollapsingMenuModule </text>
+</g>
+<!-- UATMultiSelectModule  -->
+<g id="node7" class="node">
+<title>UATMultiSelectModule </title>
+<polygon fill="#fb8072" stroke="#000000" points="343.6397,-179 186.3603,-179 186.3603,-143 343.6397,-143 343.6397,-179"/>
+<text text-anchor="middle" x="265" y="-156.8" font-family="Times,serif" font-size="14.00" fill="#000000">UATMultiSelectModule </text>
+</g>
+<!-- UATCommonModule  -->
+<g id="node8" class="node">
+<title>UATCommonModule </title>
+<polygon fill="#fb8072" stroke="#000000" points="167.9334,-179 24.0666,-179 24.0666,-143 167.9334,-143 167.9334,-179"/>
+<text text-anchor="middle" x="96" y="-156.8" font-family="Times,serif" font-size="14.00" fill="#000000">UATCommonModule </text>
+</g>
+<!-- UATRootModule -->
+<g id="node9" class="node">
+<title>UATRootModule</title>
+<polygon fill="#8dd3c7" stroke="#000000" points="817.5437,-114 814.5437,-118 793.5437,-118 790.5437,-114 702.4563,-114 702.4563,-78 817.5437,-78 817.5437,-114"/>
+<text text-anchor="middle" x="760" y="-91.8" font-family="Times,serif" font-size="14.00" fill="#000000">UATRootModule</text>
+</g>
+<!-- UATRootModule&#45;&gt;UATSlidingPanelModule  -->
+<g id="edge1" class="edge">
+<title>UATRootModule&#45;&gt;UATSlidingPanelModule </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M817.728,-87C982.6312,-87 1444,-87 1444,-87 1444,-87 1444,-132.7079 1444,-132.7079"/>
+<polygon fill="#000000" stroke="#000000" points="1440.5001,-132.7078 1444,-142.7079 1447.5001,-132.7079 1440.5001,-132.7078"/>
+</g>
+<!-- UATRootModule&#45;&gt;UATDropdownMenuModule  -->
+<g id="edge2" class="edge">
+<title>UATRootModule&#45;&gt;UATDropdownMenuModule </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M817.8854,-96C947.9416,-96 1252,-96 1252,-96 1252,-96 1252,-132.8939 1252,-132.8939"/>
+<polygon fill="#000000" stroke="#000000" points="1248.5001,-132.8938 1252,-142.8939 1255.5001,-132.8939 1248.5001,-132.8938"/>
+</g>
+<!-- UATRootModule&#45;&gt;UATSlideoutMenuModule  -->
+<g id="edge3" class="edge">
+<title>UATRootModule&#45;&gt;UATSlideoutMenuModule </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M817.7745,-105C903.9159,-105 1056,-105 1056,-105 1056,-105 1056,-132.973 1056,-132.973"/>
+<polygon fill="#000000" stroke="#000000" points="1052.5001,-132.973 1056,-142.973 1059.5001,-132.973 1052.5001,-132.973"/>
+</g>
+<!-- UATRootModule&#45;&gt;UATDropdownInputModule  -->
+<g id="edge4" class="edge">
+<title>UATRootModule&#45;&gt;UATDropdownInputModule </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M794.5756,-114.1061C794.5756,-114.1061 794.5756,-132.991 794.5756,-132.991"/>
+<polygon fill="#000000" stroke="#000000" points="791.0756,-132.9909 794.5756,-142.991 798.0756,-132.991 791.0756,-132.9909"/>
+</g>
+<!-- UATRootModule&#45;&gt;UATHamburgerMenuModule  -->
+<g id="edge5" class="edge">
+<title>UATRootModule&#45;&gt;UATHamburgerMenuModule </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M727.6699,-114.1061C727.6699,-114.1061 727.6699,-132.991 727.6699,-132.991"/>
+<polygon fill="#000000" stroke="#000000" points="724.17,-132.9909 727.6699,-142.991 731.17,-132.991 724.17,-132.9909"/>
+</g>
+<!-- UATRootModule&#45;&gt;UATCollapsingMenuModule  -->
+<g id="edge6" class="edge">
+<title>UATRootModule&#45;&gt;UATCollapsingMenuModule </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M702.4437,-105C613.803,-105 454,-105 454,-105 454,-105 454,-132.973 454,-132.973"/>
+<polygon fill="#000000" stroke="#000000" points="450.5001,-132.973 454,-142.973 457.5001,-132.973 450.5001,-132.973"/>
+</g>
+<!-- UATRootModule&#45;&gt;UATMultiSelectModule  -->
+<g id="edge7" class="edge">
+<title>UATRootModule&#45;&gt;UATMultiSelectModule </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M702.2484,-96C571.6729,-96 265,-96 265,-96 265,-96 265,-132.8939 265,-132.8939"/>
+<polygon fill="#000000" stroke="#000000" points="261.5001,-132.8938 265,-142.8939 268.5001,-132.8939 261.5001,-132.8938"/>
+</g>
+<!-- UATRootModule&#45;&gt;UATCommonModule  -->
+<g id="edge8" class="edge">
+<title>UATRootModule&#45;&gt;UATCommonModule </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M702.2359,-87C540.6888,-87 96,-87 96,-87 96,-87 96,-132.7079 96,-132.7079"/>
+<polygon fill="#000000" stroke="#000000" points="92.5001,-132.7078 96,-142.7079 99.5001,-132.7079 92.5001,-132.7078"/>
+</g>
+</g>
+</svg>
+
+          </div>
+          <div class="btn-group">
+              <button id="zoom-in" class="btn btn-default btn-sm">Zoom in</button>
+              <button id="reset" class="btn btn-default btn-sm">Reset</button>
+              <button id="zoom-out" class="btn btn-default btn-sm">Zoom out</button>
+          </div>
+      </div>
+      <script src="../js/libs/svg-pan-zoom.min.js"></script>
+      <script src="../js/svg-pan-zoom.controls.js"></script>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
+    </li>
+
+
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/lib/UAT.module.ts</code>
+        </p>
+
+
+        <div class="container-fluid module">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h3>Exports<a href="https://angular.io/api/core/NgModule#exports" target="_blank" title="Official documentation about module exports"><span class="fa fa-info-circle"></a></h3>
+                    <ul class="list-group">
+                            <li class="list-group-item">
+                                    <a href="../modules/UATSlidingPanelModule.html" >UATSlidingPanelModule</a>
+                            </li>
+                            <li class="list-group-item">
+                                    <a href="../modules/UATDropdownMenuModule.html" >UATDropdownMenuModule</a>
+                            </li>
+                            <li class="list-group-item">
+                                    <a href="../modules/UATSlideoutMenuModule.html" >UATSlideoutMenuModule</a>
+                            </li>
+                            <li class="list-group-item">
+                                    <a href="../modules/UATDropdownInputModule.html" >UATDropdownInputModule</a>
+                            </li>
+                            <li class="list-group-item">
+                                    <a href="../modules/UATHamburgerMenuModule.html" >UATHamburgerMenuModule</a>
+                            </li>
+                            <li class="list-group-item">
+                                    <a href="../modules/UATCollapsingMenuModule.html" >UATCollapsingMenuModule</a>
+                            </li>
+                            <li class="list-group-item">
+                                    <a href="../modules/UATMultiSelectModule.html" >UATMultiSelectModule</a>
+                            </li>
+                            <li class="list-group-item">
+                                    <a href="../modules/UATCommonModule.html" >UATCommonModule</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="tab-pane fade tab-source-code" id="source">
+        <pre class="line-numbers"><code class="language-typescript">import { NgModule, ModuleWithProviders } from &#x27;@angular/core&#x27;;
+
+import { UATSlidingPanelModule } from &#x27;./sliding-panel/index&#x27;;
+import { UATDropdownMenuModule } from &#x27;./dropdown-menu/index&#x27;;
+import { UATSlideoutMenuModule } from &#x27;./slideout-menu/index&#x27;;
+import { UATDropdownInputModule } from &#x27;./dropdown-input/index&#x27;;
+import { UATHamburgerMenuModule } from &#x27;./hamburger-menu/index&#x27;;
+import { UATCollapsingMenuModule } from &#x27;./collapsing-menu/index&#x27;;
+import { UATMultiSelectModule } from &#x27;./multi-select/index&#x27;;
+import { UATCommonModule } from &#x27;./common/index&#x27;;
+
+const UAT_MODULES &#x3D; [    
+    UATSlidingPanelModule,
+    UATDropdownMenuModule,
+    UATSlideoutMenuModule,
+    UATDropdownInputModule,
+    UATHamburgerMenuModule,
+    UATCollapsingMenuModule,
+    UATMultiSelectModule,
+    UATCommonModule,
+];
+
+@NgModule({
+  imports: [
+    UATSlidingPanelModule.forRoot(),
+    UATDropdownMenuModule.forRoot(),
+    UATSlideoutMenuModule.forRoot(),
+    UATDropdownInputModule.forRoot(),
+    UATHamburgerMenuModule.forRoot(),
+    UATCollapsingMenuModule.forRoot(),
+    UATCommonModule.forRoot(),
+    UATMultiSelectModule.forRoot(),
+  ],
+
+  exports:[
+    UAT_MODULES
+  ]
+})
+export class UATRootModule { }
+
+@NgModule({
+  imports: UAT_MODULES,
+  exports: UAT_MODULES,
+})
+export class UATModule {
+  static forRoot(): ModuleWithProviders {
+    return {ngModule: UATRootModule, providers: []};
+  }
+}</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+           </div>
+       </div>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script>var COMPODOC_CURRENT_PAGE_DEPTH = 1;</script>
+
+       <script src="../js/search/search.js"></script>
+       <script src="../js/search/lunr.min.js"></script>
+       <script src="../js/search/search-lunr.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+       <script src="../js/search/search_index.js"></script>
+
+    </body>
+</html>
