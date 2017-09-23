@@ -6,3 +6,12 @@
      (listItemChosen)="onSearchItemChosen($event)">
 </div>
 <div uat-sliding-panel #sp="uatSlidingPanel"></div>
+<button (click)="onInc()">Inc</button>
+<foo [inc]="inc.asObservable() | async" [cnt]="blah"></foo>
+<div >
+    <ul uatDnDContainer>
+        <li *uatDraggable style="padding: 14px; background-color: blue"><span>Item 1</span></li>
+        <li *uatDraggable style="padding: 14px; background-color: green"><span>Item 2</span></li>
+        <li *uatDraggable style="padding: 14px; background-color: yellow"><foo [inc]="inc.asObservable() | async" [cnt]="blah"></foo></li>
+    </ul>
+</div>

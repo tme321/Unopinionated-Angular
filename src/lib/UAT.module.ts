@@ -8,8 +8,9 @@ import { UATHamburgerMenuModule } from './hamburger-menu/index';
 import { UATCollapsingMenuModule } from './collapsing-menu/index';
 import { UATMultiSelectModule } from './multi-select/index';
 import { UATCommonModule } from './common/index';
+import { UATDragAndDropModule } from './drag-and-drop/index';
 
-const UAT_MODULES = [    
+const UAT_MODULES = [
     UATSlidingPanelModule,
     UATDropdownMenuModule,
     UATSlideoutMenuModule,
@@ -18,6 +19,7 @@ const UAT_MODULES = [
     UATCollapsingMenuModule,
     UATMultiSelectModule,
     UATCommonModule,
+    UATDragAndDropModule,
 ];
 
 @NgModule({
@@ -28,13 +30,11 @@ const UAT_MODULES = [
     UATDropdownInputModule.forRoot(),
     UATHamburgerMenuModule.forRoot(),
     UATCollapsingMenuModule.forRoot(),
-    UATCommonModule.forRoot(),
     UATMultiSelectModule.forRoot(),
+    UATCommonModule.forRoot(),
+    UATDragAndDropModule.forRoot(),
   ],
-
-  exports:[
-    UAT_MODULES
-  ]
+  exports: UAT_MODULES
 })
 export class UATRootModule { }
 

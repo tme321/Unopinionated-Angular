@@ -19,6 +19,8 @@ import { DropdownMenuColorWidgetComponent } from '../dropdown-menu-color-widget/
 import { UATModule } from 'unopinionated-angular-toolbox';
 import { UATDropdownInputServiceToken } from 'unopinionated-angular-toolbox';
 
+import { FooComponent } from '../home/foo.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,8 @@ import { UATDropdownInputServiceToken } from 'unopinionated-angular-toolbox';
 	  ColorViewerComponent,
 	  ColorButtonComponent,
 	  CollapsingMenuColorWidgetComponent,
-	  DropdownMenuColorWidgetComponent,
+    DropdownMenuColorWidgetComponent,
+    FooComponent
   ],
 
   imports: [
