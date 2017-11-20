@@ -374,14 +374,14 @@ module.exports = {
       }
     }),
     new ProgressPlugin(),
-    /*
+    
     new SourceMapDevToolPlugin({
       "filename": "[file].map[query]",
       "moduleFilenameTemplate": "[resource-path]",
       "fallbackModuleFilenameTemplate": "[resource-path]?[hash]",
       "sourceRoot": "webpack:///"
     }),
-    */
+    
     new HtmlWebpackPlugin({
       "template": "./src/demo/index.html",
       "filename": "./index.html",

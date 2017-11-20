@@ -1,5 +1,6 @@
 export * from './collapsing-menu/index';
 export * from './common/index';
+export * from './drag-and-drop/index';
 export * from './dropdown-input/index';
 export * from './dropdown-menu/index';
 export * from './hamburger-menu/index';

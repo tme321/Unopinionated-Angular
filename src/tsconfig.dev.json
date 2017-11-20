@@ -8,7 +8,7 @@
     "baseUrl": "./",
     "paths": {
       "unopinionated-angular-toolbox": [
-        "../dist/lib"
+        "./lib/index"
       ]
     }
   },
