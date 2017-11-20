@@ -167,44 +167,18 @@ export class UATDragAndDropContainerComponent implements AfterContentInit {
         }
       });
 
-      console.log(`dragging between item ${closestIndex} and ${nextClosestIndex}`)
-    
-    /*
-    for(let i = 0; i < this.dndContainer.length; i++) {
-      let viewRef = this.dndContainer.get(i);
-
-    }
-    */
-
     event.preventDefault();
 
-    /* this signifies that the container is a valid drop target */
+    /* this signifies that the container is a valid drop target  */
+    /* TODO: doesn't work at the moment? the uatDnDType is never */
+    /* properly attached to the event even though I am setting   */
+    /* the type inside the draggable directive event...          */
     if(event.dataTransfer.types.includes(uatDnDType)) {
       console.log('uat transfer detected');
     }
   }
 
   onDrop = (event:DragEvent) => {
-    let d = this.draggablesQL.toArray();
-    console.log("drop");
-    console.log(this.dragLocation);
-    /*
-    if(this.dragLocation.lowIndex < 0) {
-      this.dndContainer.insert(
-        this.dragLocation.viewBeingDragged,
-        0);
-    }
-    else if(this.dragLocation.highIndex >= this.draggablesQL.toArray().length) {
-      this.dndContainer.insert(
-        this.dragLocation.viewBeingDragged,
-        this.dragLocation.highIndex);
-    }
-    else {
-      this.dndContainer.insert(
-        this.dragLocation.viewBeingDragged,
-        this.dragLocation.highIndex);
-    }
-    */
     this.dndContainer.insert(
       this.dragLocation.viewBeingDragged,
       this.dragLocation.highIndex);
@@ -213,19 +187,6 @@ export class UATDragAndDropContainerComponent implements AfterContentInit {
       this.dragLocation.highIndex,
       0,
       this.dragLocation.viewBeingDragged as EmbeddedViewRef<any>);
-      
-    /*
-    for(let i = 0;i < this.dndContainer.length; i++) {
-      let eviewRef = this.dndContainer.get(i) as EmbeddedViewRef<any>;
-      console.log(eviewRef)
-      this.draggableEmbeddedViews.push(eviewRef
-        );
-    };
-    */
-    
-    //this.draggablesQL.map(this.initDraggable);
-    //let view = this.viewContainerRef.get(1);
-    //this.viewContainerRef.move(view, 0);
   }
 
   /**

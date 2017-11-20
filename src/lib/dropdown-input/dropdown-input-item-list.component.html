@@ -5,7 +5,7 @@
     [class.selected]="itemSelected[i]"
     (click)="onListItemClick($event, i)"
     (mouseover)="onListItemMouseOver($event, i)">
-    <ng-template #container="dynamicComp" [uat-dynamic-component] = "compData"></ng-template>
+    <ng-template #container="dynamicComp" [uat-dynamic-component]="compData"></ng-template>
 </li>
 
 
