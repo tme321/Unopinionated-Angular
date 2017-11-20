@@ -1,0 +1,17 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "outDir": "../docs/app",
+    "baseUrl": "./app/lib",
+    "types": []
+  },
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts",
+    "../node_modules/**/*.*",
+    "./app/lib/drag-and-drop/**/*.*",
+    "./app/lib/UAT.module.ts"
+  ]
+}
