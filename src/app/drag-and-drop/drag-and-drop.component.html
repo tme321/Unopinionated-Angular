@@ -1,0 +1,19 @@
+<p>
+  This is still a work in progress.
+</p>
+<p>
+    The drop location is calculated off of 
+    the center of the element being dragged.
+</p>
+<p>
+    Not the mouse cursor.
+</p>
+<button (click)="onInc()">Inc</button>
+<foo [inc]="inc.asObservable() | async" [cnt]="blah"></foo>
+<div >
+    <ul uatDnDContainer>
+        <li *uatDraggable style="padding: 14px; background-color: blue"><span>Item 1</span></li>
+        <li *uatDraggable style="padding: 14px; background-color: green"><span>Item 2</span></li>
+        <li *uatDraggable style="padding: 14px; background-color: yellow"><foo [inc]="inc.asObservable() | async" [cnt]="blah"></foo></li>
+    </ul>
+</div>

@@ -1,7 +1,6 @@
-/*
-import { browser, element, by } from 'protractor';
+import { browser, by, element } from 'protractor';
 
-export class UnopinionatedAngularToolboxPage {
+export class AppPage {
   navigateTo() {
     return browser.get('/');
   }
@@ -10,4 +9,3 @@ export class UnopinionatedAngularToolboxPage {
     return element(by.css('app-root h1')).getText();
   }
 }
-*/

@@ -1,13 +1,17 @@
 # UnopinionatedAngularToolbox
 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
+
 ## Development server
-Run `npm start` for a dev server. Navigate to `http://localhost:8080/`. The demo app supports hot reloading of the source files.
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Build
-Run `npm run build` to build the aot version of the library. 
-Run `npm run bundle` to build the entire library as a single bundle.
-Run `npm run prepublish` to build both the aot version and the bundle version.
-The output will be in ./dist.
+Run `npm run buildLib` to build the library with [ng-packagr](https://github.com/dherges/ng-packagr). 
 
 ## Generate Documentation
 Run `npm run genDoc` to generate the documentation in ./doc.  This uses [compoDoc](https://compodoc.github.io/website/guides/getting-started.html)
