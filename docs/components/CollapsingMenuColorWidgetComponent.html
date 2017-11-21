@@ -895,7 +895,28 @@ export class CollapsingMenuColorWidgetComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade" id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;color-picker&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;h2&gt;Collapsing Menu&lt;/h2&gt;
+&lt;p&gt;
+  Here an auto collapsing menu is used.  When the width
+  of the component isn&#x27;t large enough to display all the
+  items inside the menu it collapses the items that don&#x27;t
+  fit and puts them inside a dropdown menu right justified
+  inside the menu bar.  The toggle appears and controls 
+  showing / hiding the items that did not fit.
+&lt;/p&gt;
+&lt;p&gt;
+    Here the toggle is set to show on hover. When the hovering
+    over the menu or the dropdown the menu will stay open.  It 
+    will automatically close when the mouse leaves the toggle 
+    and the dropdown menu area.  This behavior can be controlled
+    with the showOnHover input flag.
+&lt;/p&gt;
+&lt;p&gt;
+  If the toggle is clicked once it will pin the menu open.  
+  If it is clicked again it will close the menu.  This behavior
+  can be controlled with the toggleOnClick input flag.
+&lt;/p&gt;
+&lt;div class&#x3D;&quot;color-picker&quot;&gt;
   &lt;div uat-collapsing-menu
        #menu&#x3D;&quot;uatCollapsingMenu&quot;
        [showOnHover]&#x3D;&quot;true&quot;&gt;
@@ -946,7 +967,7 @@ export class CollapsingMenuColorWidgetComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="color-picker">  <div uat-collapsing-menu       #menu="uatCollapsingMenu"       [showOnHover]="true">    <div uat-menu-toggle>            <span *ngIf="!menu.isOpen" style="padding:15px">More...</span>      <span *ngIf="menu.isOpen" style="padding:15px">Less...</span>    </div>    <a uat-menu-item class="nav-link" (click)="setColor(\'white\')">White</a>    <a uat-menu-item class="nav-link" (click)="setColor(\'black\')">Black</a>    <a uat-menu-item class="nav-link" (click)="setColor(\'red\')">Red</a>    <a uat-menu-item class="nav-link" (click)="setColor(\'green\')">Green</a>    <a uat-menu-item class="nav-link" (click)="setColor(\'blue\')">Blue</a>    <a uat-menu-item class="nav-link" (click)="setColor(\'yellow\')">Yellow</a>    <a uat-menu-item class="nav-link" (click)="setColor(\'orange\')">Orange</a>    <a uat-menu-item class="nav-link" (click)="setColor(\'purple\')">Purple</a>    <a uat-menu-item class="nav-link" (click)="setColor(\'pink\')">Pink</a>    <a uat-menu-item class="nav-link" (click)="setColor(\'cyan\')">Cyan</a>    <a uat-menu-item class="nav-link" (click)="setColor(\'magenta\')">Magenta</a>  </div>  <app-color-viewer    [viewedColor]="myColor">  </app-color-viewer></div></div>'
+        var COMPONENT_TEMPLATE = '<div><h2>Collapsing Menu</h2><p>  Here an auto collapsing menu is used.  When the width  of the component isn\'t large enough to display all the  items inside the menu it collapses the items that don\'t  fit and puts them inside a dropdown menu right justified  inside the menu bar.  The toggle appears and controls   showing / hiding the items that did not fit.</p><p>    Here the toggle is set to show on hover. When the hovering    over the menu or the dropdown the menu will stay open.  It     will automatically close when the mouse leaves the toggle     and the dropdown menu area.  This behavior can be controlled    with the showOnHover input flag.</p><p>  If the toggle is clicked once it will pin the menu open.    If it is clicked again it will close the menu.  This behavior  can be controlled with the toggleOnClick input flag.</p><div class="color-picker">  <div uat-collapsing-menu       #menu="uatCollapsingMenu"       [showOnHover]="true">    <div uat-menu-toggle>            <span *ngIf="!menu.isOpen" style="padding:15px">More...</span>      <span *ngIf="menu.isOpen" style="padding:15px">Less...</span>    </div>    <a uat-menu-item class="nav-link" (click)="setColor(\'white\')">White</a>    <a uat-menu-item class="nav-link" (click)="setColor(\'black\')">Black</a>    <a uat-menu-item class="nav-link" (click)="setColor(\'red\')">Red</a>    <a uat-menu-item class="nav-link" (click)="setColor(\'green\')">Green</a>    <a uat-menu-item class="nav-link" (click)="setColor(\'blue\')">Blue</a>    <a uat-menu-item class="nav-link" (click)="setColor(\'yellow\')">Yellow</a>    <a uat-menu-item class="nav-link" (click)="setColor(\'orange\')">Orange</a>    <a uat-menu-item class="nav-link" (click)="setColor(\'purple\')">Purple</a>    <a uat-menu-item class="nav-link" (click)="setColor(\'pink\')">Pink</a>    <a uat-menu-item class="nav-link" (click)="setColor(\'cyan\')">Cyan</a>    <a uat-menu-item class="nav-link" (click)="setColor(\'magenta\')">Magenta</a>  </div>  <app-color-viewer    [viewedColor]="myColor">  </app-color-viewer></div></div>'
     var COMPONENTS = [{'name': 'CollapsingMenuColorWidgetComponent', 'selector': 'app-collapsing-menu-color-widget'},{'name': 'ColorButtonComponent', 'selector': 'app-color-button'},{'name': 'ColorViewerComponent', 'selector': 'app-color-viewer'},{'name': 'DragAndDropComponent', 'selector': 'app-drag-and-drop'},{'name': 'DropdownMenuColorWidgetComponent', 'selector': 'app-dropdown-menu-color-widget'},{'name': 'FooComponent', 'selector': 'foo'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'MenuInput', 'selector': ''},{'name': 'NavigationLink', 'selector': ''},{'name': 'UATCollapsingMenu', 'selector': 'div[uat-collapsing-menu]'},{'name': 'UATDropdownInput', 'selector': 'div[uat-dropdown-input]'},{'name': 'UATDropdownInputItemsList', 'selector': 'ul[uat-dropdown-input-items-list]'},{'name': 'UATDropdownMenu', 'selector': 'div[uat-dropdown-menu]'},{'name': 'UATHamburgerMenu', 'selector': 'div[uat-hamburger-menu]'},{'name': 'UATMultiSelectComponent', 'selector': 'div[uat-multi-select]'},{'name': 'UATSlideoutMenu', 'selector': 'div[uat-slideout-menu]'},{'name': 'UATSlidingPanel', 'selector': 'div[uat-sliding-panel]'},{'name': 'UATToggle', 'selector': '[uat-toggle]'}];
     var DIRECTIVES = [{'name': 'UATDropdownInputDirective', 'selector': '[uat-sliding-panel-focus]'},{'name': 'UATDynamicComponentDirective', 'selector': '[uat-dynamic-component]'},{'name': 'UATMenuItem', 'selector': '[uat-menu-item]'},{'name': 'UATMenuItemRight', 'selector': '[uat-menu-item-right]'},{'name': 'UATSlidingPanelToggle', 'selector': '[uat-sliding-panel-toggle]'}];
     var ACTUAL_COMPONENT = {'name': 'CollapsingMenuColorWidgetComponent'};

@@ -21,6 +21,10 @@ import { UATDropdownInputServiceToken } from './lib/dropdown-input/dropdown-inpu
 import { DemoDropdownInputService } from './demo-dropdown-service/demo-dropdown-input.service';
 import { DragAndDropComponent } from './drag-and-drop/drag-and-drop.component';
 
+function dddisFactory() { 
+  return new DemoDropdownInputService();
+}
+
 @NgModule({
   declarations: [
     AppComponent,

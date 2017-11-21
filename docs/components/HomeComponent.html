@@ -724,7 +724,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/home/home.component.ts:12</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/home/home.component.ts:13</a></div>
                                 </td>
                             </tr>
     
@@ -758,7 +758,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/home/home.component.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/home/home.component.ts:16</a></div>
                                 </td>
                             </tr>
     
@@ -790,7 +790,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/home/home.component.ts:23</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/home/home.component.ts:24</a></div>
                                 </td>
                             </tr>
     
@@ -851,7 +851,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/home/home.component.ts:24</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/home/home.component.ts:25</a></div>
                                 </td>
                             </tr>
     
@@ -912,7 +912,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/home/home.component.ts:19</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/home/home.component.ts:20</a></div>
                                 </td>
                             </tr>
     
@@ -967,7 +967,8 @@
 import { Subject } from &#x27;rxjs/Subject&#x27;;
 import { Component, OnInit } from &#x27;@angular/core&#x27;;
 import { NavigationLink } from &#x27;../menu-items/menu-items.components&#x27;;
-import { DropdownInputItemChosenEvent } from &#x27;../lib/dropdown-input&#x27;;
+import { DropdownInputItemChosenEvent, UATDropdownInputServiceToken } from &#x27;../lib/dropdown-input&#x27;;
+import { DemoDropdownInputService } from &#x27;../demo-dropdown-service/demo-dropdown-input.service&#x27;;
 
 @Component({
   selector: &#x27;app-home&#x27;,
@@ -994,9 +995,57 @@ export class HomeComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade" id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;label&gt;Pages&lt;/label&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;h2&gt;Demo&lt;/h2&gt;
+&lt;p&gt;
+    This demo shows some of the uses for the components
+    in this library.  The descriptions here aren&#x27;t meant
+    to be comprehensive but just show off some of the 
+    features the components make use of.
+&lt;/p&gt;
+&lt;h2&gt;Hamburger Menu Nav Bar&lt;/h2&gt;
+&lt;p&gt;
+    The nav bar to this demo is the UATHamburgerMenu.  
+    It is set to expand with the input 
+    expandOnQuery&#x3D;&quot;(min-width : 844px)&quot;.
+&lt;/p&gt;
+&lt;p&gt;
+    The Home link is fixed content so it does not 
+    collapse when the rest of the menu does.
+&lt;/p&gt;
+&lt;p&gt;
+    The Menu item is just to show that arbitrary components
+    can be added to the nav bar as desired.
+&lt;/p&gt;
+&lt;p&gt;
+    The Item D and Item E items are just &amp;lt;a&amp;gt; elements but  
+    are used to show that content can also be right justified. 
+&lt;/p&gt;
+&lt;p&gt;
+    When collapsed the hamburger menu uses the content
+    defined by the uat-menu-toggle directive.
+&lt;/p&gt;
+&lt;h2&gt;Dropdown Input&lt;/h2&gt;
+&lt;p&gt;
+    The UATDropdownInput component is injected with a service
+    that implements the DropdownInputService interface.  This
+    service is responsible for providing the data necessary to
+    create the dynamic components that populate the drop down.
+    It also accepts the input and decides how to modify the 
+    the search results provided to the component.  Here the 
+    demo is just creating links to other parts of the demo.
+&lt;/p&gt;
+&lt;p&gt;
+    The search box here matches on exact text as defined by
+    the items returned from the service.  Other selection modes
+    can be set like partial match but this one only auto selects
+    the item in the drop down if the text typed matches exactly
+    with the search text defined in the model for the item the
+    service returns.  For instance type &#x27;collapsing&#x27; and the link
+    to the collapsing menu route will be automatically pre selected
+    in the dropdown box.
+&lt;/p&gt;
+&lt;label&gt;Pages: &lt;/label&gt;
 &lt;div uat-dropdown-input
-     #ddinput&#x3D;&quot;uatDropdownInput&quot;
      placeholderText&#x3D;&quot;Search...&quot;
      autoSelectionMode&#x3D;&quot;exact&quot;
      (listItemChosen)&#x3D;&quot;onSearchItemChosen($event)&quot;&gt;
@@ -1027,7 +1076,7 @@ export class HomeComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><label>Pages</label><div uat-dropdown-input     #ddinput="uatDropdownInput"     placeholderText="Search..."     autoSelectionMode="exact"     (listItemChosen)="onSearchItemChosen($event)"></div></div>'
+        var COMPONENT_TEMPLATE = '<div><h2>Demo</h2><p>    This demo shows some of the uses for the components    in this library.  The descriptions here aren\'t meant    to be comprehensive but just show off some of the     features the components make use of.</p><h2>Hamburger Menu Nav Bar</h2><p>    The nav bar to this demo is the UATHamburgerMenu.      It is set to expand with the input     expandOnQuery="(min-width : 844px)".</p><p>    The Home link is fixed content so it does not     collapse when the rest of the menu does.</p><p>    The Menu item is just to show that arbitrary components    can be added to the nav bar as desired.</p><p>    The Item D and Item E items are just &lt;a&gt; elements but      are used to show that content can also be right justified. </p><p>    When collapsed the hamburger menu uses the content    defined by the uat-menu-toggle directive.</p><h2>Dropdown Input</h2><p>    The UATDropdownInput component is injected with a service    that implements the DropdownInputService interface.  This    service is responsible for providing the data necessary to    create the dynamic components that populate the drop down.    It also accepts the input and decides how to modify the     the search results provided to the component.  Here the     demo is just creating links to other parts of the demo.</p><p>    The search box here matches on exact text as defined by    the items returned from the service.  Other selection modes    can be set like partial match but this one only auto selects    the item in the drop down if the text typed matches exactly    with the search text defined in the model for the item the    service returns.  For instance type \'collapsing\' and the link    to the collapsing menu route will be automatically pre selected    in the dropdown box.</p><label>Pages: </label><div uat-dropdown-input     placeholderText="Search..."     autoSelectionMode="exact"     (listItemChosen)="onSearchItemChosen($event)"></div></div>'
     var COMPONENTS = [{'name': 'CollapsingMenuColorWidgetComponent', 'selector': 'app-collapsing-menu-color-widget'},{'name': 'ColorButtonComponent', 'selector': 'app-color-button'},{'name': 'ColorViewerComponent', 'selector': 'app-color-viewer'},{'name': 'DragAndDropComponent', 'selector': 'app-drag-and-drop'},{'name': 'DropdownMenuColorWidgetComponent', 'selector': 'app-dropdown-menu-color-widget'},{'name': 'FooComponent', 'selector': 'foo'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'MenuInput', 'selector': ''},{'name': 'NavigationLink', 'selector': ''},{'name': 'UATCollapsingMenu', 'selector': 'div[uat-collapsing-menu]'},{'name': 'UATDropdownInput', 'selector': 'div[uat-dropdown-input]'},{'name': 'UATDropdownInputItemsList', 'selector': 'ul[uat-dropdown-input-items-list]'},{'name': 'UATDropdownMenu', 'selector': 'div[uat-dropdown-menu]'},{'name': 'UATHamburgerMenu', 'selector': 'div[uat-hamburger-menu]'},{'name': 'UATMultiSelectComponent', 'selector': 'div[uat-multi-select]'},{'name': 'UATSlideoutMenu', 'selector': 'div[uat-slideout-menu]'},{'name': 'UATSlidingPanel', 'selector': 'div[uat-sliding-panel]'},{'name': 'UATToggle', 'selector': '[uat-toggle]'}];
     var DIRECTIVES = [{'name': 'UATDropdownInputDirective', 'selector': '[uat-sliding-panel-focus]'},{'name': 'UATDynamicComponentDirective', 'selector': '[uat-dynamic-component]'},{'name': 'UATMenuItem', 'selector': '[uat-menu-item]'},{'name': 'UATMenuItemRight', 'selector': '[uat-menu-item-right]'},{'name': 'UATSlidingPanelToggle', 'selector': '[uat-sliding-panel-toggle]'}];
     var ACTUAL_COMPONENT = {'name': 'HomeComponent'};
