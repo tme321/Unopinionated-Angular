@@ -2,7 +2,8 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Subject } from 'rxjs/Subject';
 import { Component, OnInit } from '@angular/core';
 import { NavigationLink } from '../menu-items/menu-items.components';
-import { DropdownInputItemChosenEvent } from '../lib/dropdown-input';
+import { DropdownInputItemChosenEvent, UATDropdownInputServiceToken } from '../lib/dropdown-input';
+import { DemoDropdownInputService } from '../demo-dropdown-service/demo-dropdown-input.service';
 
 @Component({
   selector: 'app-home',
