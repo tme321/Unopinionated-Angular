@@ -2,7 +2,7 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { UATSlidingPanel } from './sliding-panel.component';
-import { UATSlidingPanelToggle } from './sliding-panel-toggle.directive';
+import { UATSlidingPanelToggle } from './toggle/sliding-panel-toggle.directive';
 
 @NgModule({
   imports: [
