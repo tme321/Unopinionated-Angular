@@ -13,9 +13,11 @@
     </div>
   </div>
   
-  <div [uat-sliding-panel-toggle]="panel" 
+  <div [uat-sliding-panel-toggle]="panel"
+       #toggle="uatSlidingPanelToggle" 
        [toggleOnClick]="toggleOnClick"
        [showOnHover]="showOnHover"
+       [showOnInit]="expanded"
        [closeOnClickOutside]="closeOnClickOutside">
       <ng-content select="[uat-menu-toggle]"></ng-content>
   </div>

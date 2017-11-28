@@ -4,11 +4,13 @@ import {
   HostListener, 
   HostBinding, 
   NgZone, 
-  ElementRef } from '@angular/core';
+  ElementRef, 
+  OnInit,
+  OnDestroy,
+  AfterViewInit} from '@angular/core';
 import { UATSlidingPanel } from '../sliding-panel.component';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
-import { Subject } from 'rxjs/Subject';
 import { fromEvent } from 'rxjs/observable/fromEvent';
 import { filter } from 'rxjs/operators/filter';
 import { combineLatest } from 'rxjs/operators/combineLatest';
@@ -33,7 +35,7 @@ import { of } from 'rxjs/observable/of';
   },
   exportAs:'uatSlidingPanelToggle'
 })
-export class UATSlidingPanelToggle {
+export class UATSlidingPanelToggle implements OnInit, OnDestroy {
 
   /**
    * The panel that the toggle is attached to.
@@ -62,6 +64,12 @@ export class UATSlidingPanelToggle {
   @Input() closeOnClickOutside = false;
 
   /**
+   * Sets the initial state of the panel 
+   * by pinning open it if true.
+   */
+  @Input() showOnInit: boolean;
+
+  /**
    * Keep track of the previous pin state.
    * This is needed to determine if the 
    * new pin state should actually cause a
@@ -74,7 +82,7 @@ export class UATSlidingPanelToggle {
    * can be properly closed.
    */
   private showHideSubscription: Subscription;
-  
+
   constructor(private element: ElementRef) {
   }
 
@@ -168,7 +176,7 @@ export class UATSlidingPanelToggle {
      * Combine all the pinned state
      * streams.
      */
-    let nextPinnedState$ = of(false)
+    let nextPinnedState$ = of(this.showOnInit)
       .pipe(
         merge(toggleClicked$, panelClicked$, documentClicked$));
 
@@ -180,15 +188,15 @@ export class UATSlidingPanelToggle {
       .pipe(
         merge(leaveBoth$, enterEither$),
         /*
-         * 50 here is arbitrary but 
-         * seems to be below the 
-         * human threshhold for noticing
-         * the delay while letting 
-         * slower systems have plenty of
-         * time to process the events.
-         * 
-         * Maybe it should be configurable?
-         */
+          * 50 here is arbitrary but 
+          * seems to be below the 
+          * human threshhold for noticing
+          * the delay while letting 
+          * slower systems have plenty of
+          * time to process the events.
+          * 
+          * Maybe it should be configurable?
+          */
         debounceTime(50));
 
     /*
@@ -210,12 +218,15 @@ export class UATSlidingPanelToggle {
     }
   }
 
+  showPanel = () => this.onNextState({hover: false, pin: true});
+  hidePanel = () => this.onNextState({hover: false, pin: false});
+
   /**
    * Determine what the next panel state
    * should be based on the new hover and
    * pin states.
    */
-  onNextState = (nextStates:{hover: boolean, pin: boolean}) => {
+  private onNextState = (nextStates:{hover: boolean, pin: boolean}) => {
     if(nextStates.hover ) {
       if(this.previousPinnedState && !nextStates.pin) { 
         this.panel.hide();  
