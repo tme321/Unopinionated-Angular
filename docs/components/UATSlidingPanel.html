@@ -639,10 +639,10 @@
     </p>
     <p class="comment">
         <p>A sliding panel is a div element that can be 
-set to slide horizontally or vertically.</p>
+set to slide up, down, left, or right.</p>
 <p>It can be tied to a slidiing panel toggle
 or can be shown or hidden by calling the
-public members. </p>
+public members show, hide, or toggle. </p>
 
     </p>
 
@@ -712,16 +712,13 @@ public members. </p>
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                 <a href="#horizontalState">horizontalState</a>
-                            </li>
-                            <li>
-                                <span class="modifier">Private</span> <a href="#overflowStyle">overflowStyle</a>
+                                <span class="modifier">Private</span> <a href="#horizontalState">horizontalState</a>
                             </li>
                             <li>
                                 <span class="modifier">Public</span> <a href="#pinned">pinned</a>
                             </li>
                             <li>
-                                 <a href="#verticalState">verticalState</a>
+                                <span class="modifier">Private</span> <a href="#verticalState">verticalState</a>
                             </li>
                         </ul>
                     </td>
@@ -736,9 +733,6 @@ public members. </p>
                         <ul class="index-list">
                             <li>
                                 <span class="modifier">Public</span> <a href="#hide">hide</a>
-                            </li>
-                            <li>
-                                 <a href="#ngOnInit">ngOnInit</a>
                             </li>
                             <li>
                                 <span class="modifier">Public</span> <a href="#show">show</a>
@@ -757,9 +751,6 @@ public members. </p>
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
-                            <li>
-                                <a href="#showOnInit">showOnInit</a>
-                            </li>
                             <li>
                                 <a href="#slideDirection">slideDirection</a>
                             </li>
@@ -791,20 +782,6 @@ public members. </p>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <h6><b>HostBindings</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#class.uat-sliding-panel">class.uat-sliding-panel</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
                         <h6><b>Accessors</b></h6>
                     </td>
                 </tr>
@@ -813,9 +790,6 @@ public members. </p>
                         <ul class="index-list">
                             <li>
                                  <a href="#isShowing">isShowing</a>
-                            </li>
-                            <li>
-                                 <a href="#isHorizontal">isHorizontal</a>
                             </li>
                         </ul>
                     </td>
@@ -830,52 +804,15 @@ public members. </p>
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <code>constructor(chRef: <a href="https://angular.io/docs/ts/latest/api/api/core/ChangeDetectorRef" target="_blank">ChangeDetectorRef</a>, zone: <a href="https://angular.io/docs/ts/latest/api/api/core/NgZone" target="_blank">NgZone</a>)</code>
+                            <code>constructor()</code>
                         </td>
                     </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="187" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:187</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="99" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:99</a></div>
                                 </td>
                             </tr>
     
-                    <tr>
-                        <td class="col-md-4">
-                                <div>
-                                        <b>Parameters :</b>
-                                        <table class="params">
-                                            <thead>
-                                                <tr>
-                                                    <td>Name</td>
-                                                    <td>Type</td>
-                                                    <td>Optional</td>
-                                                    <td>Description</td>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                    <tr>
-                                                      <td>chRef</td>
-                                                      <td>
-                                                                <code><a href="https://angular.io/docs/ts/latest/api/api/core/ChangeDetectorRef" target="_blank" >ChangeDetectorRef</a></code>
-                                                      </td>
-                                                      <td>
-                                                      </td>
-                                                      <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                      <td>zone</td>
-                                                      <td>
-                                                                <code><a href="https://angular.io/docs/ts/latest/api/api/core/NgZone" target="_blank" >NgZone</a></code>
-                                                      </td>
-                                                      <td>
-                                                      </td>
-                                                      <td></td>
-                                                    </tr>
-                                            </tbody>
-                                        </table>
-                                </div>
-                        </td>
-                    </tr>
                 </tbody>
             </table>
     </section>
@@ -886,48 +823,22 @@ public members. </p>
                 <tbody>
                     <tr>
                         <td class="col-md-2">
-                            <a name="showOnInit"></a>
-                            <code>showOnInit</code>
-                        </td>
-                        <td class="col-md-10">
-                            <div><p>Specify whether the menu should initialize in the showing
-or hidden state.  Defaults to false.</p>
-</div>
-                            <p>
-                              <em>Default value: </em><code>false</code>
-                            </p>
-                        </td>
-                    </tr>
-                            <tr>
-                                <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="147" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:147</a></div>
-                                </td>
-                            </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-2">
                             <a name="slideDirection"></a>
                             <code>slideDirection</code>
                         </td>
                         <td class="col-md-10">
                             <div><p>Specify the direction of the panels sliding animation.
-&#39;horizontal&#39; or &#39;veritcal&#39;</p>
+Valid values: &#39;up&#39;, &#39;down&#39;, &#39;left&#39;, or &#39;right&#39;</p>
 </div>
                               <p>
-                                <em>Type:</em>    <code>&quot;horizontal&quot; | &quot;vertical&quot;</code>
+                                <em>Type:</em>    <code><a href="../miscellaneous/enumerations.html#SlideDirections" target="_self" >SlideDirections</a></code>
 
                               </p>
-                            <p>
-                              <em>Default value: </em><code>horizontal</code>
-                            </p>
                         </td>
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="141" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:141</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:66</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -952,7 +863,7 @@ or hidden state.  Defaults to false.</p>
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="167" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:167</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:86</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -973,7 +884,7 @@ or hidden state.  Defaults to false.</p>
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="152" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:152</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:71</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -994,7 +905,7 @@ or hidden state.  Defaults to false.</p>
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="157" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:157</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:76</a></div>
                                 </td>
                             </tr>
                 </tbody>
@@ -1015,43 +926,13 @@ or hidden state.  Defaults to false.</p>
                     </tr>
                             <tr>
                                 <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="162" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:162</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="81" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:81</a></div>
                                 </td>
                             </tr>
                 </tbody>
             </table>
     </section>
 
-    <section>
-        <h3>HostBindings</h3>        <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <a name="class.uat-sliding-panel"></a>
-                            <span class="name"><b> class.uat-sliding-panel</b><a href="#class.uat-sliding-panel"><span class="fa fa-link"></span></a></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <code>class.uat-sliding-panel:     <code></code>
-    </code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Default value : </i><code>true</code>
-                            </td>
-                        </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="135" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:135</a></div>
-                                </td>
-                            </tr>
-    
-    
-                </tbody>
-            </table>
-    </section>
 
 
     <section>
@@ -1077,7 +958,7 @@ or hidden state.  Defaults to false.</p>
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="229" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:229</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="143" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:143</a></div>
                                 </td>
                             </tr>
     
@@ -1085,38 +966,6 @@ or hidden state.  Defaults to false.</p>
                         <td class="col-md-4">
                                 <div class="io-description"><p>Hide the panel with a sliding animation.</p>
     </div>
-    
-                                <div class="io-description">
-                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-    
-                                </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <a name="ngOnInit"></a>
-                            <span class="name"><b> ngOnInit</b><a href="#ngOnInit"><span class="fa fa-link"></span></a></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-    <code>ngOnInit()</code>
-                        </td>
-                    </tr>
-    
-    
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="191" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:191</a></div>
-                                </td>
-                            </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
     
                                 <div class="io-description">
                                     <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -1144,7 +993,7 @@ or hidden state.  Defaults to false.</p>
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="217" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:217</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="114" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:114</a></div>
                                 </td>
                             </tr>
     
@@ -1179,7 +1028,7 @@ or hidden state.  Defaults to false.</p>
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="241" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:241</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="152" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:152</a></div>
                                 </td>
                             </tr>
     
@@ -1208,60 +1057,33 @@ or hidden state.  Defaults to false.</p>
                     <tr>
                         <td class="col-md-4">
                             <a name="horizontalState"></a>
-                            <span class="name"><b> horizontalState</b><a href="#horizontalState"><span class="fa fa-link"></span></a></span>
+                            <span class="name"><b><span class="modifier">Private</span> horizontalState</b><a href="#horizontalState"><span class="fa fa-link"></span></a></span>
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <code>horizontalState:     <code>&quot;init&quot; | &quot;show&quot; | &quot;hide&quot;</code>
+                            <span class="modifier-icon fa fa-lock"></span><code>horizontalState:     <code><a href="../miscellaneous/enumerations.html#SlideAnimationDirections" target="_self" >SlideAnimationDirections</a></code>
     </code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                <i>Type : </i>    <code>&quot;init&quot; | &quot;show&quot; | &quot;hide&quot;</code>
+                                <i>Type : </i>    <code><a href="../miscellaneous/enumerations.html#SlideAnimationDirections" target="_self" >SlideAnimationDirections</a></code>
     
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Default value : </i><code>init</code>
                             </td>
                         </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="184" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:184</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="94" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:94</a></div>
                                 </td>
                             </tr>
     
-    
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <a name="overflowStyle"></a>
-                            <span class="name"><b><span class="modifier">Private</span> overflowStyle</b><a href="#overflowStyle"><span class="fa fa-link"></span></a></span>
+                            <div class="io-description"><p>Trigger for the horizontal animations.</p>
+    </div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <span class="modifier-icon fa fa-lock"></span><code>overflowStyle:     <code></code>
-    </code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Default value : </i><code>hidden</code>
-                            </td>
-                        </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="187" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:187</a></div>
-                                </td>
-                            </tr>
-    
     
                 </tbody>
             </table>
@@ -1286,7 +1108,7 @@ or hidden state.  Defaults to false.</p>
                         </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="169" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:169</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="88" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:88</a></div>
                                 </td>
                             </tr>
     
@@ -1298,32 +1120,33 @@ or hidden state.  Defaults to false.</p>
                     <tr>
                         <td class="col-md-4">
                             <a name="verticalState"></a>
-                            <span class="name"><b> verticalState</b><a href="#verticalState"><span class="fa fa-link"></span></a></span>
+                            <span class="name"><b><span class="modifier">Private</span> verticalState</b><a href="#verticalState"><span class="fa fa-link"></span></a></span>
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <code>verticalState:     <code>&quot;init&quot; | &quot;show&quot; | &quot;hide&quot;</code>
+                            <span class="modifier-icon fa fa-lock"></span><code>verticalState:     <code><a href="../miscellaneous/enumerations.html#SlideAnimationDirections" target="_self" >SlideAnimationDirections</a></code>
     </code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                <i>Type : </i>    <code>&quot;init&quot; | &quot;show&quot; | &quot;hide&quot;</code>
+                                <i>Type : </i>    <code><a href="../miscellaneous/enumerations.html#SlideAnimationDirections" target="_self" >SlideAnimationDirections</a></code>
     
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Default value : </i><code>init</code>
                             </td>
                         </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="185" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:185</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="99" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:99</a></div>
                                 </td>
                             </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Trigger for the vertical animations.</p>
+    </div>
+                        </td>
+                    </tr>
     
                 </tbody>
             </table>
@@ -1349,29 +1172,7 @@ or hidden state.  Defaults to false.</p>
                     </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="171" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:171</a></div>
-                                    </td>
-                                </tr>
-    
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <a name="isHorizontal"></a>
-                            <span class="name"><b>isHorizontal</b><a href="#isHorizontal"><span class="fa fa-link"></span></a></span>
-                        </td>
-                    </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-                            <span class="accessor"><b>get</b><code>isHorizontal()</code></span>
-                        </td>
-                    </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="180" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:180</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="106" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel.component.ts:106</a></div>
                                     </td>
                                 </tr>
     
@@ -1404,13 +1205,20 @@ import {
   group
 } from &#x27;@angular/animations&#x27;;
 
+import { 
+  verticalSlideAnimations, 
+  horizontalSlideAnimations } from &#x27;./sliding-panel.animations&#x27;;
+import { SlideAnimationDirections, SlideDirections } from &#x27;./sliding-panel.enums&#x27;;
+
+
+
 /**
  * A sliding panel is a div element that can be 
- * set to slide horizontally or vertically.
+ * set to slide up, down, left, or right.
  * 
  * It can be tied to a slidiing panel toggle
  * or can be shown or hidden by calling the
- * public members. 
+ * public members show, hide, or toggle. 
  */
 @Component({
   selector: &#x27;div[uat-sliding-panel]&#x27;,
@@ -1426,109 +1234,21 @@ import {
     &#x27;(mouseleave)&#x27;:&#x27;mouseLeavePanel.emit($event)&#x27;,
     &#x27;(mouseover)&#x27;:&#x27;mouseOverPanel.emit($event)&#x27;,
     &#x27;(click)&#x27;:&#x27;clickPanel.emit($event)&#x27;,
+    &#x27;[class.uat-sliding-panel]&#x27;:&quot;&#x27;true&#x27;&quot;
   },
-  // TODO: long term I would like to make the transition timing values
-  // variable by an @Input.  
   animations: [
-    trigger(&#x27;horizontalTrigger&#x27;, [
-        state(&#x27;hide&#x27;, style({
-            width: &#x27;0&#x27;,
-            overflow: &#x27;hidden&#x27;,
-            // TODO: using scaleY instead of height for the animation
-            // would be a better solution but we cannot toggle between
-            // transform-origin values for vertical normal vs reverse
-            // expansion of the panel.  So until we can use a variable
-            // binding in animations we&#x27;ll have to use height and width
-            // despite their being less than ideal.
-            //transform: &#x27;scaleY(0)&#x27;,
-            //&#x27;transform-origin&#x27;: &#x27;top&#x27;,
-        })),
-        state(&#x27;show&#x27;,   style({
-          width: &#x27;*&#x27;,
-          //transform: &#x27;scaleY(1)&#x27;,
-          //&#x27;transform-origin&#x27;: &#x27;top&#x27;,
-        })),
-        
-        
-        transition(&#x27;hide &#x3D;&gt; show&#x27;, [
-          style({ width:&#x27;0&#x27;, overflow:&#x27;hidden&#x27; }),
-          group([
-            animate(&#x27;150ms ease-in&#x27;, style({
-              width: &#x27;*&#x27;,
-              overflow: &#x27;hidden&#x27;
-            })),
-            animate(&#x27;0ms 151ms ease&#x27;, style({
-            }))
-          ])
-        ]), 
-
-        transition(&#x27;show &#x3D;&gt; hide&#x27;, [
-          style({ width:&#x27;*&#x27; }),
-          group([
-            animate(&#x27;150ms ease-out&#x27;, style({
-              width: &#x27;0&#x27;,
-            })),
-            animate(&#x27;0ms ease&#x27;, style({
-              overflow: &#x27;hidden&#x27;
-            }))
-          ])
-        ]), 
-        // simple transitions can be using with scale.
-        //transition(&#x27;hide &#x3D;&gt; show&#x27;, animate(&#x27;200ms ease-in&#x27;)),
-        //transition(&#x27;show &#x3D;&gt; hide&#x27;, animate(&#x27;200ms ease-out&#x27;))
-    ]),
-    trigger(&#x27;verticalTrigger&#x27;, [
-        state(&#x27;hide&#x27;, style({
-            height: &#x27;0&#x27;,
-            overflow: &#x27;hidden&#x27;
-        })),
-        state(&#x27;show&#x27;,   style({
-          height: &#x27;*&#x27;,
-        })),
-        transition(&#x27;hide &#x3D;&gt; show&#x27;, [
-          style({ height:&#x27;0&#x27;, overflow:&#x27;hidden&#x27; }),
-          group([
-            animate(&#x27;150ms ease-in&#x27;, style({
-              height: &#x27;*&#x27;,
-              overflow: &#x27;hidden&#x27;
-            })),
-            animate(&#x27;0ms 151ms ease-in&#x27;, style({
-            }))
-          ])
-        ]), 
-
-        transition(&#x27;show &#x3D;&gt; hide&#x27;, [
-          style({ height:&#x27;*&#x27; }),
-          group([
-            animate(&#x27;150ms ease-out&#x27;, style({
-              height: &#x27;0&#x27;,
-            })),
-            animate(&#x27;0ms ease-out&#x27;, style({
-              overflow: &#x27;hidden&#x27;
-            }))
-          ])
-        ]), 
-        //transition(&#x27;hide &#x3D;&gt; show&#x27;, animate(&#x27;200ms ease-in&#x27;)),
-        //transition(&#x27;show &#x3D;&gt; hide&#x27;, animate(&#x27;200ms ease-out&#x27;))
-    ])
+    verticalSlideAnimations(), 
+    horizontalSlideAnimations(),
   ],
   exportAs: &#x27;uatSlidingPanel&#x27;,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UATSlidingPanel {
-  @HostBinding(&#x27;class.uat-sliding-panel&#x27;) applyHostClass &#x3D; true;
-
   /**
    * Specify the direction of the panels sliding animation.
-   * &#x27;horizontal&#x27; or &#x27;veritcal&#x27;
+   * Valid values: &#x27;up&#x27;, &#x27;down&#x27;, &#x27;left&#x27;, or &#x27;right&#x27;
    */
-  @Input() slideDirection: &#x27;horizontal&#x27; | &#x27;vertical&#x27; &#x3D; &#x27;horizontal&#x27;;
-
-  /**
-   * Specify whether the menu should initialize in the showing
-   * or hidden state.  Defaults to false.
-   */
-  @Input() showOnInit &#x3D; false;
+  @Input() slideDirection: SlideDirections &#x3D; SlideDirections.DOWN;
 
   /**
    * Event for when the mouse enters the panel.
@@ -1552,58 +1272,53 @@ export class UATSlidingPanel {
 
   public pinned &#x3D; false;
 
+
+  /**
+   * Trigger for the horizontal animations.
+   */
+  private horizontalState : SlideAnimationDirections &#x3D; SlideAnimationDirections.CLOSE;
+
+  /**
+   * Trigger for the vertical animations.
+   */
+  private verticalState : SlideAnimationDirections &#x3D; SlideAnimationDirections.CLOSE;
+
+  constructor() { }
+
+  /**
+   * Returns whether the panel is open or closed.
+   */
   public get isShowing() {
-    if(this.isHorizontal) {
-      return this.horizontalState &#x3D;&#x3D;&#x3D; &#x27;show&#x27;
-    }
-    else{
-      return this.verticalState &#x3D;&#x3D;&#x3D; &#x27;show&#x27;
-    }
-  }
-
-  public get isHorizontal() {
-    return this.slideDirection &#x3D;&#x3D;&#x3D; &#x27;horizontal&#x27;;
-  }
-
-  horizontalState: &#x27;init&#x27; | &#x27;show&#x27; | &#x27;hide&#x27; &#x3D; &#x27;init&#x27;;
-  verticalState: &#x27;init&#x27; | &#x27;show&#x27; | &#x27;hide&#x27; &#x3D; &#x27;init&#x27;;
-
-  private overflowStyle &#x3D; &#x27;hidden&#x27;;
-
-  constructor(private chRef: ChangeDetectorRef, private zone: NgZone) { }
-
-  ngOnInit() {
-    if(!this.showOnInit) {
-        if(this.isHorizontal) {
-          this.zone.run(()&#x3D;&gt; setTimeout((_:any)&#x3D;&gt;{
-            this.verticalState &#x3D; &#x27;show&#x27;;
-            this.horizontalState &#x3D; &#x27;hide&#x27;;
-          }));
-        }
-        else {
-          this.zone.run(()&#x3D;&gt; setTimeout((_:any)&#x3D;&gt;{
-            this.horizontalState &#x3D; &#x27;show&#x27;;
-            this.verticalState &#x3D; &#x27;hide&#x27;;
-          }));
-        }
-    }
-    else {
-      this.zone.run(()&#x3D;&gt; setTimeout((_:any)&#x3D;&gt;{
-        this.verticalState &#x3D; &#x27;show&#x27;;
-        this.horizontalState &#x3D; &#x27;show&#x27;;
-      }));
-    }
+    return (this.horizontalState !&#x3D;&#x3D; SlideAnimationDirections.CLOSE ||
+        this.verticalState !&#x3D;&#x3D; SlideAnimationDirections.CLOSE);
   }
 
   /**
    * Show the panel with a sliding animation.
    */
   public show() {
-    if(this.isHorizontal){
-      this.horizontalState &#x3D; &#x27;show&#x27;;
-    }
-    else{
-      this.verticalState &#x3D; &#x27;show&#x27;;
+    switch(this.slideDirection) {
+      case SlideDirections.LEFT: {
+        this.horizontalState &#x3D; SlideAnimationDirections.SLIDE_LEFT;
+        break;
+      }
+      case SlideDirections.RIGHT: {
+        this.horizontalState &#x3D; SlideAnimationDirections.SLIDE_RIGHT;
+        break;
+      }
+      case SlideDirections.UP: {
+        this.verticalState &#x3D; SlideAnimationDirections.SLIDE_UP;
+        break;
+      }
+      case SlideDirections.DOWN: {
+        this.verticalState &#x3D; SlideAnimationDirections.SLIDE_DOWN;
+        break;
+      }
+      default: {
+        this.horizontalState &#x3D; SlideAnimationDirections.CLOSE;
+        this.verticalState &#x3D; SlideAnimationDirections.CLOSE;
+        break;
+      }
     }
   }
 
@@ -1611,12 +1326,9 @@ export class UATSlidingPanel {
    * Hide the panel with a sliding animation.
    */
   public hide() {
-    if(this.isHorizontal){
-      this.horizontalState &#x3D; &#x27;hide&#x27;;
-    }
-    else{
-      this.verticalState &#x3D; &#x27;hide&#x27;;
-    }
+    this.horizontalState &#x3D; SlideAnimationDirections.CLOSE;
+    this.verticalState &#x3D; SlideAnimationDirections.CLOSE;
+
   }
 
   /**
@@ -1663,7 +1375,7 @@ export class UATSlidingPanel {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><ng-content></ng-content></div>'
-    var COMPONENTS = [{'name': 'CollapsingMenuColorWidgetComponent', 'selector': 'app-collapsing-menu-color-widget'},{'name': 'ColorButtonComponent', 'selector': 'app-color-button'},{'name': 'ColorViewerComponent', 'selector': 'app-color-viewer'},{'name': 'DragAndDropComponent', 'selector': 'app-drag-and-drop'},{'name': 'DropdownMenuColorWidgetComponent', 'selector': 'app-dropdown-menu-color-widget'},{'name': 'FooComponent', 'selector': 'foo'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'MenuInput', 'selector': ''},{'name': 'NavigationLink', 'selector': ''},{'name': 'UATCollapsingMenu', 'selector': 'div[uat-collapsing-menu]'},{'name': 'UATDropdownInput', 'selector': 'div[uat-dropdown-input]'},{'name': 'UATDropdownInputItemsList', 'selector': 'ul[uat-dropdown-input-items-list]'},{'name': 'UATDropdownMenu', 'selector': 'div[uat-dropdown-menu]'},{'name': 'UATHamburgerMenu', 'selector': 'div[uat-hamburger-menu]'},{'name': 'UATMultiSelectComponent', 'selector': 'div[uat-multi-select]'},{'name': 'UATSlideoutMenu', 'selector': 'div[uat-slideout-menu]'},{'name': 'UATSlidingPanel', 'selector': 'div[uat-sliding-panel]'},{'name': 'UATToggle', 'selector': '[uat-toggle]'}];
+    var COMPONENTS = [{'name': 'CollapsingMenuColorWidgetComponent', 'selector': 'app-collapsing-menu-color-widget'},{'name': 'ColorButtonComponent', 'selector': 'app-color-button'},{'name': 'ColorViewerComponent', 'selector': 'app-color-viewer'},{'name': 'DragAndDropComponent', 'selector': 'app-drag-and-drop'},{'name': 'DropdownMenuColorWidgetComponent', 'selector': 'app-dropdown-menu-color-widget'},{'name': 'FooComponent', 'selector': 'foo'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'MenuInput', 'selector': ''},{'name': 'NavigationLink', 'selector': ''},{'name': 'UATCollapsingMenu', 'selector': 'div[uat-collapsing-menu]'},{'name': 'UATDropdownInput', 'selector': 'div[uat-dropdown-input]'},{'name': 'UATDropdownInputItemsList', 'selector': 'ul[uat-dropdown-input-items-list]'},{'name': 'UATDropdownMenu', 'selector': 'div[uat-dropdown-menu]'},{'name': 'UATHamburgerMenu', 'selector': 'div[uat-hamburger-menu], nav[uat-hamburger-menu]'},{'name': 'UATMultiSelectComponent', 'selector': 'div[uat-multi-select]'},{'name': 'UATSlideoutMenu', 'selector': 'div[uat-slideout-menu]'},{'name': 'UATSlidingPanel', 'selector': 'div[uat-sliding-panel]'},{'name': 'UATToggle', 'selector': '[uat-toggle]'}];
     var DIRECTIVES = [{'name': 'UATDropdownInputDirective', 'selector': '[uat-sliding-panel-focus]'},{'name': 'UATDynamicComponentDirective', 'selector': '[uat-dynamic-component]'},{'name': 'UATMenuItem', 'selector': '[uat-menu-item]'},{'name': 'UATMenuItemRight', 'selector': '[uat-menu-item-right]'},{'name': 'UATSlidingPanelToggle', 'selector': '[uat-sliding-panel-toggle]'}];
     var ACTUAL_COMPONENT = {'name': 'UATSlidingPanel'};
 </script>

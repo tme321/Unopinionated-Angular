@@ -628,19 +628,26 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts</code>
+            <code>src/app/lib/sliding-panel/toggle/sliding-panel-toggle.directive.ts</code>
         </p>
 
             <p class="comment">
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Control a sliding panels shown or hidden state.
-Should only be attached to elements that have
+                <p>Control a sliding panels shown or hidden state.</p>
+<p>Should only be attached to elements that have
 a click event.</p>
 
             </p>
 
+            <p class="comment">
+                <h3>Implements</h3>
+            </p>
+            <p class="comment">
+                        <code><a href="https://angular.io/docs/ts/latest/api/api/core/OnInit" target="_blank" >OnInit</a></code>
+                        <code><a href="https://angular.io/docs/ts/latest/api/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+            </p>
 
 
         <section>
@@ -670,40 +677,19 @@ a click event.</p>
                             <td class="col-md-4">
                                 <ul class="index-list">
                                     <li>
-                                        <span class="modifier">Private</span> <a href="#clickedNotEntered">clickedNotEntered</a>
+                                         <a href="#hidePanel">hidePanel</a>
                                     </li>
                                     <li>
-                                        <span class="modifier">Private</span> <a href="#isHovering">isHovering</a>
+                                        <span class="modifier">Private</span> <a href="#onNextState">onNextState</a>
                                     </li>
                                     <li>
-                                        <span class="modifier">Private</span> <a href="#onPanelClicked">onPanelClicked</a>
+                                        <span class="modifier">Private</span> <a href="#previousPinnedState">previousPinnedState</a>
                                     </li>
                                     <li>
-                                        <span class="modifier">Private</span> <a href="#onPanelMouseEntered">onPanelMouseEntered</a>
+                                        <span class="modifier">Private</span> <a href="#showHideSubscription">showHideSubscription</a>
                                     </li>
                                     <li>
-                                        <span class="modifier">Private</span> <a href="#onPanelMouseLeft">onPanelMouseLeft</a>
-                                    </li>
-                                    <li>
-                                        <span class="modifier">Private</span> <a href="#panelClickedSub">panelClickedSub</a>
-                                    </li>
-                                    <li>
-                                        <span class="modifier">Private</span> <a href="#panelMouseEnteredSub">panelMouseEnteredSub</a>
-                                    </li>
-                                    <li>
-                                        <span class="modifier">Private</span> <a href="#panelMouseLeftSub">panelMouseLeftSub</a>
-                                    </li>
-                                    <li>
-                                        <span class="modifier">Private</span> <a href="#panelWasClicked">panelWasClicked</a>
-                                    </li>
-                                    <li>
-                                        <span class="modifier">Private</span> <a href="#panelWasEntered">panelWasEntered</a>
-                                    </li>
-                                    <li>
-                                        <span class="modifier">Private</span> <a href="#panelWasLeft">panelWasLeft</a>
-                                    </li>
-                                    <li>
-                                        <span class="modifier">Private</span> <a href="#toggleWasClicked">toggleWasClicked</a>
+                                         <a href="#showPanel">showPanel</a>
                                     </li>
                                 </ul>
                             </td>
@@ -717,25 +703,10 @@ a click event.</p>
                             <td class="col-md-4">
                                 <ul class="index-list">
                                     <li>
-                                        <span class="modifier">Private</span> <a href="#hideIfNotOver">hideIfNotOver</a>
-                                    </li>
-                                    <li>
                                          <a href="#ngOnDestroy">ngOnDestroy</a>
                                     </li>
                                     <li>
                                          <a href="#ngOnInit">ngOnInit</a>
-                                    </li>
-                                    <li>
-                                         <a href="#onClick">onClick</a>
-                                    </li>
-                                    <li>
-                                         <a href="#onMouseEnter">onMouseEnter</a>
-                                    </li>
-                                    <li>
-                                         <a href="#onMouseLeave">onMouseLeave</a>
-                                    </li>
-                                    <li>
-                                         <a href="#onOutsideClick">onOutsideClick</a>
                                     </li>
                                 </ul>
                             </td>
@@ -755,24 +726,13 @@ a click event.</p>
                                         <a href="#showOnHover">showOnHover</a>
                                     </li>
                                     <li>
+                                        <a href="#showOnInit">showOnInit</a>
+                                    </li>
+                                    <li>
                                         <a href="#toggleOnClick">toggleOnClick</a>
                                     </li>
                                     <li>
                                         <a href="#uat-sliding-panel-toggle">uat-sliding-panel-toggle</a>
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <h6><b>HostBindings</b></h6>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <ul class="index-list">
-                                    <li>
-                                        <a href="#class.uat-sliding-panel-toggle">class.uat-sliding-panel-toggle</a>
                                     </li>
                                 </ul>
                             </td>
@@ -787,12 +747,12 @@ a click event.</p>
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <code>constructor(zone: <a href="https://angular.io/docs/ts/latest/api/api/core/NgZone" target="_blank">NgZone</a>)</code>
+                                    <code>constructor(element: <a href="https://angular.io/docs/ts/latest/api/api/core/ElementRef" target="_blank">ElementRef</a>)</code>
                                 </td>
                             </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts:78</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/app/lib/sliding-panel/toggle/sliding-panel-toggle.directive.ts:84</a></div>
                                         </td>
                                     </tr>
             
@@ -811,9 +771,9 @@ a click event.</p>
                                                     </thead>
                                                     <tbody>
                                                             <tr>
-                                                              <td>zone</td>
+                                                              <td>element</td>
                                                               <td>
-                                                                        <code><a href="https://angular.io/docs/ts/latest/api/api/core/NgZone" target="_blank" >NgZone</a></code>
+                                                                        <code><a href="https://angular.io/docs/ts/latest/api/api/core/ElementRef" target="_blank" >ElementRef</a></code>
                                                               </td>
                                                               <td>
                                                               </td>
@@ -848,7 +808,7 @@ clicked outside the toggle or panel or not.</p>
                             </tr>
                                     <tr>
                                         <td class="col-md-2" colspan="2">
-                                            <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts:50</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/lib/sliding-panel/toggle/sliding-panel-toggle.directive.ts:64</a></div>
                                         </td>
                                     </tr>
                         </tbody>
@@ -871,7 +831,31 @@ on mouse over or not.</p>
                             </tr>
                                     <tr>
                                         <td class="col-md-2" colspan="2">
-                                            <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts:44</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/lib/sliding-panel/toggle/sliding-panel-toggle.directive.ts:58</a></div>
+                                        </td>
+                                    </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <a name="showOnInit"></a>
+                                    <code>showOnInit</code>
+                                </td>
+                                <td class="col-md-10">
+                                    <div><p>Sets the initial state of the panel 
+by pinning open it if true.</p>
+</div>
+                                      <p>
+                                        <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                                    <tr>
+                                        <td class="col-md-2" colspan="2">
+                                            <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/app/lib/sliding-panel/toggle/sliding-panel-toggle.directive.ts:70</a></div>
                                         </td>
                                     </tr>
                         </tbody>
@@ -894,7 +878,7 @@ on a click event or not.</p>
                             </tr>
                                     <tr>
                                         <td class="col-md-2" colspan="2">
-                                            <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts:38</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/lib/sliding-panel/toggle/sliding-panel-toggle.directive.ts:52</a></div>
                                         </td>
                                     </tr>
                         </tbody>
@@ -907,9 +891,9 @@ on a click event or not.</p>
                                     <code>uat-sliding-panel-toggle</code>
                                 </td>
                                 <td class="col-md-10">
-                                    <div><p>The panel that the toggle is attached to.
-If this value is not set an error will be thrown
-during init.</p>
+                                    <div><p>The panel that the toggle is attached to.</p>
+<p>If this value is not set an error will be 
+thrown during init.</p>
 </div>
                                       <p>
                                         <em>Type:</em>    <code><a href="../components/UATSlidingPanel.html" target="_self" >UATSlidingPanel</a></code>
@@ -919,7 +903,7 @@ during init.</p>
                             </tr>
                                     <tr>
                                         <td class="col-md-2" colspan="2">
-                                            <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts:32</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/lib/sliding-panel/toggle/sliding-panel-toggle.directive.ts:46</a></div>
                                         </td>
                                     </tr>
                         </tbody>
@@ -927,36 +911,6 @@ during init.</p>
             </section>
 
 
-            <section>
-                <h3>HostBindings</h3>        <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <a name="class.uat-sliding-panel-toggle"></a>
-                                    <span class="name"><b> class.uat-sliding-panel-toggle</b><a href="#class.uat-sliding-panel-toggle"><span class="fa fa-link"></span></a></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <code>class.uat-sliding-panel-toggle:     <code></code>
-            </code>
-                                </td>
-                            </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <i>Default value : </i><code>true</code>
-                                    </td>
-                                </tr>
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts:25</a></div>
-                                        </td>
-                                    </tr>
-            
-            
-                        </tbody>
-                    </table>
-            </section>
 
 
             <section>
@@ -964,74 +918,6 @@ during init.</p>
                     <h3 id="methods">
                         Methods
                     </h3>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <a name="hideIfNotOver"></a>
-                                    <span class="name"><b><span class="modifier">Private</span> hideIfNotOver</b><a href="#hideIfNotOver"><span class="fa fa-link"></span></a></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                        <span class="modifier-icon fa fa-lock"></span>
-                                    <code>hideIfNotOver(timeoutMs: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
-                                </td>
-                            </tr>
-            
-            
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="213" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts:213</a></div>
-                                        </td>
-                                    </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <div class="io-description"><p>We don&#39;t want to hide the panel if the mouse was moved
-            from the toggle to the menu so this function will only
-            be called after a timeout to determine if the 
-            mouse is still on the toggle or the panel, and only 
-            then will it hide the panel.</p>
-            </div>
-            
-                                        <div class="io-description">
-                                                <b>Parameters :</b>
-                                                <table class="params">
-                                                    <thead>
-                                                        <tr>
-                                                            <td>Name</td>
-                                                            <td>Type</td>
-                                                            <td>Optional</td>
-                                                            <td>Description</td>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                            <tr>
-                                                              <td>timeoutMs</td>
-                                                              <td>
-                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-                                                              </td>
-                                                              <td>
-                                                              </td>
-                                                              <td></td>
-                                                            </tr>
-                                                    </tbody>
-                                                </table>
-                                        </div>
-                                        <div>
-                                        </div>
-                                        <div class="io-description">
-                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-            
-                                        </div>
-                                            <div class="io-description">
-                                                
-                                            </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
@@ -1049,7 +935,7 @@ during init.</p>
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="120" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts:120</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="215" class="link-to-prism">src/app/lib/sliding-panel/toggle/sliding-panel-toggle.directive.ts:215</a></div>
                                         </td>
                                     </tr>
             
@@ -1081,7 +967,7 @@ during init.</p>
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts:83</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">src/app/lib/sliding-panel/toggle/sliding-panel-toggle.directive.ts:89</a></div>
                                         </td>
                                     </tr>
             
@@ -1092,250 +978,6 @@ during init.</p>
                                             <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
             
                                         </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <a name="onClick"></a>
-                                    <span class="name"><b> onClick</b><a href="#onClick"><span class="fa fa-link"></span></a></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="col-md-4">
-            <code>onClick(e: MouseEvent)</code>
-                                </td>
-                            </tr>
-            
-            
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="130" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts:130</a></div>
-                                        </td>
-                                    </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-            
-                                        <div class="io-description">
-                                                <b>Parameters :</b>
-                                                <table class="params">
-                                                    <thead>
-                                                        <tr>
-                                                            <td>Name</td>
-                                                            <td>Type</td>
-                                                            <td>Optional</td>
-                                                            <td>Description</td>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                            <tr>
-                                                              <td>e</td>
-                                                              <td>
-                                                                      <code>MouseEvent</code>
-                                                              </td>
-                                                              <td>
-                                                              </td>
-                                                              <td></td>
-                                                            </tr>
-                                                    </tbody>
-                                                </table>
-                                        </div>
-                                        <div>
-                                        </div>
-                                        <div class="io-description">
-                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-            
-                                        </div>
-                                            <div class="io-description">
-                                                
-                                            </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <a name="onMouseEnter"></a>
-                                    <span class="name"><b> onMouseEnter</b><a href="#onMouseEnter"><span class="fa fa-link"></span></a></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="col-md-4">
-            <code>onMouseEnter(e: MouseEvent)</code>
-                                </td>
-                            </tr>
-            
-            
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="189" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts:189</a></div>
-                                        </td>
-                                    </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-            
-                                        <div class="io-description">
-                                                <b>Parameters :</b>
-                                                <table class="params">
-                                                    <thead>
-                                                        <tr>
-                                                            <td>Name</td>
-                                                            <td>Type</td>
-                                                            <td>Optional</td>
-                                                            <td>Description</td>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                            <tr>
-                                                              <td>e</td>
-                                                              <td>
-                                                                      <code>MouseEvent</code>
-                                                              </td>
-                                                              <td>
-                                                              </td>
-                                                              <td></td>
-                                                            </tr>
-                                                    </tbody>
-                                                </table>
-                                        </div>
-                                        <div>
-                                        </div>
-                                        <div class="io-description">
-                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-            
-                                        </div>
-                                            <div class="io-description">
-                                                
-                                            </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <a name="onMouseLeave"></a>
-                                    <span class="name"><b> onMouseLeave</b><a href="#onMouseLeave"><span class="fa fa-link"></span></a></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="col-md-4">
-            <code>onMouseLeave(e: MouseEvent)</code>
-                                </td>
-                            </tr>
-            
-            
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="197" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts:197</a></div>
-                                        </td>
-                                    </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-            
-                                        <div class="io-description">
-                                                <b>Parameters :</b>
-                                                <table class="params">
-                                                    <thead>
-                                                        <tr>
-                                                            <td>Name</td>
-                                                            <td>Type</td>
-                                                            <td>Optional</td>
-                                                            <td>Description</td>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                            <tr>
-                                                              <td>e</td>
-                                                              <td>
-                                                                      <code>MouseEvent</code>
-                                                              </td>
-                                                              <td>
-                                                              </td>
-                                                              <td></td>
-                                                            </tr>
-                                                    </tbody>
-                                                </table>
-                                        </div>
-                                        <div>
-                                        </div>
-                                        <div class="io-description">
-                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-            
-                                        </div>
-                                            <div class="io-description">
-                                                
-                                            </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <a name="onOutsideClick"></a>
-                                    <span class="name"><b> onOutsideClick</b><a href="#onOutsideClick"><span class="fa fa-link"></span></a></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="col-md-4">
-            <code>onOutsideClick(e: MouseEvent)</code>
-                                </td>
-                            </tr>
-            
-            
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="174" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts:174</a></div>
-                                        </td>
-                                    </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-            
-                                        <div class="io-description">
-                                                <b>Parameters :</b>
-                                                <table class="params">
-                                                    <thead>
-                                                        <tr>
-                                                            <td>Name</td>
-                                                            <td>Type</td>
-                                                            <td>Optional</td>
-                                                            <td>Description</td>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                            <tr>
-                                                              <td>e</td>
-                                                              <td>
-                                                                      <code>MouseEvent</code>
-                                                              </td>
-                                                              <td>
-                                                              </td>
-                                                              <td></td>
-                                                            </tr>
-                                                    </tbody>
-                                                </table>
-                                        </div>
-                                        <div>
-                                        </div>
-                                        <div class="io-description">
-                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-            
-                                        </div>
-                                            <div class="io-description">
-                                                
-                                            </div>
                                 </td>
                             </tr>
                         </tbody>
@@ -1351,16 +993,76 @@ during init.</p>
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <a name="clickedNotEntered"></a>
-                                    <span class="name"><b><span class="modifier">Private</span> clickedNotEntered</b><a href="#clickedNotEntered"><span class="fa fa-link"></span></a></span>
+                                    <a name="hidePanel"></a>
+                                    <span class="name"><b> hidePanel</b><a href="#hidePanel"><span class="fa fa-link"></span></a></span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-lock"></span><code>clickedNotEntered:     <code></code>
+                                    <code>hidePanel:     <code></code>
             </code>
                                 </td>
                             </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="222" class="link-to-prism">src/app/lib/sliding-panel/toggle/sliding-panel-toggle.directive.ts:222</a></div>
+                                        </td>
+                                    </tr>
+            
+            
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="onNextState"></a>
+                                    <span class="name"><b><span class="modifier">Private</span> onNextState</b><a href="#onNextState"><span class="fa fa-link"></span></a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <span class="modifier-icon fa fa-lock"></span><code>onNextState:     <code></code>
+            </code>
+                                </td>
+                            </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="229" class="link-to-prism">src/app/lib/sliding-panel/toggle/sliding-panel-toggle.directive.ts:229</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Determine what the next panel state
+            should be based on the new hover and
+            pin states.</p>
+            </div>
+                                </td>
+                            </tr>
+            
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="previousPinnedState"></a>
+                                    <span class="name"><b><span class="modifier">Private</span> previousPinnedState</b><a href="#previousPinnedState"><span class="fa fa-link"></span></a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <span class="modifier-icon fa fa-lock"></span><code>previousPinnedState:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+            </code>
+                                </td>
+                            </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+            
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td class="col-md-4">
                                         <i>Default value : </i><code>false</code>
@@ -1368,10 +1070,19 @@ during init.</p>
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts:78</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">src/app/lib/sliding-panel/toggle/sliding-panel-toggle.directive.ts:78</a></div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Keep track of the previous pin state.
+            This is needed to determine if the 
+            new pin state should actually cause a
+            transition or not.</p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -1379,128 +1090,13 @@ during init.</p>
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <a name="isHovering"></a>
-                                    <span class="name"><b><span class="modifier">Private</span> isHovering</b><a href="#isHovering"><span class="fa fa-link"></span></a></span>
+                                    <a name="showHideSubscription"></a>
+                                    <span class="name"><b><span class="modifier">Private</span> showHideSubscription</b><a href="#showHideSubscription"><span class="fa fa-link"></span></a></span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-lock"></span><code>isHovering:     <code></code>
-            </code>
-                                </td>
-                            </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <i>Default value : </i><code>false</code>
-                                    </td>
-                                </tr>
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts:68</a></div>
-                                        </td>
-                                    </tr>
-            
-            
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <a name="onPanelClicked"></a>
-                                    <span class="name"><b><span class="modifier">Private</span> onPanelClicked</b><a href="#onPanelClicked"><span class="fa fa-link"></span></a></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-lock"></span><code>onPanelClicked:     <code>Observable&lt;MouseEvent&gt;</code>
-            </code>
-                                </td>
-                            </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <i>Type : </i>    <code>Observable&lt;MouseEvent&gt;</code>
-            
-                                    </td>
-                                </tr>
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts:55</a></div>
-                                        </td>
-                                    </tr>
-            
-            
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <a name="onPanelMouseEntered"></a>
-                                    <span class="name"><b><span class="modifier">Private</span> onPanelMouseEntered</b><a href="#onPanelMouseEntered"><span class="fa fa-link"></span></a></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-lock"></span><code>onPanelMouseEntered:     <code>Observable&lt;MouseEvent&gt;</code>
-            </code>
-                                </td>
-                            </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <i>Type : </i>    <code>Observable&lt;MouseEvent&gt;</code>
-            
-                                    </td>
-                                </tr>
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts:53</a></div>
-                                        </td>
-                                    </tr>
-            
-            
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <a name="onPanelMouseLeft"></a>
-                                    <span class="name"><b><span class="modifier">Private</span> onPanelMouseLeft</b><a href="#onPanelMouseLeft"><span class="fa fa-link"></span></a></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-lock"></span><code>onPanelMouseLeft:     <code>Observable&lt;MouseEvent&gt;</code>
-            </code>
-                                </td>
-                            </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <i>Type : </i>    <code>Observable&lt;MouseEvent&gt;</code>
-            
-                                    </td>
-                                </tr>
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts:54</a></div>
-                                        </td>
-                                    </tr>
-            
-            
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <a name="panelClickedSub"></a>
-                                    <span class="name"><b><span class="modifier">Private</span> panelClickedSub</b><a href="#panelClickedSub"><span class="fa fa-link"></span></a></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-lock"></span><code>panelClickedSub:     <code>Subscription</code>
+                                    <span class="modifier-icon fa fa-lock"></span><code>showHideSubscription:     <code>Subscription</code>
             </code>
                                 </td>
                             </tr>
@@ -1512,10 +1108,17 @@ during init.</p>
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts:59</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/app/lib/sliding-panel/toggle/sliding-panel-toggle.directive.ts:84</a></div>
                                         </td>
                                     </tr>
             
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Save he subscription so the stream
+            can be properly closed.</p>
+            </div>
+                                </td>
+                            </tr>
             
                         </tbody>
                     </table>
@@ -1523,169 +1126,19 @@ during init.</p>
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <a name="panelMouseEnteredSub"></a>
-                                    <span class="name"><b><span class="modifier">Private</span> panelMouseEnteredSub</b><a href="#panelMouseEnteredSub"><span class="fa fa-link"></span></a></span>
+                                    <a name="showPanel"></a>
+                                    <span class="name"><b> showPanel</b><a href="#showPanel"><span class="fa fa-link"></span></a></span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-lock"></span><code>panelMouseEnteredSub:     <code>Subscription</code>
+                                    <code>showPanel:     <code></code>
             </code>
                                 </td>
                             </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <i>Type : </i>    <code>Subscription</code>
-            
-                                    </td>
-                                </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts:57</a></div>
-                                        </td>
-                                    </tr>
-            
-            
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <a name="panelMouseLeftSub"></a>
-                                    <span class="name"><b><span class="modifier">Private</span> panelMouseLeftSub</b><a href="#panelMouseLeftSub"><span class="fa fa-link"></span></a></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-lock"></span><code>panelMouseLeftSub:     <code>Subscription</code>
-            </code>
-                                </td>
-                            </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <i>Type : </i>    <code>Subscription</code>
-            
-                                    </td>
-                                </tr>
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts:58</a></div>
-                                        </td>
-                                    </tr>
-            
-            
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <a name="panelWasClicked"></a>
-                                    <span class="name"><b><span class="modifier">Private</span> panelWasClicked</b><a href="#panelWasClicked"><span class="fa fa-link"></span></a></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-lock"></span><code>panelWasClicked:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-            </code>
-                                </td>
-                            </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-            
-                                    </td>
-                                </tr>
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts:63</a></div>
-                                        </td>
-                                    </tr>
-            
-            
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <a name="panelWasEntered"></a>
-                                    <span class="name"><b><span class="modifier">Private</span> panelWasEntered</b><a href="#panelWasEntered"><span class="fa fa-link"></span></a></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-lock"></span><code>panelWasEntered:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-            </code>
-                                </td>
-                            </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-            
-                                    </td>
-                                </tr>
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts:61</a></div>
-                                        </td>
-                                    </tr>
-            
-            
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <a name="panelWasLeft"></a>
-                                    <span class="name"><b><span class="modifier">Private</span> panelWasLeft</b><a href="#panelWasLeft"><span class="fa fa-link"></span></a></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-lock"></span><code>panelWasLeft:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-            </code>
-                                </td>
-                            </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-            
-                                    </td>
-                                </tr>
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts:62</a></div>
-                                        </td>
-                                    </tr>
-            
-            
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <a name="toggleWasClicked"></a>
-                                    <span class="name"><b><span class="modifier">Private</span> toggleWasClicked</b><a href="#toggleWasClicked"><span class="fa fa-link"></span></a></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-lock"></span><code>toggleWasClicked:     <code></code>
-            </code>
-                                </td>
-                            </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <i>Default value : </i><code>false</code>
-                                    </td>
-                                </tr>
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/app/lib/sliding-panel/sliding-panel-toggle.directive.ts:72</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="221" class="link-to-prism">src/app/lib/sliding-panel/toggle/sliding-panel-toggle.directive.ts:221</a></div>
                                         </td>
                                     </tr>
             
@@ -1699,13 +1152,30 @@ during init.</p>
 
 
     <div class="tab-pane fade tab-source-code" id="source">
-        <pre class="line-numbers"><code class="language-typescript">import { Directive, Input, HostListener, HostBinding, NgZone } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers"><code class="language-typescript">import { 
+  Directive, 
+  Input, 
+  HostListener, 
+  HostBinding, 
+  NgZone, 
+  ElementRef, 
+  OnInit,
+  OnDestroy,
+  AfterViewInit} from &#x27;@angular/core&#x27;;
+import { UATSlidingPanel } from &#x27;../sliding-panel.component&#x27;;
 import { Observable } from &#x27;rxjs/Observable&#x27;;
 import { Subscription } from &#x27;rxjs/Subscription&#x27;;
-import { UATSlidingPanel } from &#x27;./sliding-panel.component&#x27;;
+import { fromEvent } from &#x27;rxjs/observable/fromEvent&#x27;;
+import { filter } from &#x27;rxjs/operators/filter&#x27;;
+import { combineLatest } from &#x27;rxjs/operators/combineLatest&#x27;;
+import { merge } from &#x27;rxjs/operators/merge&#x27;;
+import { map } from &#x27;rxjs/operators/map&#x27;;
+import { debounceTime } from &#x27;rxjs/operators/debounceTime&#x27;;
+import { of } from &#x27;rxjs/observable/of&#x27;;
 
 /**
  * Control a sliding panels shown or hidden state.
+ * 
  * Should only be attached to elements that have
  * a click event.
  */
@@ -1715,20 +1185,17 @@ import { UATSlidingPanel } from &#x27;./sliding-panel.component&#x27;;
     &#x27;[class.open]&#x27;:&#x27;panel.isShowing&#x27;,
     &#x27;[class.closed]&#x27;:&#x27;!panel.isShowing&#x27;,
     &#x27;[class.pinned]&#x27;:&#x27;panel.pinned&#x27;,
-    &#x27;(click)&#x27;:&quot;onClick($event)&quot;,
-    &#x27;(mouseenter)&#x27;:&quot;onMouseEnter($event)&quot;,
-    &#x27;(mouseleave)&#x27;:&quot;onMouseLeave($event)&quot;,
-    &#x27;(document:click)&#x27;:&quot;onOutsideClick($event)&quot;,
+    &#x27;[class.uat-sliding-panel-toggle]&#x27;:&quot;&#x27;true&#x27;&quot;
   },
   exportAs:&#x27;uatSlidingPanelToggle&#x27;
 })
-export class UATSlidingPanelToggle {
-  @HostBinding(&#x27;class.uat-sliding-panel-toggle&#x27;) applyHostClass &#x3D; true;
+export class UATSlidingPanelToggle implements OnInit, OnDestroy {
 
   /**
    * The panel that the toggle is attached to.
-   * If this value is not set an error will be thrown
-   * during init.
+   * 
+   * If this value is not set an error will be 
+   * thrown during init.
    */
   @Input(&#x27;uat-sliding-panel-toggle&#x27;) panel: UATSlidingPanel;
 
@@ -1750,178 +1217,191 @@ export class UATSlidingPanelToggle {
    */
   @Input() closeOnClickOutside &#x3D; false;
 
+  /**
+   * Sets the initial state of the panel 
+   * by pinning open it if true.
+   */
+  @Input() showOnInit: boolean;
 
-  private onPanelMouseEntered : Observable&lt;MouseEvent&gt;;
-  private onPanelMouseLeft : Observable&lt;MouseEvent&gt;;
-  private onPanelClicked : Observable&lt;MouseEvent&gt;;
+  /**
+   * Keep track of the previous pin state.
+   * This is needed to determine if the 
+   * new pin state should actually cause a
+   * transition or not.
+   */
+  private previousPinnedState: boolean &#x3D; false;
+  
+  /**
+   * Save he subscription so the stream
+   * can be properly closed.
+   */
+  private showHideSubscription: Subscription;
 
-  private panelMouseEnteredSub: Subscription;
-  private panelMouseLeftSub: Subscription;
-  private panelClickedSub: Subscription;
-
-  private panelWasEntered: boolean;
-  private panelWasLeft: boolean;
-  private panelWasClicked: boolean;
-
-  // tracks if the mouse is over either the toggle or
-  // the panel itself so that the panel does not close
-  // when the user is interacting with either.
-  private isHovering &#x3D; false;
-
-  // tracks inside clicks so that the panel is not closed
-  // by the onOutsideClick method when the button is clicked
-  private toggleWasClicked &#x3D; false;
-
-  // tracks when the toggle was just clicked so that the mouse
-  // entered event is ignored in cases where the toggles template
-  // is changed due to the click (swapping out templates for an 
-  // expand and hide toggle for instance)
-  private clickedNotEntered &#x3D; false;
-
-  constructor(private zone: NgZone) {
+  constructor(private element: ElementRef) {
   }
 
   ngOnInit() {
     if(!this.panel){
-      throw new ReferenceError(&#x27;No UATSlidingPanel component supplied to &#x27; + 
-                               &#x27;the uat-sliding-panel-toggle directive &#x27; + 
-                               &#x27;([uat-sliding-panel-toggle]&#x3D;&quot;$PanelVariable&quot;).&#x27;);
+      throw new Error(&#x27;No UATSlidingPanel component supplied to &#x27; + 
+                      &#x27;the uat-sliding-panel-toggle directive &#x27; + 
+                      &#x27;([uat-sliding-panel-toggle]&#x3D;&quot;$PanelVariable&quot;).&#x27;);
     }
 
-    this.onPanelMouseEntered &#x3D; this.panel.mouseEnterPanel.asObservable();
-    this.onPanelMouseLeft &#x3D; this.panel.mouseLeavePanel.asObservable();
-    this.onPanelClicked &#x3D; this.panel.clickPanel.asObservable();
+    if(this.showHideSubscription &amp;&amp; !this.showHideSubscription.closed) {
+      this.showHideSubscription.unsubscribe();
+    }
 
     /*
-     * Sync with the panel&#x27;s events
+     * Streams of the events necessary 
+     * for the logic of the toggle.
      */
-    this.panelMouseEnteredSub &#x3D; 
-      this.onPanelMouseEntered.subscribe(_&#x3D;&gt; {
-          this.panelWasEntered &#x3D; true;
-          this.panelWasLeft &#x3D; false;
-        });
 
-    this.panelMouseLeftSub &#x3D; 
-      this.onPanelMouseLeft.subscribe(_&#x3D;&gt; {
-          this.panelWasLeft &#x3D; true;
-          this.panelWasEntered &#x3D; false; 
+    let documentClick$: Observable&lt;MouseEvent&gt; &#x3D; fromEvent(document, &#x27;click&#x27;);
+    
+    let toggleClick$: Observable&lt;MouseEvent&gt; &#x3D; fromEvent(this.element.nativeElement, &#x27;click&#x27;);
+    let toggleMouseEnter$: Observable&lt;MouseEvent&gt; &#x3D; fromEvent(this.element.nativeElement, &#x27;mouseenter&#x27;);
+    let toggleMouseLeave$: Observable&lt;MouseEvent&gt; &#x3D; fromEvent(this.element.nativeElement, &#x27;mouseleave&#x27;);
 
-          if(this.showOnHover) {
-            this.hideIfNotOver(100);
-          }
-        });
+    let panelMouseEntered$ &#x3D; this.panel.mouseEnterPanel.asObservable();
+    let panelMouseLeft$ &#x3D; this.panel.mouseLeavePanel.asObservable();
+    let panelClick$ &#x3D; this.panel.clickPanel.asObservable();
 
+    /*
+     * Reduce both leaving events to 
+     * a false emission.
+     */
+    let leaveBoth$ &#x3D; toggleMouseLeave$
+      .pipe(
+        merge(panelMouseLeft$),
+        filter(_&#x3D;&gt;this.showOnHover), 
+        map(_&#x3D;&gt;false));
 
-    this.panelClickedSub &#x3D; 
-      this.onPanelClicked.subscribe(_&#x3D;&gt; {
-        this.panelWasClicked &#x3D; true;
-      })
+    /*
+     * Reduce both enter events to 
+     * a true emission.
+     */
+    let enterEither$ &#x3D; toggleMouseEnter$
+      .pipe(
+        merge(panelMouseEntered$),
+        filter(_&#x3D;&gt;this.showOnHover),
+        map(_&#x3D;&gt;true));
+
+    /*
+     * When the toggle is clicked 
+     * stop the event from bubbling
+     * and toggle the pinned state.
+     */
+    let toggleClicked$ &#x3D; toggleClick$
+      .pipe(
+        map(_&#x3D;&gt; {
+          /*
+           * should probably be done with
+           * a do operator, once it works again,
+           * for both toggle clicked and panel
+           * clicked
+           */
+          event.stopPropagation();
+          return !this.previousPinnedState }));
+
+    /*
+     * When the panel is clicked
+     * stop the event from bubbling
+     * and just continue to emit the
+     * previous pinned state.
+     */
+    let panelClicked$ &#x3D; panelClick$
+      .pipe(map(_&#x3D;&gt;{
+        event.stopPropagation();
+        return this.previousPinnedState }));
+
+    /*
+     * A document click is only
+     * triggered when the panel
+     * and the toggle don&#x27;t prevent
+     * the bubbling so just emit 
+     * false as the next pinned state.
+     */
+    let documentClicked$ &#x3D; documentClick$
+      .pipe(
+        filter(_&#x3D;&gt;this.closeOnClickOutside),
+        map(_&#x3D;&gt;false));
+    
+    /*
+     * Combine all the pinned state
+     * streams.
+     */
+    let nextPinnedState$ &#x3D; of(this.showOnInit)
+      .pipe(
+        merge(toggleClicked$, panelClicked$, documentClicked$));
+
+    /*
+     * Combine all the mouse movement
+     * streams.
+     */
+    let isHovering$ &#x3D; of(false)
+      .pipe(
+        merge(leaveBoth$, enterEither$),
+        /*
+          * 50 here is arbitrary but 
+          * seems to be below the 
+          * human threshhold for noticing
+          * the delay while letting 
+          * slower systems have plenty of
+          * time to process the events.
+          * 
+          * Maybe it should be configurable?
+          */
+        debounceTime(50));
+
+    /*
+     * Combine the hover and pinned state
+     * streams into a stream that determines
+     * whether the panel state needs to change.
+     */
+    this.showHideSubscription &#x3D; 
+      isHovering$
+        .pipe(
+          combineLatest(nextPinnedState$),
+          map(states&#x3D;&gt;({hover:states[0],pin:states[1] })))
+        .subscribe(this.onNextState);
   }
 
   ngOnDestroy() {
-    /*
-     * Clean up panel event syncing.
-     */
-    this.panelMouseEnteredSub.unsubscribe();
-    this.panelMouseLeftSub.unsubscribe();
-    this.panelClickedSub.unsubscribe();
-  }
-
-
-  onClick(e:MouseEvent){
-    this.toggleWasClicked &#x3D; true;
-    this.clickedNotEntered &#x3D; true;
-
-    /*
-     * A bit of hairy logic. This will
-     * open and close the panel if showOnHover
-     * is false.  
-     * 
-     * If showOnHover is true it follow this logic:
-     *   
-     * If the menu is opened by hover but not pinned 
-     * it will stay open and get pinned and hover 
-     * will be ignored until it is unpinned.
-     * 
-     * If the menu is pinned it will be unpinned and
-     * hidden. When the mouse leaves the hover 
-     * show/hide functionality will be reenabled.
-     */
-    if(this.showOnHover) {
-      if(this.panel.isShowing &amp;&amp; 
-         !this.panel.pinned){
-        this.panel.pinned &#x3D; true;
-        this.panel.show();
-      }
-      else{
-        if(this.panel.isShowing){
-          this.panel.pinned &#x3D; false;
-          this.panel.hide();
-        }
-        else{
-          this.panel.pinned &#x3D; true;
-          this.panel.show();
-        }
-      }
-    }
-    else{
-      if(this.toggleOnClick){
-        this.panel.toggle();
-        this.panel.pinned &#x3D; !this.panel.pinned;
-      }
+    if(this.showHideSubscription &amp;&amp; !this.showHideSubscription.closed) {
+      this.showHideSubscription.unsubscribe();
     }
   }
 
-  onOutsideClick(e: MouseEvent) {
-    if(this.closeOnClickOutside &amp;&amp; 
-       !this.panelWasClicked &amp;&amp;
-       !this.toggleWasClicked) {
-      this.panel.hide();
-    }
-
-    if(!this.toggleWasClicked &amp;&amp; !this.panelWasClicked) {
-      this.panel.pinned &#x3D; false;
-    }
-
-    this.toggleWasClicked &#x3D; false;
-    this.panelWasClicked &#x3D; false;
-  }
-
-  onMouseEnter(e: MouseEvent) {
-    this.isHovering &#x3D; true;
-
-    if(this.showOnHover &amp;&amp; !this.clickedNotEntered) {
-      this.panel.show();
-    }
-  }
-
-  onMouseLeave(e: MouseEvent) {
-    this.isHovering &#x3D; false;
-
-    if(this.showOnHover) {
-      this.hideIfNotOver(100);
-    }
-    this.clickedNotEntered &#x3D; false;
-  }
+  showPanel &#x3D; () &#x3D;&gt; this.onNextState({hover: false, pin: true});
+  hidePanel &#x3D; () &#x3D;&gt; this.onNextState({hover: false, pin: false});
 
   /**
-   * We don&#x27;t want to hide the panel if the mouse was moved
-   * from the toggle to the menu so this function will only
-   * be called after a timeout to determine if the 
-   * mouse is still on the toggle or the panel, and only 
-   * then will it hide the panel.
+   * Determine what the next panel state
+   * should be based on the new hover and
+   * pin states.
    */
-  private hideIfNotOver(timeoutMs: number)  {
-    this.zone.run(()&#x3D;&gt;
-      setTimeout(_&#x3D;&gt;{
-        if(!this.panelWasEntered &amp;&amp; 
-          !this.isHovering &amp;&amp; 
-          !this.panel.pinned) {
-            this.panel.hide();
-        }
-      },timeoutMs));
+  private onNextState &#x3D; (nextStates:{hover: boolean, pin: boolean}) &#x3D;&gt; {
+    if(nextStates.hover ) {
+      if(this.previousPinnedState &amp;&amp; !nextStates.pin) { 
+        this.panel.hide();  
+      }
+      else {
+        this.panel.show();
+      }
+    }
+    else {
+      if(!this.previousPinnedState &amp;&amp; nextStates.pin) {
+        this.panel.show();
+      }
+      else if(!nextStates.pin){
+        this.panel.hide();
+      }
+    }
+    this.previousPinnedState &#x3D; nextStates.pin;
+    this.panel.pinned &#x3D; nextStates.pin;
   }
 
+  
 }</code></pre>
     </div>
 

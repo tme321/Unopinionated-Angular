@@ -695,9 +695,6 @@
                             <li>
                                  <a href="#panel">panel</a>
                             </li>
-                            <li>
-                                 <a href="#showOnInit">showOnInit</a>
-                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -770,7 +767,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/lib/slideout-menu/slideout-menu.component.ts:31</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/lib/slideout-menu/slideout-menu.component.ts:29</a></div>
                                 </td>
                             </tr>
     
@@ -939,34 +936,6 @@
     
                 </tbody>
             </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <a name="showOnInit"></a>
-                            <span class="name"><b> showOnInit</b><a href="#showOnInit"><span class="fa fa-link"></span></a></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <code>showOnInit:     <code></code>
-    </code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Default value : </i><code>false</code>
-                            </td>
-                        </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/lib/slideout-menu/slideout-menu.component.ts:31</a></div>
-                                </td>
-                            </tr>
-    
-    
-                </tbody>
-            </table>
     </section>
 
     <section>
@@ -1052,8 +1021,6 @@ export class UATSlideoutMenu {
     return this.slideDirection &#x3D;&#x3D;&#x3D; &quot;left&quot;;
   }
 
-  showOnInit &#x3D; false;
-
   constructor() { }
 }
 </code></pre>
@@ -1071,8 +1038,7 @@ export class UATSlideoutMenu {
     &lt;div class&#x3D;&quot;slide-anchor&quot;&gt;
       &lt;div uat-sliding-panel 
         #panel&#x3D;&quot;uatSlidingPanel&quot;
-        [showOnInit]&#x3D;&quot;showOnInit&quot;
-        slideDirection&#x3D;&quot;horizontal&quot;&gt;
+        [slideDirection]&#x3D;&quot;slideDirection&quot;&gt;
           &lt;ng-content select&#x3D;&quot;[uat-menu-item]&quot;&gt;&lt;/ng-content&gt;
       &lt;/div&gt;
     &lt;/div&gt;
@@ -1103,8 +1069,8 @@ export class UATSlideoutMenu {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="slide-container">  <div [uat-sliding-panel-toggle]="panel"     [toggleOnClick]="pinOnClick"    [showOnHover]="showOnMouseOver"    [closeOnClickOutside]="closeOnClickOutside">    <ng-content select="[uat-menu-toggle]"></ng-content>  </div>  <div class="slide-position">    <div class="slide-anchor">      <div uat-sliding-panel         #panel="uatSlidingPanel"        [showOnInit]="showOnInit"        slideDirection="horizontal">          <ng-content select="[uat-menu-item]"></ng-content>      </div>    </div>  </div></div></div>'
-    var COMPONENTS = [{'name': 'CollapsingMenuColorWidgetComponent', 'selector': 'app-collapsing-menu-color-widget'},{'name': 'ColorButtonComponent', 'selector': 'app-color-button'},{'name': 'ColorViewerComponent', 'selector': 'app-color-viewer'},{'name': 'DragAndDropComponent', 'selector': 'app-drag-and-drop'},{'name': 'DropdownMenuColorWidgetComponent', 'selector': 'app-dropdown-menu-color-widget'},{'name': 'FooComponent', 'selector': 'foo'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'MenuInput', 'selector': ''},{'name': 'NavigationLink', 'selector': ''},{'name': 'UATCollapsingMenu', 'selector': 'div[uat-collapsing-menu]'},{'name': 'UATDropdownInput', 'selector': 'div[uat-dropdown-input]'},{'name': 'UATDropdownInputItemsList', 'selector': 'ul[uat-dropdown-input-items-list]'},{'name': 'UATDropdownMenu', 'selector': 'div[uat-dropdown-menu]'},{'name': 'UATHamburgerMenu', 'selector': 'div[uat-hamburger-menu]'},{'name': 'UATMultiSelectComponent', 'selector': 'div[uat-multi-select]'},{'name': 'UATSlideoutMenu', 'selector': 'div[uat-slideout-menu]'},{'name': 'UATSlidingPanel', 'selector': 'div[uat-sliding-panel]'},{'name': 'UATToggle', 'selector': '[uat-toggle]'}];
+        var COMPONENT_TEMPLATE = '<div><div class="slide-container">  <div [uat-sliding-panel-toggle]="panel"     [toggleOnClick]="pinOnClick"    [showOnHover]="showOnMouseOver"    [closeOnClickOutside]="closeOnClickOutside">    <ng-content select="[uat-menu-toggle]"></ng-content>  </div>  <div class="slide-position">    <div class="slide-anchor">      <div uat-sliding-panel         #panel="uatSlidingPanel"        [slideDirection]="slideDirection">          <ng-content select="[uat-menu-item]"></ng-content>      </div>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'CollapsingMenuColorWidgetComponent', 'selector': 'app-collapsing-menu-color-widget'},{'name': 'ColorButtonComponent', 'selector': 'app-color-button'},{'name': 'ColorViewerComponent', 'selector': 'app-color-viewer'},{'name': 'DragAndDropComponent', 'selector': 'app-drag-and-drop'},{'name': 'DropdownMenuColorWidgetComponent', 'selector': 'app-dropdown-menu-color-widget'},{'name': 'FooComponent', 'selector': 'foo'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'MenuInput', 'selector': ''},{'name': 'NavigationLink', 'selector': ''},{'name': 'UATCollapsingMenu', 'selector': 'div[uat-collapsing-menu]'},{'name': 'UATDropdownInput', 'selector': 'div[uat-dropdown-input]'},{'name': 'UATDropdownInputItemsList', 'selector': 'ul[uat-dropdown-input-items-list]'},{'name': 'UATDropdownMenu', 'selector': 'div[uat-dropdown-menu]'},{'name': 'UATHamburgerMenu', 'selector': 'div[uat-hamburger-menu], nav[uat-hamburger-menu]'},{'name': 'UATMultiSelectComponent', 'selector': 'div[uat-multi-select]'},{'name': 'UATSlideoutMenu', 'selector': 'div[uat-slideout-menu]'},{'name': 'UATSlidingPanel', 'selector': 'div[uat-sliding-panel]'},{'name': 'UATToggle', 'selector': '[uat-toggle]'}];
     var DIRECTIVES = [{'name': 'UATDropdownInputDirective', 'selector': '[uat-sliding-panel-focus]'},{'name': 'UATDynamicComponentDirective', 'selector': '[uat-dynamic-component]'},{'name': 'UATMenuItem', 'selector': '[uat-menu-item]'},{'name': 'UATMenuItemRight', 'selector': '[uat-menu-item-right]'},{'name': 'UATSlidingPanelToggle', 'selector': '[uat-sliding-panel-toggle]'}];
     var ACTUAL_COMPONENT = {'name': 'UATSlideoutMenu'};
 </script>
