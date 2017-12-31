@@ -28,7 +28,5 @@ export class UATSlideoutMenu {
     return this.slideDirection === "left";
   }
 
-  showOnInit = false;
-
   constructor() { }
 }

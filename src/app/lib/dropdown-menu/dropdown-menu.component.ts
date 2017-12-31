@@ -29,7 +29,5 @@ export class UATDropdownMenu {
     return this.panel.isShowing;
   }
 
-  showOnInit = false;
-
   constructor() { }
 }
