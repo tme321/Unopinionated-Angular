@@ -1,12 +1,16 @@
 {
   "name": "unopinionated-angular-toolbox",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "Thomas Elliott",
   "license": "MIT",
   "description": "Unopinionated Angular Toolbox",
-  "private": false,  
+  "private": false,
   "main": "./dist/unopinionated-angular-toolbox.js",
   "typings": "./dist/unopinionated-angular-toolbox.d.ts",
+  "repository": {
+  "type": "git",
+  "url": "git://github.com/tme321/Unopinionated-Angular.git"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -19,7 +23,7 @@
     "noJekyll": "touch ./docs/.nojekyll",
     "genDoc": "./node_modules/.bin/compodoc -p src/tsconfig.compodoc.json -d \"./docs\" && npm run noJekyll &&  npm run buildDemo",
     "clean": "rm -r ./dist && rm -r ./docs",
-    "prepublish": "npm run buildLib && npm run genDoc"
+    "prepublish": "npm run buildLib"
   },
   "dependencies": {
     "@angular/animations": "^5.0.0",
@@ -36,14 +40,14 @@
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
-    "@angular/cli": "1.5.0",
+    "@angular/cli": "1.6.3",
     "@angular/compiler-cli": "^5.0.0",
     "@angular/language-service": "^5.0.0",
     "@compodoc/compodoc": "^1.0.4",
     "@types/jasmine": "~2.5.53",
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
-    "codelyzer": "~3.2.0",
+    "codelyzer": "^4.0.0",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
     "karma": "~1.7.0",
@@ -52,7 +56,7 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "ng-packagr": "^1.6.0",
+    "ng-packagr": "^2.0.0-rc.9",
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
