@@ -1,0 +1,32 @@
+div.menu{color:#9d9d9d;background-color:#222}.menu div.list{height:50px}.menu .header a.label{color:#9d9d9d;padding:15px;font-size:18px;text-decoration:none;font-weight:400;cursor:default}.menu .header a.label:hover{color:#fff}.menu a.button,.menu a.nav-link{color:#9d9d9d;padding:15px;text-decoration:none;cursor:pointer}.menu a.button:hover,.menu a.nav-link:hover{color:#fff}.vertical .menu .list li.item{padding:15px}.vertical div.menu{width:auto}.collapsable.horizontal div.menu{height:50px}.collapsable .controls a.button.toggle{color:#9d9d9d;background-color:#222;text-decoration:none;cursor:pointer}.collapsable.horizontal.normal .controls a.button.toggle{margin-top:14px;margin-right:14px}.collapsable.horizontal.reverse .controls a.button.toggle{margin-bottom:14px;margin-right:14px}.collapsable .controls a.button.toggle:hover{color:#fff}.collapsable .menu .list li.item{padding:15px}/* @import url('menu.css'); */
+
+/* Material Icons */.material-icons{font-family:Material Icons;font-weight:400;font-style:normal;font-size:24px;  /* Preferred icon size */display:inline-block;line-height:1;text-transform:none;letter-spacing:normal;word-wrap:normal;white-space:nowrap;direction:ltr;
+
+  /* Support for all WebKit browsers. */-webkit-font-smoothing:antialiased;
+  /* Support for Safari and Chrome. */text-rendering:optimizeLegibility;
+
+  /* Support for Firefox. */-moz-osx-font-smoothing:grayscale;
+
+  /* Support for IE. */-webkit-font-feature-settings:"liga";font-feature-settings:"liga"}
+
+/* Material Icons */
+
+/* small normalization */ul{margin:0}div.main-content{margin:5em}
+
+/* /normalization */
+
+/* Sliding Panel styles */.uat-sliding-panel-toggle{max-width:250px;background-color:#222;color:#9d9d9d}.uat-sliding-panel-toggle.open{color:#ddd}.uat-sliding-panel-toggle.open.pinned{color:#fff}div.uat-sliding-panel{border:1px solid #000}div.uat-sliding-panel.closed{opacity:0}div.uat-sliding-panel.open{background-color:#444;color:#9d9d9d}.uat-sliding-panel.open a:hover{color:#fff}div.uat-sliding-panel.open.pinned{background-color:#222}
+
+/* /Sliding Panel styles */
+
+/* Nav Link styles */a.nav-link{padding:15px;text-decoration:none;cursor:pointer;display:block}
+
+/* /Nav Link styles */
+
+/* Hamburger Menu styles */div.uat-hamburger-menu{background-color:#222;border:1px solid #000;position:fixed;top:0;left:0;right:0;min-height:50px;z-index:1000}.uat-hamburger-menu div.uat-sliding-panel{border:none;background-color:#222}.uat-hamburger-menu.collapsed div.uat-sliding-panel.open{border:1px solid #000}.uat-hamburger-menu a{color:#9d9d9d}div.inner-menu{padding:15px;text-align:center;width:75px}.collapsed div.inner-menu{text-align:start}a.my-brand{font-size:18px;color:#fff;padding:15px;text-decoration:none}div.uat-slideout-menu{width:100px}
+
+/* /Hamburger */
+
+/* dropdown input */.uat-dropdown-input input{width:150px}li.item{color:#000}li.item.selected{background-color:#222;color:#fff}li.item.soft-selected{background-color:#444;color:#fff}.uat-dropdown-input div.results{max-height:250px;overflow-y:scroll;overflow-x:hidden;background-color:#222;border:2px solid #000;width:150px;border-style:inset}.uat-dropdown-input li{border-top:1px solid #444;border-bottom:1px solid #444}.uat-dropdown-input li.auto-selected{background-color:#555}.uat-dropdown-input li.selected{background-color:#444}div.uat-dropdown-input{display:inline-block}.results a{color:#9d9d9d}
+
+/* /dropdown input *//* You can add global styles to this file, and also import other style files */

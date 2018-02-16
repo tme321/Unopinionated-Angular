@@ -98,7 +98,7 @@ export class UATSlidingPanel {
    */
   private verticalState : SlideAnimationDirections = SlideAnimationDirections.CLOSE;
 
-  constructor() { }
+  constructor(private cdRef: ChangeDetectorRef) { }
 
   /**
    * Returns whether the panel is open or closed.
@@ -135,6 +135,7 @@ export class UATSlidingPanel {
         break;
       }
     }
+    this.cdRef.markForCheck();
   }
 
   /**
@@ -143,7 +144,7 @@ export class UATSlidingPanel {
   public hide() {
     this.horizontalState = SlideAnimationDirections.CLOSE;
     this.verticalState = SlideAnimationDirections.CLOSE;
-
+    this.cdRef.markForCheck();
   }
 
   /**
