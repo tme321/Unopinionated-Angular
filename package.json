@@ -1,6 +1,6 @@
 {
   "name": "unopinionated-angular-toolbox",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "author": "Thomas Elliott",
   "license": "MIT",
   "description": "Unopinionated Angular Toolbox",
@@ -22,8 +22,7 @@
     "buildDemo": "ng build --prod -op \"./docs/demo\"",
     "noJekyll": "touch ./docs/.nojekyll",
     "genDoc": "./node_modules/.bin/compodoc -p src/tsconfig.compodoc.json -d \"./docs\" && npm run noJekyll &&  npm run buildDemo",
-    "clean": "rm -r ./dist && rm -r ./docs",
-    "prepublish": "npm run buildLib"
+    "clean": "rm -r ./dist && rm -r ./docs"
   },
   "dependencies": {
     "@angular/animations": "^5.0.0",

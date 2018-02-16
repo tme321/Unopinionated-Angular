@@ -649,6 +649,10 @@
     <table class="table table-sm table-hover">
         <tbody>
 
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
+            </tr>
 
 
 
@@ -724,7 +728,7 @@
                     </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/home/home.component.ts:13</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/home/home.component.ts:14</a></div>
                                 </td>
                             </tr>
     
@@ -758,7 +762,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/home/home.component.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/home/home.component.ts:17</a></div>
                                 </td>
                             </tr>
     
@@ -790,7 +794,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/home/home.component.ts:24</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/home/home.component.ts:25</a></div>
                                 </td>
                             </tr>
     
@@ -851,7 +855,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/home/home.component.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/home/home.component.ts:26</a></div>
                                 </td>
                             </tr>
     
@@ -912,7 +916,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/home/home.component.ts:20</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/home/home.component.ts:21</a></div>
                                 </td>
                             </tr>
     
@@ -965,7 +969,7 @@
     <div class="tab-pane fade tab-source-code" id="source">
         <pre class="line-numbers"><code class="language-typescript">import { BehaviorSubject } from &#x27;rxjs/BehaviorSubject&#x27;;
 import { Subject } from &#x27;rxjs/Subject&#x27;;
-import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { Component, OnInit, ChangeDetectionStrategy } from &#x27;@angular/core&#x27;;
 import { NavigationLink } from &#x27;../menu-items/menu-items.components&#x27;;
 import { DropdownInputItemChosenEvent, UATDropdownInputServiceToken } from &#x27;../lib/dropdown-input&#x27;;
 import { DemoDropdownInputService } from &#x27;../demo-dropdown-service/demo-dropdown-input.service&#x27;;
@@ -973,7 +977,8 @@ import { DemoDropdownInputService } from &#x27;../demo-dropdown-service/demo-dro
 @Component({
   selector: &#x27;app-home&#x27;,
   templateUrl: &#x27;./home.component.html&#x27;,
-  styleUrls: [&#x27;./home.component.css&#x27;]
+  styleUrls: [&#x27;./home.component.css&#x27;],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent implements OnInit {
   constructor() { }

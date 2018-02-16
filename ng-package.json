@@ -1,5 +1,6 @@
 {
   "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+  "src": "src/app/lib",
   "dest": "dist",
   "lib": {
     "entryFile": "src/app/lib/public_api.ts"
