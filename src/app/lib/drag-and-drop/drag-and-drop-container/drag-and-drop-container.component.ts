@@ -12,7 +12,7 @@ import {
   EmbeddedViewRef,
   ViewRef,
   OnDestroy} from '@angular/core';
-import { UATDraggableDirective } from '../draggable';
+import { UATDraggableDirective } from '../draggable/draggable.directive';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
 import { fromEvent } from 'rxjs/observable/fromEvent';

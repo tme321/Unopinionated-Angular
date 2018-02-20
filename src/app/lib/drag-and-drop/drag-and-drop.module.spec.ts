@@ -1,10 +1,10 @@
-import { DragAndDropModule } from './drag-and-drop.module';
+import { UATDragAndDropModule } from './drag-and-drop.module';
 
-describe('DragAndDropModule', () => {
-  let dragAndDropModule: DragAndDropModule;
+describe('UATDragAndDropModule', () => {
+  let dragAndDropModule: UATDragAndDropModule;
 
   beforeEach(() => {
-    dragAndDropModule = new DragAndDropModule();
+    dragAndDropModule = new UATDragAndDropModule();
   });
 
   it('should create an instance', () => {
